@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "e029ac02-aa4d-4342-ad3c-b5f6cf3a1400",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Ani_Play": {
+      "ver": "1.0.3",
+      "uuid": "ddb9e658-0636-48f2-8495-46382dca8c7f",
+      "rawTextureUuid": "e029ac02-aa4d-4342-ad3c-b5f6cf3a1400",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -11,
+      "offsetY": 24,
+      "trimX": 2,
+      "trimY": 2,
+      "width": 102,
+      "height": 76,
+      "rawWidth": 128,
+      "rawHeight": 128,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

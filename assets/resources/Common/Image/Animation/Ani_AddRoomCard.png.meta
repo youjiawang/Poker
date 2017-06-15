@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "4be7929b-45db-436e-b4f4-a81594b4a1f9",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Ani_AddRoomCard": {
+      "ver": "1.0.3",
+      "uuid": "b953970d-e7c2-4db8-8e03-889c3304e79f",
+      "rawTextureUuid": "4be7929b-45db-436e-b4f4-a81594b4a1f9",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -15,
+      "offsetY": 56,
+      "trimX": 2,
+      "trimY": 2,
+      "width": 94,
+      "height": 140,
+      "rawWidth": 128,
+      "rawHeight": 256,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

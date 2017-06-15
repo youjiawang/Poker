@@ -1,0 +1,17 @@
+{
+   "data" :
+   [
+      {
+         "Value" : "6",
+         "Name" : "RoundNumForGameType_1"
+      },
+    {
+    "Value" : "6",
+    "Name" : "RoundNumForGameType_2"
+    },
+    {
+    "Value" : "10",
+    "Name" : "RoundNumForGameType_3"
+    }
+   ]
+}

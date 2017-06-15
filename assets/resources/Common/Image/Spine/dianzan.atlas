@@ -1,0 +1,118 @@
+
+dianzan.png
+size: 990,304
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dianzan/dianzan_00001
+  rotate: false
+  xy: 893, 1
+  size: 89, 85
+  orig: 176, 188
+  offset: 43, 62
+  index: -1
+dianzan/dianzan_00002
+  rotate: true
+  xy: 893, 86
+  size: 103, 97
+  orig: 176, 188
+  offset: 35, 56
+  index: -1
+dianzan/dianzan_00003
+  rotate: true
+  xy: 858, 189
+  size: 115, 107
+  orig: 176, 188
+  offset: 29, 51
+  index: -1
+dianzan/dianzan_00004
+  rotate: true
+  xy: 663, 60
+  size: 122, 115
+  orig: 176, 188
+  offset: 26, 47
+  index: -1
+dianzan/dianzan_00005
+  rotate: true
+  xy: 743, 182
+  size: 122, 115
+  orig: 176, 188
+  offset: 26, 47
+  index: -1
+dianzan/dianzan_00006
+  rotate: true
+  xy: 125, 11
+  size: 122, 119
+  orig: 176, 188
+  offset: 26, 43
+  index: -1
+dianzan/dianzan_00007
+  rotate: false
+  xy: 489, 166
+  size: 137, 138
+  orig: 176, 188
+  offset: 17, 32
+  index: -1
+dianzan/dianzan_00008
+  rotate: true
+  xy: 527, 29
+  size: 137, 136
+  orig: 176, 188
+  offset: 17, 33
+  index: -1
+dianzan/dianzan_00009
+  rotate: true
+  xy: 778, 60
+  size: 122, 115
+  orig: 176, 188
+  offset: 26, 47
+  index: -1
+dianzan/dianzan_00010
+  rotate: true
+  xy: 626, 182
+  size: 122, 117
+  orig: 176, 188
+  offset: 26, 45
+  index: -1
+dianzan/dianzan_00011
+  rotate: true
+  xy: 0, 7
+  size: 126, 125
+  orig: 176, 188
+  offset: 22, 39
+  index: -1
+dianzan/dianzan_00012
+  rotate: true
+  xy: 244, 0
+  size: 135, 136
+  orig: 176, 188
+  offset: 16, 34
+  index: -1
+dianzan/dianzan_00013
+  rotate: true
+  xy: 380, 0
+  size: 146, 147
+  orig: 176, 188
+  offset: 10, 28
+  index: -1
+dianzan/dianzan_00014
+  rotate: false
+  xy: 332, 146
+  size: 157, 158
+  orig: 176, 188
+  offset: 4, 23
+  index: -1
+dianzan/dianzan_00015
+  rotate: false
+  xy: 166, 135
+  size: 166, 169
+  orig: 176, 188
+  offset: 0, 17
+  index: -1
+dianzan/dianzan_00016
+  rotate: false
+  xy: 0, 133
+  size: 166, 171
+  orig: 176, 188
+  offset: 0, 14
+  index: -1

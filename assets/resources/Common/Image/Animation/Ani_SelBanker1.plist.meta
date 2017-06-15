@@ -1,0 +1,56 @@
+{
+  "ver": "1.2.4",
+  "uuid": "3b2ef485-726e-4de0-9802-386c84f20a0e",
+  "rawTextureUuid": "d720b103-237f-494c-afc4-f35f44e6ebb3",
+  "size": {
+    "width": 256,
+    "height": 512
+  },
+  "type": "Texture Packer",
+  "subMetas": {
+    "Ani_SelBanker1_1.png": {
+      "ver": "1.0.3",
+      "uuid": "2f054a6d-da35-42ca-a2a9-dc2e8ff802f8",
+      "rawTextureUuid": "d720b103-237f-494c-afc4-f35f44e6ebb3",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 2,
+      "trimY": 142,
+      "width": 241,
+      "height": 138,
+      "rawWidth": 241,
+      "rawHeight": 138,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "spriteType": "normal",
+      "subMetas": {}
+    },
+    "Ani_SelBanker1_2.png": {
+      "ver": "1.0.3",
+      "uuid": "e4e03a90-0a49-4372-ac98-257e38dc53ca",
+      "rawTextureUuid": "d720b103-237f-494c-afc4-f35f44e6ebb3",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 2,
+      "trimY": 2,
+      "width": 241,
+      "height": 138,
+      "rawWidth": 241,
+      "rawHeight": 138,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "spriteType": "normal",
+      "subMetas": {}
+    }
+  }
+}

@@ -1,0 +1,48 @@
+
+lose.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bai
+  rotate: false
+  xy: 231, 148
+  size: 109, 101
+  orig: 111, 103
+  offset: 1, 1
+  index: -1
+bai2
+  rotate: false
+  xy: 231, 148
+  size: 109, 101
+  orig: 111, 103
+  offset: 1, 1
+  index: -1
+di
+  rotate: false
+  xy: 2, 126
+  size: 227, 123
+  orig: 229, 125
+  offset: 1, 1
+  index: -1
+di2
+  rotate: false
+  xy: 2, 2
+  size: 225, 122
+  orig: 227, 124
+  offset: 1, 1
+  index: -1
+shi
+  rotate: false
+  xy: 342, 149
+  size: 108, 100
+  orig: 110, 102
+  offset: 1, 1
+  index: -1
+shi2
+  rotate: false
+  xy: 342, 149
+  size: 108, 100
+  orig: 110, 102
+  offset: 1, 1
+  index: -1

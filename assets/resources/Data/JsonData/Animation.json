@@ -1,0 +1,69 @@
+{
+    "data" : [
+              {
+              "Id" : "1",
+              "DelayTime" : "0",
+              "FrameCount" : "2",
+              "Name" : "Ani_SelBanker1"
+              },
+              {
+              "Id" : "2",
+              "DelayTime" : "0",
+              "FrameCount" : "2",
+              "Name" : "Ani_SelBanker2"
+              },
+              {
+              "Id" : "3",
+              "DelayTime" : "0",
+              "FrameCount" : "3",
+              "Name" : "Ani_Play"
+              },
+              {
+              "Id" : "4",
+              "DelayTime" : "0",
+              "FrameCount" : "5",
+              "Name" : "Ani_Talk"
+              },
+              {
+              "Id" : "5",
+              "DelayTime" : "0",
+              "FrameCount" : "6",
+              "Name" : "Ani_AddRoomCard"
+              },
+              {
+              "Id" : "6",
+              "DelayTime" : "0",
+              "FrameCount" : "6",
+              "Name" : "Ani_RoomCard"
+              },
+              {
+              "Id" : "7",
+              "DelayTime" : "0",
+              "FrameCount" : "6",
+              "Name" : "Ani_Notice"
+              },
+              {
+              "Id" : "8",
+              "DelayTime" : "0",
+              "FrameCount" : "2",
+              "Name" : "Ani_TOAShare"
+              },
+              {
+              "Id" : "9",
+              "DelayTime" : "0",
+              "FrameCount" : "6",
+              "Name" : "Ani_Activity"
+              },
+              {
+              "Id" : "10",
+              "DelayTime" : "0",
+              "FrameCount" : "7",
+              "Name" : "Ani_Banker"
+              },
+              {"Id" : "11",
+              "DelayTime" : "0",
+              "FrameCount" : "8",
+              "Name" : "Ani_Red_Packet"
+              }
+              ]
+}

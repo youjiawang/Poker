@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "063058f2-208f-4b67-b545-52e93d8ac1fb",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Ani_SelBanker2": {
+      "ver": "1.0.3",
+      "uuid": "f108d34e-97ec-4c55-937c-529f105e6383",
+      "rawTextureUuid": "063058f2-208f-4b67-b545-52e93d8ac1fb",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -32,
+      "offsetY": 115.5,
+      "trimX": 3,
+      "trimY": 2,
+      "width": 186,
+      "height": 277,
+      "rawWidth": 256,
+      "rawHeight": 512,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

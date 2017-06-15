@@ -1,0 +1,62 @@
+
+WIN.png
+size: 512,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+dihuan
+  rotate: false
+  xy: 2, 2
+  size: 234, 221
+  orig: 235, 221
+  offset: 1, 0
+  index: -1
+guangmang
+  rotate: false
+  xy: 2, 225
+  size: 244, 248
+  orig: 246, 250
+  offset: 1, 1
+  index: -1
+li
+  rotate: false
+  xy: 351, 154
+  size: 97, 91
+  orig: 98, 93
+  offset: 0, 1
+  index: -1
+li2
+  rotate: false
+  xy: 351, 154
+  size: 97, 91
+  orig: 98, 93
+  offset: 0, 1
+  index: -1
+sheng
+  rotate: false
+  xy: 248, 155
+  size: 101, 90
+  orig: 102, 92
+  offset: 1, 1
+  index: -1
+sheng2
+  rotate: false
+  xy: 248, 155
+  size: 101, 90
+  orig: 102, 92
+  offset: 1, 1
+  index: -1
+you
+  rotate: false
+  xy: 248, 247
+  size: 203, 111
+  orig: 203, 112
+  offset: 0, 1
+  index: -1
+zuo
+  rotate: false
+  xy: 248, 360
+  size: 230, 113
+  orig: 230, 113
+  offset: 0, 0
+  index: -1

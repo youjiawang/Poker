@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "387725d4-12b1-4a65-8509-45f38aecbb9f",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "TOA_ClickMenu": {
+      "ver": "1.0.3",
+      "uuid": "bb8542cd-ce0e-4e10-9f87-ff2485032178",
+      "rawTextureUuid": "387725d4-12b1-4a65-8509-45f38aecbb9f",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -1.5,
+      "offsetY": 2,
+      "trimX": 1,
+      "trimY": 0,
+      "width": 49,
+      "height": 49,
+      "rawWidth": 54,
+      "rawHeight": 53,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

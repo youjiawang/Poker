@@ -1,0 +1,153 @@
+
+jidan.png
+size: 791,222
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+jidan/jidan_00000
+  rotate: true
+  xy: 747, 100
+  size: 35, 40
+  orig: 176, 188
+  offset: 72, 83
+  index: -1
+jidan/jidan_00001
+  rotate: false
+  xy: 696, 104
+  size: 51, 54
+  orig: 176, 188
+  offset: 65, 75
+  index: -1
+jidan/jidan_00002
+  rotate: false
+  xy: 691, 12
+  size: 68, 68
+  orig: 176, 188
+  offset: 56, 66
+  index: -1
+jidan/jidan_00003
+  rotate: false
+  xy: 99, 9
+  size: 81, 84
+  orig: 176, 188
+  offset: 49, 56
+  index: -1
+jidan/jidan_00004
+  rotate: true
+  xy: 0, 0
+  size: 93, 99
+  orig: 176, 188
+  offset: 41, 46
+  index: -1
+jidan/jidan_00005
+  rotate: true
+  xy: 399, 118
+  size: 104, 114
+  orig: 176, 188
+  offset: 34, 36
+  index: -1
+jidan/jidan_00006
+  rotate: true
+  xy: 315, 1
+  size: 113, 130
+  orig: 176, 188
+  offset: 27, 25
+  index: -1
+jidan/jidan_00007
+  rotate: true
+  xy: 127, 102
+  size: 120, 131
+  orig: 176, 188
+  offset: 21, 28
+  index: -1
+jidan/jidan_00008
+  rotate: false
+  xy: 0, 93
+  size: 127, 129
+  orig: 176, 188
+  offset: 15, 35
+  index: -1
+jidan/jidan_00009
+  rotate: false
+  xy: 180, 0
+  size: 135, 102
+  orig: 176, 188
+  offset: 10, 66
+  index: -1
+jidan/jidan_00010
+  rotate: false
+  xy: 258, 114
+  size: 141, 108
+  orig: 176, 188
+  offset: 6, 65
+  index: -1
+jidan/jidan_00011
+  rotate: false
+  xy: 445, 7
+  size: 105, 111
+  orig: 176, 188
+  offset: 46, 65
+  index: -1
+jidan/jidan_00012
+  rotate: true
+  xy: 513, 143
+  size: 79, 73
+  orig: 176, 188
+  offset: 53, 64
+  index: -1
+jidan/jidan_00013
+  rotate: false
+  xy: 550, 68
+  size: 75, 75
+  orig: 176, 188
+  offset: 54, 63
+  index: -1
+jidan/jidan_00014
+  rotate: false
+  xy: 625, 80
+  size: 71, 75
+  orig: 176, 188
+  offset: 55, 63
+  index: -1
+jidan/jidan_00015
+  rotate: false
+  xy: 629, 5
+  size: 62, 75
+  orig: 176, 188
+  offset: 59, 62
+  index: -1
+jidan/jidan_00016
+  rotate: true
+  xy: 667, 158
+  size: 64, 77
+  orig: 176, 188
+  offset: 58, 60
+  index: -1
+jidan/jidan_00017
+  rotate: true
+  xy: 550, 2
+  size: 66, 79
+  orig: 176, 188
+  offset: 57, 59
+  index: -1
+jidan/jidan_00018
+  rotate: true
+  xy: 586, 155
+  size: 67, 81
+  orig: 176, 188
+  offset: 57, 58
+  index: -1
+jidan/jidan_00019
+  rotate: false
+  xy: 744, 181
+  size: 47, 41
+  orig: 176, 188
+  offset: 66, 80
+  index: -1
+jidan/jidan_00020
+  rotate: true
+  xy: 747, 135
+  size: 46, 39
+  orig: 176, 188
+  offset: 66, 81
+  index: -1

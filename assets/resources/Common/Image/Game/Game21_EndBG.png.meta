@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "d6d87eda-5d5a-46fb-9a3f-c946bd71525d",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Game21_EndBG": {
+      "ver": "1.0.3",
+      "uuid": "bc8c116a-4cd0-4625-965e-3645db866085",
+      "rawTextureUuid": "d6d87eda-5d5a-46fb-9a3f-c946bd71525d",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 1023,
+      "height": 549,
+      "rawWidth": 1023,
+      "rawHeight": 549,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

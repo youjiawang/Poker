@@ -1,0 +1,293 @@
+
+start2.png
+size: 1024,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+TXZ1
+  rotate: true
+  xy: 670, 235
+  size: 101, 93
+  orig: 103, 94
+  offset: 1, 0
+  index: -1
+kai
+  rotate: true
+  xy: 670, 235
+  size: 101, 93
+  orig: 103, 94
+  offset: 1, 0
+  index: -1
+TXZ2
+  rotate: false
+  xy: 638, 337
+  size: 104, 94
+  orig: 104, 96
+  offset: 0, 1
+  index: -1
+shi
+  rotate: false
+  xy: 638, 337
+  size: 104, 94
+  orig: 104, 96
+  offset: 0, 1
+  index: -1
+di
+  rotate: true
+  xy: 645, 598
+  size: 174, 197
+  orig: 176, 198
+  offset: 1, 0
+  index: -1
+dihuan
+  rotate: true
+  xy: 1, 364
+  size: 209, 196
+  orig: 209, 196
+  offset: 0, 0
+  index: -1
+guangmang
+  rotate: false
+  xy: 1, 803
+  size: 216, 220
+  orig: 218, 222
+  offset: 1, 1
+  index: -1
+jiao1
+  rotate: false
+  xy: 347, 576
+  size: 107, 119
+  orig: 109, 119
+  offset: 1, 0
+  index: -1
+jiao2
+  rotate: true
+  xy: 895, 779
+  size: 107, 119
+  orig: 109, 119
+  offset: 1, 0
+  index: -1
+star
+  rotate: true
+  xy: 369, 379
+  size: 196, 32
+  orig: 198, 32
+  offset: 1, 0
+  index: -1
+新建文件夹/images/xx 1_00014
+  rotate: true
+  xy: 402, 492
+  size: 29, 10
+  orig: 240, 260
+  offset: 107, 144
+  index: -1
+新建文件夹/images/xx 1_00015
+  rotate: false
+  xy: 743, 337
+  size: 39, 16
+  orig: 240, 260
+  offset: 103, 139
+  index: -1
+新建文件夹/images/xx 1_00016
+  rotate: true
+  xy: 997, 976
+  size: 47, 26
+  orig: 240, 260
+  offset: 100, 134
+  index: -1
+新建文件夹/images/xx 1_00017
+  rotate: true
+  xy: 402, 522
+  size: 53, 36
+  orig: 240, 260
+  offset: 99, 129
+  index: -1
+新建文件夹/images/xx 1_00018
+  rotate: false
+  xy: 185, 162
+  size: 59, 54
+  orig: 240, 260
+  offset: 97, 124
+  index: -1
+新建文件夹/images/xx 1_00019
+  rotate: false
+  xy: 566, 419
+  size: 65, 72
+  orig: 240, 260
+  offset: 95, 120
+  index: -1
+新建文件夹/images/xx 1_00020
+  rotate: false
+  xy: 566, 330
+  size: 71, 88
+  orig: 240, 260
+  offset: 92, 117
+  index: -1
+新建文件夹/images/xx 1_00021
+  rotate: true
+  xy: 743, 354
+  size: 77, 101
+  orig: 240, 260
+  offset: 89, 114
+  index: -1
+新建文件夹/images/xx 1_00022
+  rotate: false
+  xy: 588, 218
+  size: 81, 111
+  orig: 240, 260
+  offset: 87, 111
+  index: -1
+新建文件夹/images/xx 1_00023
+  rotate: false
+  xy: 933, 482
+  size: 86, 121
+  orig: 240, 260
+  offset: 85, 107
+  index: -1
+新建文件夹/images/xx 1_00024
+  rotate: false
+  xy: 494, 200
+  size: 93, 129
+  orig: 240, 260
+  offset: 84, 104
+  index: -1
+新建文件夹/images/xx 1_00025
+  rotate: false
+  xy: 893, 887
+  size: 103, 136
+  orig: 240, 260
+  offset: 79, 102
+  index: -1
+新建文件夹/images/xx 1_00026
+  rotate: true
+  xy: 350, 217
+  size: 112, 143
+  orig: 240, 260
+  offset: 74, 99
+  index: -1
+新建文件夹/images/xx 1_00027
+  rotate: true
+  xy: 197, 576
+  size: 119, 149
+  orig: 240, 260
+  offset: 70, 97
+  index: -1
+新建文件夹/images/xx 1_00028
+  rotate: false
+  xy: 803, 442
+  size: 129, 155
+  orig: 240, 260
+  offset: 64, 94
+  index: -1
+新建文件夹/images/xx 1_00029
+  rotate: false
+  xy: 160, 1
+  size: 139, 160
+  orig: 240, 260
+  offset: 57, 91
+  index: -1
+新建文件夹/images/xx 1_00030
+  rotate: true
+  xy: 198, 237
+  size: 150, 151
+  orig: 240, 260
+  offset: 50, 101
+  index: -1
+新建文件夹/images/xx 1_00031
+  rotate: true
+  xy: 1, 1
+  size: 160, 158
+  orig: 240, 260
+  offset: 43, 95
+  index: -1
+新建文件夹/images/xx 1_00032
+  rotate: false
+  xy: 632, 432
+  size: 170, 165
+  orig: 240, 260
+  offset: 36, 88
+  index: -1
+新建文件夹/images/xx 1_00033
+  rotate: false
+  xy: 843, 604
+  size: 180, 168
+  orig: 240, 260
+  offset: 30, 84
+  index: -1
+新建文件夹/images/xx 1_00034
+  rotate: true
+  xy: 198, 388
+  size: 187, 170
+  orig: 240, 260
+  offset: 26, 79
+  index: -1
+新建文件夹/images/xx 1_00035
+  rotate: false
+  xy: 402, 330
+  size: 163, 161
+  orig: 240, 260
+  offset: 21, 71
+  index: -1
+新建文件夹/images/xx 1_00036
+  rotate: true
+  xy: 455, 492
+  size: 171, 176
+  orig: 240, 260
+  offset: 17, 61
+  index: -1
+新建文件夹/images/xx 1_00037
+  rotate: true
+  xy: 455, 664
+  size: 177, 189
+  orig: 240, 260
+  offset: 14, 53
+  index: -1
+新建文件夹/images/xx 1_00038
+  rotate: false
+  xy: 1, 162
+  size: 183, 201
+  orig: 240, 260
+  offset: 13, 45
+  index: -1
+新建文件夹/images/xx 1_00039
+  rotate: true
+  xy: 440, 842
+  size: 181, 211
+  orig: 240, 260
+  offset: 19, 38
+  index: -1
+新建文件夹/images/xx 1_00040
+  rotate: true
+  xy: 218, 833
+  size: 190, 221
+  orig: 240, 260
+  offset: 15, 30
+  index: -1
+新建文件夹/images/xx 1_00041
+  rotate: false
+  xy: 1, 574
+  size: 195, 228
+  orig: 240, 260
+  offset: 15, 25
+  index: -1
+新建文件夹/images/xx 1_00042
+  rotate: true
+  xy: 218, 696
+  size: 136, 236
+  orig: 240, 260
+  offset: 77, 18
+  index: -1
+新建文件夹/images/xx 1_00043
+  rotate: true
+  xy: 652, 885
+  size: 138, 240
+  orig: 240, 260
+  offset: 76, 13
+  index: -1
+新建文件夹/images/xx 1_00044
+  rotate: true
+  xy: 652, 773
+  size: 111, 242
+  orig: 240, 260
+  offset: 75, 9
+  index: -1

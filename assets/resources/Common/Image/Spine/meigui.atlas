@@ -1,0 +1,216 @@
+
+meigui.png
+size: 994,809
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+meigui/meigui_00000
+  rotate: false
+  xy: 880, 588
+  size: 106, 107
+  orig: 176, 188
+  offset: 35, 45
+  index: -1
+meigui/meigui_00001
+  rotate: false
+  xy: 880, 695
+  size: 114, 114
+  orig: 176, 188
+  offset: 35, 45
+  index: -1
+meigui/meigui_00002
+  rotate: false
+  xy: 846, 69
+  size: 127, 122
+  orig: 176, 188
+  offset: 32, 43
+  index: -1
+meigui/meigui_00003
+  rotate: true
+  xy: 846, 191
+  size: 146, 142
+  orig: 176, 188
+  offset: 23, 36
+  index: -1
+meigui/meigui_00004
+  rotate: false
+  xy: 704, 337
+  size: 156, 148
+  orig: 176, 188
+  offset: 17, 32
+  index: -1
+meigui/meigui_00005
+  rotate: false
+  xy: 0, 2
+  size: 166, 158
+  orig: 176, 188
+  offset: 10, 27
+  index: -1
+meigui/meigui_00006
+  rotate: false
+  xy: 522, 0
+  size: 168, 161
+  orig: 176, 188
+  offset: 8, 26
+  index: -1
+meigui/meigui_00007
+  rotate: false
+  xy: 351, 0
+  size: 171, 161
+  orig: 176, 188
+  offset: 5, 27
+  index: -1
+meigui/meigui_00008
+  rotate: false
+  xy: 176, 0
+  size: 175, 161
+  orig: 176, 188
+  offset: 1, 27
+  index: -1
+meigui/meigui_00009
+  rotate: false
+  xy: 0, 646
+  size: 176, 163
+  orig: 176, 188
+  offset: 0, 25
+  index: -1
+meigui/meigui_00010
+  rotate: false
+  xy: 0, 484
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00011
+  rotate: false
+  xy: 176, 647
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00012
+  rotate: false
+  xy: 0, 322
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00013
+  rotate: false
+  xy: 176, 485
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00014
+  rotate: false
+  xy: 352, 647
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00015
+  rotate: false
+  xy: 0, 160
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00016
+  rotate: false
+  xy: 176, 323
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00017
+  rotate: false
+  xy: 352, 485
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00018
+  rotate: false
+  xy: 528, 647
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00019
+  rotate: false
+  xy: 176, 161
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00020
+  rotate: false
+  xy: 352, 323
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00021
+  rotate: false
+  xy: 528, 485
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00022
+  rotate: false
+  xy: 704, 647
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00023
+  rotate: false
+  xy: 352, 161
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00024
+  rotate: false
+  xy: 528, 323
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00025
+  rotate: false
+  xy: 704, 485
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00026
+  rotate: false
+  xy: 528, 161
+  size: 176, 162
+  orig: 176, 188
+  offset: 0, 26
+  index: -1
+meigui/meigui_00027
+  rotate: true
+  xy: 704, 178
+  size: 159, 142
+  orig: 176, 188
+  offset: 8, 39
+  index: -1
+meigui/meigui_00028
+  rotate: true
+  xy: 690, 2
+  size: 159, 142
+  orig: 176, 188
+  offset: 8, 39
+  index: -1
+meigui/meigui_00029
+  rotate: true
+  xy: 860, 339
+  size: 146, 127
+  orig: 176, 188
+  offset: 15, 47
+  index: -1

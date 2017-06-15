@@ -1,0 +1,104 @@
+
+tuoxie.png
+size: 241,531
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+tuoxie/tuoxie_00000
+  rotate: true
+  xy: 123, 9
+  size: 44, 43
+  orig: 176, 188
+  offset: 67, 80
+  index: -1
+tuoxie/tuoxie_00001
+  rotate: false
+  xy: 69, 3
+  size: 54, 54
+  orig: 176, 188
+  offset: 59, 74
+  index: -1
+tuoxie/tuoxie_00002
+  rotate: false
+  xy: 93, 60
+  size: 61, 66
+  orig: 176, 188
+  offset: 51, 65
+  index: -1
+tuoxie/tuoxie_00003
+  rotate: false
+  xy: 154, 53
+  size: 79, 73
+  orig: 176, 188
+  offset: 43, 60
+  index: -1
+tuoxie/tuoxie_00004
+  rotate: false
+  xy: 0, 57
+  size: 93, 79
+  orig: 176, 188
+  offset: 35, 55
+  index: -1
+tuoxie/tuoxie_00005
+  rotate: false
+  xy: 112, 126
+  size: 105, 86
+  orig: 176, 188
+  offset: 27, 50
+  index: -1
+tuoxie/tuoxie_00006
+  rotate: false
+  xy: 125, 333
+  size: 116, 97
+  orig: 176, 188
+  offset: 21, 46
+  index: -1
+tuoxie/tuoxie_00007
+  rotate: false
+  xy: 0, 319
+  size: 122, 101
+  orig: 176, 188
+  offset: 21, 49
+  index: -1
+tuoxie/tuoxie_00008
+  rotate: false
+  xy: 0, 420
+  size: 125, 111
+  orig: 176, 188
+  offset: 21, 46
+  index: -1
+tuoxie/tuoxie_00009
+  rotate: true
+  xy: 122, 212
+  size: 121, 117
+  orig: 176, 188
+  offset: 26, 46
+  index: -1
+tuoxie/tuoxie_00010
+  rotate: true
+  xy: 125, 430
+  size: 101, 116
+  orig: 176, 188
+  offset: 47, 46
+  index: -1
+tuoxie/tuoxie_00011
+  rotate: false
+  xy: 0, 208
+  size: 112, 111
+  orig: 176, 188
+  offset: 32, 56
+  index: -1
+tuoxie/tuoxie_00012
+  rotate: false
+  xy: 0, 136
+  size: 101, 72
+  orig: 176, 188
+  offset: 32, 96
+  index: -1
+tuoxie/tuoxie_00013
+  rotate: false
+  xy: 0, 0
+  size: 69, 57
+  orig: 176, 188
+  offset: 37, 101
+  index: -1

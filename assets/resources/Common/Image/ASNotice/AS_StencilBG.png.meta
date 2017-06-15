@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "95292a80-a835-4700-8422-fcf7df765049",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "AS_StencilBG": {
+      "ver": "1.0.3",
+      "uuid": "585dfabb-8711-43d4-8379-62358bc47f0d",
+      "rawTextureUuid": "95292a80-a835-4700-8422-fcf7df765049",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 0,
+      "offsetY": 0,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 973,
+      "height": 525,
+      "rawWidth": 973,
+      "rawHeight": 525,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

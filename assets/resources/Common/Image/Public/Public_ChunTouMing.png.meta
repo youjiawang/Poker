@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "b2850ab6-2e4f-42d5-a6cd-b80bf325755b",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "Public_ChunTouMing": {
+      "ver": "1.0.3",
+      "uuid": "d41bf58f-88e3-4197-94d5-fede0980828d",
+      "rawTextureUuid": "b2850ab6-2e4f-42d5-a6cd-b80bf325755b",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": 2.5,
+      "offsetY": -2.5,
+      "trimX": 5,
+      "trimY": 5,
+      "width": 0,
+      "height": 0,
+      "rawWidth": 5,
+      "rawHeight": 5,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
