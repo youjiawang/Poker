@@ -24,7 +24,8 @@ cc.Class({
             let card = new cc.Node();
             card.addComponent(cc.Sprite).spriteFrame = this.poker.getSpriteFrame('pkc_' + data[k].value + '0' + (data[k].color + 1));
             card.setScale(0.8);
-            card.parent = cc.find('Canvas/My');
+            card.parent = cc.find('Canvas/my/card');
+            cc.log(k)
         }
     },
     showStart() {

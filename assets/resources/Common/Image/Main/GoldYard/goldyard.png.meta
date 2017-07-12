@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "e7bcf271-0a76-4cf5-8690-92e747ab3ab8",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "goldyard": {
+      "ver": "1.0.3",
+      "uuid": "3a954bb1-e2c3-40c8-be85-e12380246878",
+      "rawTextureUuid": "e7bcf271-0a76-4cf5-8690-92e747ab3ab8",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -13,
+      "offsetY": 10,
+      "trimX": 2,
+      "trimY": 2,
+      "width": 994,
+      "height": 1000,
+      "rawWidth": 1024,
+      "rawHeight": 1024,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
