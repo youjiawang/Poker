@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "607bcf66-fbe5-4066-991b-8b4b49d2b29c",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "sign_days_font2-export": {
+      "ver": "1.0.3",
+      "uuid": "b1858e4a-410e-443c-8a33-c44c63b17b78",
+      "rawTextureUuid": "607bcf66-fbe5-4066-991b-8b4b49d2b29c",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -14.5,
+      "offsetY": 8.5,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 99,
+      "height": 47,
+      "rawWidth": 128,
+      "rawHeight": 64,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}

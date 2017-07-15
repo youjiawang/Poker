@@ -1,0 +1,30 @@
+{
+  "ver": "1.0.0",
+  "uuid": "c90c3877-a038-4ec9-801f-bd46793a4c45",
+  "type": "sprite",
+  "wrapMode": "clamp",
+  "filterMode": "bilinear",
+  "subMetas": {
+    "activity_ontime_Sign_Time_FontBtn1-export": {
+      "ver": "1.0.3",
+      "uuid": "b05dde0d-b8f0-4713-af1c-920595900fa8",
+      "rawTextureUuid": "c90c3877-a038-4ec9-801f-bd46793a4c45",
+      "trimType": "auto",
+      "trimThreshold": 1,
+      "rotated": false,
+      "offsetX": -3.5,
+      "offsetY": 0.5,
+      "trimX": 0,
+      "trimY": 0,
+      "width": 57,
+      "height": 63,
+      "rawWidth": 64,
+      "rawHeight": 64,
+      "borderTop": 0,
+      "borderBottom": 0,
+      "borderLeft": 0,
+      "borderRight": 0,
+      "subMetas": {}
+    }
+  }
+}
