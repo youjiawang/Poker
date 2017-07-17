@@ -16,17 +16,39 @@ cc.Class({
 
     // use this for initialization
     onLoad() {
-        GameData.uId = 100
-        net.on('onopen', () => {
-            cc.director.loadScene('main')
+        cc.director.setDisplayStats(true)
+        net.on('User_init', (data) => {
+            cc.log('----')
+            cc.log(data)
         }, this)
+        net.on('Room_create', (data) => {
+            cc.log('----')
+            cc.log(data)
+        }, this)
+        net.on('Room_enter', (data) => {
+            cc.log('----')
+            cc.log(data)
+        }, this)
+        net.send('User_init')
     },
 
     // called every frame, uncomment this function to activate update callback
-    // update (dt) {
+    // update: function (dt) {
 
     // },
     onDestroy() {
-        net.off('onopen', this)
+        net.off('User_init', this)
+        net.off('Room_create', this)
+        net.off('Room_enter', this)
+    },
+    createRoom() {
+        net.send('Room_create', { 'gameId': 1, 'types': { '1': 1, '2': 1, '3': 2 } })
+    },
+    enterRoom() {
+        net.send('Room_enter', { 'roomId': 1 })
+    },
+    randomRoom() {
+
     }
+
 })

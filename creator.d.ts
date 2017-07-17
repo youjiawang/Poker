@@ -1188,8 +1188,8 @@ declare module cc {
 	!#zh 系统事件单例，方便全局使用 */
 	export var systemEvent: SystemEvent;	
 	/**
-	!#en Defines a CCClass using the given specification, please see [Class](/docs/editors_and_tools/creator-chapters/scripting/class-es5/) for details.
-	!#zh 定义一个 CCClass，传入参数必须是一个包含类型参数的字面量对象，具体用法请查阅[类型定义](/docs/creator/scripting/class-es5/)。
+	!#en Defines a CCClass using the given specification, please see [Class](/docs/editors_and_tools/creator-chapters/scripting/class.html) for details.
+	!#zh 定义一个 CCClass，传入参数必须是一个包含类型参数的字面量对象，具体用法请查阅[类型定义](/docs/creator/scripting/class.html)。
 	@param options options
 	
 	@example 
@@ -1961,7 +1961,7 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0 , 0, 10, 0);
+	var a = new cc.Rect(0 , 0, 10, 0);
 	``` 
 	*/
 	export function rect(x?: number, y?: number, w?: number, h?: number): Rect;	
@@ -1973,10 +1973,10 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0, 0, 10, 10);
-	var b = new cc.rect(0, 0, 5, 5);
+	var a = new cc.Rect(0, 0, 10, 10);
+	var b = new cc.Rect(0, 0, 5, 5);
 	cc.rectEqualToRect(a, b); // false;
-	var c = new cc.rect(0, 0, 5, 5);
+	var c = new cc.Rect(0, 0, 5, 5);
 	cc.rectEqualToRect(b, c); // true;
 	``` 
 	*/
@@ -1991,8 +1991,8 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0, 0, 20, 20);
-	var b = new cc.rect(10, 10, 20, 20);
+	var a = new cc.Rect(0, 0, 20, 20);
+	var b = new cc.Rect(10, 10, 20, 20);
 	cc.rectContainsRect(a, b); // true;
 	``` 
 	*/
@@ -2004,7 +2004,7 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(10, 0, 20, 20);
+	var a = new cc.Rect(10, 0, 20, 20);
 	cc.rectGetMaxX(a); // 30;
 	``` 
 	*/
@@ -2016,7 +2016,7 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(10, 0, 20, 20);
+	var a = new cc.Rect(10, 0, 20, 20);
 	cc.rectGetMidX(a); // 20;
 	``` 
 	*/
@@ -2028,7 +2028,7 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(10, 0, 20, 20);
+	var a = new cc.Rect(10, 0, 20, 20);
 	cc.rectGetMinX(a); // 10;
 	``` 
 	*/
@@ -2040,7 +2040,7 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0, 10, 20, 20);
+	var a = new cc.Rect(0, 10, 20, 20);
 	cc.rectGetMaxY(a); // 30;
 	``` 
 	*/
@@ -2052,7 +2052,7 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0, 10, 20, 20);
+	var a = new cc.Rect(0, 10, 20, 20);
 	cc.rectGetMidY(a); // 20;
 	``` 
 	*/
@@ -2064,7 +2064,7 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0, 10, 20, 20);
+	var a = new cc.Rect(0, 10, 20, 20);
 	cc.rectGetMinY(a); // 10;
 	``` 
 	*/
@@ -2077,8 +2077,8 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0, 10, 20, 20);
-	var b = cc.v2(0, 10, 10, 10);
+	var a = new cc.Rect(0, 10, 20, 20);
+	var b = new cc.Vec2(0, 10, 10, 10);
 	cc.rectContainsPoint(a, b); // true;
 	``` 
 	*/
@@ -2091,8 +2091,8 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0, 10, 20, 20);
-	var b = new cc.rect(0, 10, 10, 10);
+	var a = new cc.Rect(0, 10, 20, 20);
+	var b = new cc.Rect(0, 10, 10, 10);
 	cc.rectIntersectsRect(a, b); // true;
 	``` 
 	*/
@@ -2105,8 +2105,8 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0, 10, 20, 20);
-	var b = new cc.rect(0, 10, 10, 10);
+	var a = new cc.Rect(0, 10, 20, 20);
+	var b = new cc.Rect(0, 10, 10, 10);
 	cc.rectOverlapsRect(a, b); // true;
 	``` 
 	*/
@@ -2119,8 +2119,8 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0, 10, 20, 20);
-	var b = new cc.rect(0, 10, 10, 10);
+	var a = new cc.Rect(0, 10, 20, 20);
+	var b = new cc.Rect(0, 10, 10, 10);
 	cc.rectUnion(a, b); // Rect {x: 0, y: 10, width: 20, height: 20};
 	``` 
 	*/
@@ -2133,8 +2133,8 @@ declare module cc {
 	
 	@example 
 	```js
-	var a = new cc.rect(0, 10, 20, 20);
-	var b = new cc.rect(0, 10, 10, 10);
+	var a = new cc.Rect(0, 10, 20, 20);
+	var b = new cc.Rect(0, 10, 10, 10);
 	cc.rectIntersection(a, b); // Rect {x: 0, y: 10, width: 10, height: 10};
 	``` 
 	*/
@@ -2233,6 +2233,144 @@ declare module cc {
 		INFO_FOR_WEB_PAGE = 0,
 		WARN_FOR_WEB_PAGE = 0,
 		ERROR_FOR_WEB_PAGE = 0,	
+	}	
+	/** !#en
+	 cc.NodePool is the cache pool designed for node type.<br/>
+	 It can helps you to improve your game performance for objects which need frequent release and recreate operations<br/>
+	
+	It's recommended to create cc.NodePool instances by node type, the type corresponds to node type in game design, not the class,
+	for example, a prefab is a specific node type. <br/>
+	When you create a node pool, you can pass a Component which contains `unuse`, `reuse` functions to control the content of node.<br/>
+	
+	Some common use case is :<br/>
+	     1. Bullets in game (die very soon, massive creation and recreation, no side effect on other objects)<br/>
+	     2. Blocks in candy crash (massive creation and recreation)<br/>
+	     etc...
+	!#zh
+	cc.NodePool 是用于管理节点对象的对象缓存池。<br/>
+	它可以帮助您提高游戏性能，适用于优化对象的反复创建和销毁<br/>
+	以前 cocos2d-x 中的 cc.pool 和新的节点事件注册系统不兼容，因此请使用 cc.NodePool 来代替。
+	
+	新的 NodePool 需要实例化之后才能使用，每种不同的节点对象池需要一个不同的对象池实例，这里的种类对应于游戏中的节点设计，一个 prefab 相当于一个种类的节点。<br/>
+	在创建缓冲池时，可以传入一个包含 unuse, reuse 函数的组件类型用于节点的回收和复用逻辑。<br/>
+	
+	一些常见的用例是：<br/>
+	     1.在游戏中的子弹（死亡很快，频繁创建，对其他对象无副作用）<br/>
+	     2.糖果粉碎传奇中的木块（频繁创建）。
+	     等等.... */
+	export class NodePool {		
+		/**
+		!#en
+		Constructor for creating a pool for a specific node template (usually a prefab). You can pass a component (type or name) argument for handling event for reusing and recycling node.
+		!#zh
+		使用构造函数来创建一个节点专用的对象池，您可以传递一个组件类型或名称，用于处理节点回收和复用时的事件逻辑。
+		@param poolHandlerComp !#en The constructor or the class name of the component to control the unuse/reuse logic. !#zh 处理节点回收和复用事件逻辑的组件类型或名称。
+		
+		@example 
+		```js
+		properties: {
+		   template: cc.Prefab
+		 },
+		 onLoad () {
+		// MyTemplateHandler is a component with 'unuse' and 'reuse' to handle events when node is reused or recycled.
+		   this.myPool = new cc.NodePool('MyTemplateHandler');
+		 }
+		``` 
+		*/
+		constructor(poolHandlerComp?: {prototype: Component}|string);		
+		/** !#en The pool handler component, it could be the class name or the constructor.
+		!#zh 缓冲池处理组件，用于节点的回收和复用逻辑，这个属性可以是组件类名或组件的构造函数。 */
+		poolHandlerComp: Function|string;		
+		/**
+		!#en The current available size in the pool
+		!#zh 获取当前缓冲池的可用对象数量 
+		*/
+		size(): number;		
+		/**
+		!#en Destroy all cached nodes in the pool
+		!#zh 销毁对象池中缓存的所有节点 
+		*/
+		clear(): void;		
+		/**
+		!#en Put a new Node into the pool.
+		It will automatically remove the node from its parent without cleanup.
+		It will also invoke unuse method of the poolHandlerComp if exist.
+		!#zh 向缓冲池中存入一个不再需要的节点对象。
+		这个函数会自动将目标节点从父节点上移除，但是不会进行 cleanup 操作。
+		这个函数会调用 poolHandlerComp 的 unuse 函数，如果组件和函数都存在的话。
+		@param obj obj
+		
+		@example 
+		```js
+		let myNode = cc.instantiate(this.template);
+		  this.myPool.put(myNode);
+		``` 
+		*/
+		put(obj: Node): void;		
+		/**
+		!#en Get a obj from pool, if no available object in pool, null will be returned.
+		This function will invoke the reuse function of poolHandlerComp if exist.
+		!#zh 获取对象池中的对象，如果对象池没有可用对象，则返回空。
+		这个函数会调用 poolHandlerComp 的 reuse 函数，如果组件和函数都存在的话。
+		@param params !#en Params to pass to 'reuse' method in poolHandlerComp !#zh 向 poolHandlerComp 中的 'reuse' 函数传递的参数
+		
+		@example 
+		```js
+		let newNode = this.myPool.get();
+		``` 
+		*/
+		get(...params: any[]): Node;	
+	}	
+	/** !#en
+	 Attention: In creator, it's strongly not recommended to use cc.pool to manager cc.Node.
+	 We provided {{#crossLink "NodePool"}}cc.NodePool{{/crossLink}} instead.
+	
+	 cc.pool is a singleton object serves as an object cache pool.<br/>
+	 It can helps you to improve your game performance for objects which need frequent release and recreate operations<br/>
+	!#zh
+	首先请注意，在 Creator 中我们强烈不建议使用 cc.pool 来管理 cc.Node 节点对象，请使用 {{#crossLink "NodePool"}}cc.NodePool{{/crossLink}} 代替
+	因为 cc.pool 是面向类来设计的，而 cc.Node 中使用 Component 来进行组合，它的类永远都一样，实际却千差万别。
+	
+	cc.pool 是一个单例对象，用作为对象缓存池。<br/>
+	它可以帮助您提高游戏性能，适用于优化对象的反复创建和销毁<br/> */
+	export class pool {		
+		/**
+		!#en Put the obj in pool.
+		!#zh 加入对象到对象池中。
+		@param obj The need put in pool object.
+		
+		@example 
+		```js
+		---------------------------------
+		var sp = new _ccsg.Sprite("a.png");
+		this.addChild(sp);
+		cc.pool.putInPool(sp);
+		cc.pool.getFromPool(_ccsg.Sprite, "a.png");
+		
+		``` 
+		*/
+		putInPool(obj: any): void;		
+		/**
+		!#en Check if this kind of obj has already in pool.
+		!#zh 检查对象池中是否有指定对象的存在。
+		@param objClass The check object class. 
+		*/
+		hasObject(objClass: any): boolean;		
+		/**
+		!#en Remove the obj if you want to delete it.
+		!#zh 移除在对象池中指定的对象。 
+		*/
+		removeObject(): void;		
+		/**
+		!#en Get the obj from pool.
+		!#zh 获取对象池中的指定对象。 
+		*/
+		getFromPool(): any;		
+		/**
+		!#en Remove all objs in pool and reset the pool.
+		!#zh 移除对象池中的所有对象，并且重置对象池。 
+		*/
+		drainAllPools(): void;	
 	}	
 	/** !#en Base class cc.Action for action classes.
 	!#zh Action 类是所有动作类型的基类。 */
@@ -2783,286 +2921,6 @@ declare module cc {
 		*/
 		static setMaxWebAudioSize(kb: void): void;	
 	}	
-	/** Particle System base class. <br/>
-	Attributes of a Particle System:<br/>
-	 - emmision rate of the particles<br/>
-	 - Gravity Mode (Mode A): <br/>
-	 - gravity <br/>
-	 - direction <br/>
-	 - speed +-  variance <br/>
-	 - tangential acceleration +- variance<br/>
-	 - radial acceleration +- variance<br/>
-	 - Radius Mode (Mode B):      <br/>
-	 - startRadius +- variance    <br/>
-	 - endRadius +- variance      <br/>
-	 - rotate +- variance         <br/>
-	 - Properties common to all modes: <br/>
-	 - life +- life variance      <br/>
-	 - start spin +- variance     <br/>
-	 - end spin +- variance       <br/>
-	 - start size +- variance     <br/>
-	 - end size +- variance       <br/>
-	 - start color +- variance    <br/>
-	 - end color +- variance      <br/>
-	 - life +- variance           <br/>
-	 - blending function          <br/>
-	 - texture                    <br/>
-	<br/>
-	cocos2d also supports particles generated by Particle Designer (http://particledesigner.71squared.com/).<br/>
-	'Radius Mode' in Particle Designer uses a fixed emit rate of 30 hz. Since that can't be guarateed in cocos2d,  <br/>
-	cocos2d uses a another approach, but the results are almost identical.<br/>
-	cocos2d supports all the variables used by Particle Designer plus a bit more:  <br/>
-	 - spinning particles (supported when using ParticleSystem)       <br/>
-	 - tangential acceleration (Gravity mode)                               <br/>
-	 - radial acceleration (Gravity mode)                                   <br/>
-	 - radius direction (Radius mode) (Particle Designer supports outwards to inwards direction only) <br/>
-	It is possible to customize any of the above mentioned properties in runtime. Example:   <br/> */
-	export class ParticleSystem extends _RendererUnderSG {		
-		/** !#en Play particle in edit mode.
-		!#zh 在编辑器模式下预览粒子，启用后选中粒子时，粒子将自动播放。 */
-		preview: boolean;		
-		/** !#en
-		If set custom to true, then use custom properties insteadof read particle file.
-		!#zh 是否自定义粒子属性。 */
-		custom: boolean;		
-		/** !#en The plist file.
-		!#zh plist 格式的粒子配置文件。 */
-		file: string;		
-		/** . */
-		texture: Texture2D;		
-		/** !#en Current quantity of particles that are being simulated.
-		!#zh 当前播放的粒子数量。 */
-		particleCount: number;		
-		/** !#en Specify the source Blend Factor.
-		!#zh 指定原图混合模式。 */
-		srcBlendFactor: BlendFactor;		
-		/** !#en Specify the destination Blend Factor.
-		!#zh 指定目标的混合模式。 */
-		dstBlendFactor: BlendFactor;		
-		/** !#en If set to true, the particle system will automatically start playing on onLoad.
-		!#zh 如果设置为 true 运行时会自动发射粒子。 */
-		playOnLoad: boolean;		
-		/** !#en Indicate whether the owner node will be auto-removed when it has no particles left.
-		!#zh 粒子播放完毕后自动销毁所在的节点。 */
-		autoRemoveOnFinish: boolean;		
-		/** !#en Indicate whether the particle system is activated.
-		!#zh 是否激活粒子。 */
-		active: boolean;		
-		/** !#en Maximum particles of the system.
-		!#zh 粒子最大数量。 */
-		totalParticles: number;		
-		/** !#en How many seconds the emitter wil run. -1 means 'forever'.
-		!#zh 发射器生存时间，单位秒，-1表示持续发射。 */
-		duration: number;		
-		/** !#en Emission rate of the particles.
-		!#zh 每秒发射的粒子数目。 */
-		emissionRate: number;		
-		/** !#en Life of each particle setter.
-		!#zh 粒子的运行时间。 */
-		life: number;		
-		/** !#en Variation of life.
-		!#zh 粒子的运行时间变化范围。 */
-		lifeVar: number;		
-		/** !#en Start color of each particle.
-		!#zh 粒子初始颜色。 */
-		startColor: Color;		
-		/** !#en Variation of the start color.
-		!#zh 粒子初始颜色变化范围。 */
-		startColorVar: Color;		
-		/** !#en Ending color of each particle.
-		!#zh 粒子结束颜色。 */
-		endColor: Color;		
-		/** !#en Variation of the end color.
-		!#zh 粒子结束颜色变化范围。 */
-		endColorVar: Color;		
-		/** !#en Angle of each particle setter.
-		!#zh 粒子角度。 */
-		angle: number;		
-		/** !#en Variation of angle of each particle setter.
-		!#zh 粒子角度变化范围。 */
-		angleVar: number;		
-		/** !#en Start size in pixels of each particle.
-		!#zh 粒子的初始大小。 */
-		startSize: number;		
-		/** !#en Variation of start size in pixels.
-		!#zh 粒子初始大小的变化范围。 */
-		startSizeVar: number;		
-		/** !#en End size in pixels of each particle.
-		!#zh 粒子结束时的大小。 */
-		endSize: number;		
-		/** !#en Variation of end size in pixels.
-		!#zh 粒子结束大小的变化范围。 */
-		endSizeVar: number;		
-		/** !#en Start angle of each particle.
-		!#zh 粒子开始自旋角度。 */
-		startSpin: number;		
-		/** !#en Variation of start angle.
-		!#zh 粒子开始自旋角度变化范围。 */
-		startSpinVar: number;		
-		/** !#en End angle of each particle.
-		!#zh 粒子结束自旋角度。 */
-		endSpin: number;		
-		/** !#en Variation of end angle.
-		!#zh 粒子结束自旋角度变化范围。 */
-		endSpinVar: number;		
-		/** !#en Source position of the emitter.
-		!#zh 发射器位置。 */
-		sourcePos: Vec2;		
-		/** !#en Variation of source position.
-		!#zh 发射器位置的变化范围。（横向和纵向） */
-		posVar: Vec2;		
-		/** !#en Particles movement type.
-		!#zh 粒子位置类型。 */
-		positionType: ParticleSystem.PositionType;		
-		/** !#en Particles emitter modes.
-		!#zh 发射器类型。 */
-		emitterMode: ParticleSystem.EmitterMode;		
-		/** !#en Gravity of the emitter.
-		!#zh 重力。 */
-		gravity: Vec2;		
-		/** !#en Speed of the emitter.
-		!#zh 速度。 */
-		speed: number;		
-		/** !#en Variation of the speed.
-		!#zh 速度变化范围。 */
-		speedVar: number;		
-		/** !#en Tangential acceleration of each particle. Only available in 'Gravity' mode.
-		!#zh 每个粒子的切向加速度，即垂直于重力方向的加速度，只有在重力模式下可用。 */
-		tangentialAccel: number;		
-		/** !#en Variation of the tangential acceleration.
-		!#zh 每个粒子的切向加速度变化范围。 */
-		tangentialAccelVar: number;		
-		/** !#en Acceleration of each particle. Only available in 'Gravity' mode.
-		!#zh 粒子径向加速度，即平行于重力方向的加速度，只有在重力模式下可用。 */
-		radialAccel: number;		
-		/** !#en Variation of the radial acceleration.
-		!#zh 粒子径向加速度变化范围。 */
-		radialAccelVar: number;		
-		/** !#en Indicate whether the rotation of each particle equals to its direction. Only available in 'Gravity' mode.
-		!#zh 每个粒子的旋转是否等于其方向，只有在重力模式下可用。 */
-		rotationIsDir: boolean;		
-		/** !#en Starting radius of the particles. Only available in 'Radius' mode.
-		!#zh 初始半径，表示粒子出生时相对发射器的距离，只有在半径模式下可用。 */
-		startRadius: number;		
-		/** !#en Variation of the starting radius.
-		!#zh 初始半径变化范围。 */
-		startRadiusVar: number;		
-		/** !#en Ending radius of the particles. Only available in 'Radius' mode.
-		!#zh 结束半径，只有在半径模式下可用。 */
-		endRadius: number;		
-		/** !#en Variation of the ending radius.
-		!#zh 结束半径变化范围。 */
-		endRadiusVar: number;		
-		/** !#en Number of degress to rotate a particle around the source pos per second. Only available in 'Radius' mode.
-		!#zh 粒子每秒围绕起始点的旋转角度，只有在半径模式下可用。 */
-		rotatePerS: number;		
-		/** !#en Variation of the degress to rotate a particle around the source pos per second.
-		!#zh 粒子每秒围绕起始点的旋转角度变化范围。 */
-		rotatePerSVar: number;		
-		/** !#en The Particle emitter lives forever.
-		!#zh 表示发射器永久存在 */
-		static DURATION_INFINITY: number;		
-		/** !#en The starting size of the particle is equal to the ending size.
-		!#zh 表示粒子的起始大小等于结束大小。 */
-		static START_SIZE_EQUAL_TO_END_SIZE: number;		
-		/** !#en The starting radius of the particle is equal to the ending radius.
-		!#zh 表示粒子的起始半径等于结束半径。 */
-		static START_RADIUS_EQUAL_TO_END_RADIUS: number;		
-		/**
-		!#en Add a particle to the emitter.
-		!#zh 添加一个粒子到发射器中。 
-		*/
-		addParticle(): boolean;		
-		/**
-		!#en Stop emitting particles. Running particles will continue to run until they die.
-		!#zh 停止发射器发射粒子，发射出去的粒子将继续运行，直至粒子生命结束。
-		
-		@example 
-		```js
-		// stop particle system.
-		myParticleSystem.stopSystem();
-		``` 
-		*/
-		stopSystem(): void;		
-		/**
-		!#en Kill all living particles.
-		!#zh 杀死所有存在的粒子，然后重新启动粒子发射器。
-		
-		@example 
-		```js
-		// play particle system.
-		myParticleSystem.resetSystem();
-		``` 
-		*/
-		resetSystem(): void;		
-		/**
-		!#en Whether or not the system is full.
-		!#zh 发射器中粒子是否大于等于设置的总粒子数量。 
-		*/
-		isFull(): boolean;		
-		/**
-		!#en
-		<p> Sets a new CCSpriteFrame as particle.</br>
-		WARNING: this method is experimental. Use setTextureWithRect instead.
-		</p>
-		!#zh
-		<p> 设置一个新的精灵帧为粒子。</br>
-		警告：这个函数只是试验，请使用 setTextureWithRect 实现。
-		</p>
-		@param spriteFrame spriteFrame 
-		*/
-		setDisplayFrame(spriteFrame: SpriteFrame): void;		
-		/**
-		!#en Sets a new texture with a rect. The rect is in texture position and size.
-		!#zh 设置一张新贴图和关联的矩形。
-		@param texture texture
-		@param rect rect 
-		*/
-		setTextureWithRect(texture: Texture2D, rect: Rect): void;	
-	}	
-	/** !#en
-	cc.MotionStreak manages a Ribbon based on it's motion in absolute space.                 <br/>
-	You construct it with a fadeTime, minimum segment size, texture path, texture            <br/>
-	length and color. The fadeTime controls how long it takes each vertex in                 <br/>
-	the streak to fade out, the minimum segment size it how many pixels the                  <br/>
-	streak will move before adding a new ribbon segment, and the texture                     <br/>
-	length is the how many pixels the texture is stretched across. The texture               <br/>
-	is vertically aligned along the streak segment.
-	!#zh 运动轨迹，用于游戏对象的运动轨迹上实现拖尾渐隐效果。 */
-	export class MotionStreak extends Component {		
-		/** !#en
-		!#zh 在编辑器模式下预览拖尾效果。 */
-		preview: boolean;		
-		/** !#en The fade time to fade.
-		!#zh 拖尾的渐隐时间，以秒为单位。 */
-		fadeTime: number;		
-		/** !#en The minimum segment size.
-		!#zh 拖尾之间最小距离。 */
-		minSeg: number;		
-		/** !#en The stroke's width.
-		!#zh 拖尾的宽度。 */
-		stroke: number;		
-		/** !#en The texture of the MotionStreak.
-		!#zh 拖尾的贴图。 */
-		texture: Texture2D;		
-		/** !#en The color of the MotionStreak.
-		!#zh 拖尾的颜色 */
-		color: Color;		
-		/** !#en The fast Mode.
-		!#zh 是否启用了快速模式。当启用快速模式，新的点会被更快地添加，但精度较低。 */
-		fastMode: boolean;		
-		/**
-		!#en Remove all living segments of the ribbon.
-		!#zh 删除当前所有的拖尾片段。
-		
-		@example 
-		```js
-		// stop particle system.
-		myParticleSystem.stopSystem();
-		``` 
-		*/
-		reset(): void;	
-	}	
 	/** !#en Class for animation data handling.
 	!#zh 动画剪辑，用于存储动画数据。 */
 	export class AnimationClip extends Asset {		
@@ -3202,6 +3060,167 @@ declare module cc {
 		/** !#en The current time of this animation in seconds.
 		!#zh 动画当前的时间，秒。 */
 		time: number;	
+	}	
+	/** !#en cc.game is the singleton object for game related functions.
+	!#zh cc.game 是 Game 的实例，用来驱动整个游戏。 */
+	export class Game extends EventTarget {		
+		/** Event triggered when game hide to background.
+		Please note that this event is not 100% guaranteed to be fired. */
+		EVENT_HIDE: string;		
+		/** Event triggered when game back to foreground
+		Please note that this event is not 100% guaranteed to be fired. */
+		EVENT_SHOW: string;		
+		/** Event triggered after game inited, at this point all engine objects and game scripts are loaded */
+		EVENT_GAME_INITED: string;		
+		/** Event triggered after renderer inited, at this point you will be able to use the render context */
+		EVENT_RENDERER_INITED: string;		
+		/** Key of config */
+		CONFIG_KEY: any;		
+		/** !#en The outer frame of the game canvas, parent of cc.container.
+		!#zh 游戏画布的外框，cc.container 的父类。 */
+		frame: any;		
+		/** !#en The container of game canvas, equals to cc.container.
+		!#zh 游戏画布的容器。 */
+		container: HTMLDivElement;		
+		/** !#en The canvas of the game, equals to cc._canvas.
+		!#zh 游戏的画布。 */
+		canvas: HTMLCanvasElement;		
+		/** !#en
+		The current game configuration, including:<br/>
+		1. debugMode<br/>
+		     "debugMode" possible values :<br/>
+		     0 - No message will be printed.                                                      <br/>
+		     1 - cc.error, cc.assert, cc.warn, cc.log will print in console.                      <br/>
+		     2 - cc.error, cc.assert, cc.warn will print in console.                              <br/>
+		     3 - cc.error, cc.assert will print in console.                                       <br/>
+		     4 - cc.error, cc.assert, cc.warn, cc.log will print on canvas, available only on web.<br/>
+		     5 - cc.error, cc.assert, cc.warn will print on canvas, available only on web.        <br/>
+		     6 - cc.error, cc.assert will print on canvas, available only on web.                 <br/>
+		2. showFPS<br/>
+		     Left bottom corner fps information will show when "showFPS" equals true, otherwise it will be hide.<br/>
+		3. exposeClassName<br/>
+		     Expose class name to chrome debug tools, the class intantiate performance is a little bit slower when exposed.<br/>
+		4. frameRate<br/>
+		     "frameRate" set the wanted frame rate for your game, but the real fps depends on your game implementation and the running environment.<br/>
+		5. id<br/>
+		     "gameCanvas" sets the id of your canvas element on the web page, it's useful only on web.<br/>
+		6. renderMode<br/>
+		     "renderMode" sets the renderer type, only useful on web :<br/>
+		     0 - Automatically chosen by engine<br/>
+		     1 - Forced to use canvas renderer<br/>
+		     2 - Forced to use WebGL renderer, but this will be ignored on mobile browsers<br/>
+		7. scenes<br/>
+		     "scenes" include available scenes in the current bundle.<br/>
+		<br/>
+		Please DO NOT modify this object directly, it won't have any effect.<br/>
+		!#zh
+		当前的游戏配置，包括：                                                                  <br/>
+		1. debugMode（debug 模式，但是在浏览器中这个选项会被忽略）                                <br/>
+		     "debugMode" 各种设置选项的意义。                                                   <br/>
+		         0 - 没有消息被打印出来。                                                       <br/>
+		         1 - cc.error，cc.assert，cc.warn，cc.log 将打印在 console 中。                  <br/>
+		         2 - cc.error，cc.assert，cc.warn 将打印在 console 中。                          <br/>
+		         3 - cc.error，cc.assert 将打印在 console 中。                                   <br/>
+		         4 - cc.error，cc.assert，cc.warn，cc.log 将打印在 canvas 中（仅适用于 web 端）。 <br/>
+		         5 - cc.error，cc.assert，cc.warn 将打印在 canvas 中（仅适用于 web 端）。         <br/>
+		         6 - cc.error，cc.assert 将打印在 canvas 中（仅适用于 web 端）。                  <br/>
+		2. showFPS（显示 FPS）                                                            <br/>
+		     当 showFPS 为 true 的时候界面的左下角将显示 fps 的信息，否则被隐藏。              <br/>
+		3. exposeClassName                                                           <br/>
+		     暴露类名让 Chrome DevTools 可以识别，如果开启会稍稍降低类的创建过程的性能，但对对象构造没有影响。 <br/>
+		4. frameRate (帧率)                                                              <br/>
+		     “frameRate” 设置想要的帧率你的游戏，但真正的FPS取决于你的游戏实现和运行环境。      <br/>
+		5. id                                                                            <br/>
+		     "gameCanvas" Web 页面上的 Canvas Element ID，仅适用于 web 端。                         <br/>
+		6. renderMode（渲染模式）                                                         <br/>
+		     “renderMode” 设置渲染器类型，仅适用于 web 端：                              <br/>
+		         0 - 通过引擎自动选择。                                                     <br/>
+		         1 - 强制使用 canvas 渲染。
+		         2 - 强制使用 WebGL 渲染，但是在部分 Android 浏览器中这个选项会被忽略。     <br/>
+		7. scenes                                                                         <br/>
+		     “scenes” 当前包中可用场景。                                                   <br/>
+		<br/>
+		注意：请不要直接修改这个对象，它不会有任何效果。 */
+		config: any;		
+		/**
+		!#en Callback when the scripts of engine have been load.
+		!#zh 当引擎完成启动后的回调函数。 
+		*/
+		onStart(): void;		
+		/**
+		!#en Set frameRate of game.
+		!#zh 设置游戏帧率。
+		@param frameRate frameRate 
+		*/
+		setFrameRate(frameRate: number): void;		
+		/**
+		!#en Run the game frame by frame.
+		!#zh 执行一帧游戏循环。 
+		*/
+		step(): void;		
+		/**
+		!#en Pause the game main loop. This will pause:
+		game logic execution, rendering process, event manager, background music and all audio effects.
+		This is different with cc.director.pause which only pause the game logic execution.
+		!#zh 暂停游戏主循环。包含：游戏逻辑，渲染，事件处理，背景音乐和所有音效。这点和只暂停游戏逻辑的 cc.director.pause 不同。 
+		*/
+		pause(): void;		
+		/**
+		!#en Resume the game from pause. This will resume:
+		game logic execution, rendering process, event manager, background music and all audio effects.
+		!#zh 恢复游戏主循环。包含：游戏逻辑，渲染，事件处理，背景音乐和所有音效。 
+		*/
+		resume(): void;		
+		/**
+		!#en Check whether the game is paused.
+		!#zh 判断游戏是否暂停。 
+		*/
+		isPaused(): boolean;		
+		/**
+		!#en Restart game.
+		!#zh 重新开始游戏 
+		*/
+		restart(): void;		
+		/**
+		!#en End game, it will close the game window
+		!#zh 退出游戏 
+		*/
+		end(): void;		
+		/**
+		!#en Prepare game.
+		!#zh 准备引擎，请不要直接调用这个函数。
+		@param cb cb 
+		*/
+		prepare(cb: Function): void;		
+		/**
+		!#en Run game with configuration object and onStart function.
+		!#zh 运行游戏，并且指定引擎配置和 onStart 的回调。
+		@param config Pass configuration object or onStart function
+		@param onStart function to be executed after game initialized 
+		*/
+		run(config?: any|Function, onStart?: Function): void;		
+		/**
+		!#en
+		Add a persistent root node to the game, the persistent node won't be destroyed during scene transition.<br/>
+		The target node must be placed in the root level of hierarchy, otherwise this API won't have any effect.
+		!#zh
+		声明常驻根节点，该节点不会被在场景切换中被销毁。<br/>
+		目标节点必须位于为层级的根节点，否则无效。
+		@param node The node to be made persistent 
+		*/
+		addPersistRootNode(node: Node): void;		
+		/**
+		!#en Remove a persistent root node.
+		!#zh 取消常驻根节点。
+		@param node The node to be removed from persistent node list 
+		*/
+		removePersistRootNode(node: Node): void;		
+		/**
+		!#en Check whether the node is a persistent root node.
+		!#zh 检查节点是否是常驻根节点。
+		@param node The node to be checked 
+		*/
+		isPersistRootNode(node: Node): boolean;	
 	}	
 	/** !#en
 	<p>
@@ -3479,167 +3498,6 @@ declare module cc {
 		!#zh 获取上一帧的 “delta time”。 
 		*/
 		getDeltaTime(): number;	
-	}	
-	/** !#en cc.game is the singleton object for game related functions.
-	!#zh cc.game 是 Game 的实例，用来驱动整个游戏。 */
-	export class Game extends EventTarget {		
-		/** Event triggered when game hide to background.
-		Please note that this event is not 100% guaranteed to be fired. */
-		EVENT_HIDE: string;		
-		/** Event triggered when game back to foreground
-		Please note that this event is not 100% guaranteed to be fired. */
-		EVENT_SHOW: string;		
-		/** Event triggered after game inited, at this point all engine objects and game scripts are loaded */
-		EVENT_GAME_INITED: string;		
-		/** Event triggered after renderer inited, at this point you will be able to use the render context */
-		EVENT_RENDERER_INITED: string;		
-		/** Key of config */
-		CONFIG_KEY: any;		
-		/** !#en The outer frame of the game canvas, parent of cc.container.
-		!#zh 游戏画布的外框，cc.container 的父类。 */
-		frame: any;		
-		/** !#en The container of game canvas, equals to cc.container.
-		!#zh 游戏画布的容器。 */
-		container: HTMLDivElement;		
-		/** !#en The canvas of the game, equals to cc._canvas.
-		!#zh 游戏的画布。 */
-		canvas: HTMLCanvasElement;		
-		/** !#en
-		The current game configuration, including:<br/>
-		1. debugMode<br/>
-		     "debugMode" possible values :<br/>
-		     0 - No message will be printed.                                                      <br/>
-		     1 - cc.error, cc.assert, cc.warn, cc.log will print in console.                      <br/>
-		     2 - cc.error, cc.assert, cc.warn will print in console.                              <br/>
-		     3 - cc.error, cc.assert will print in console.                                       <br/>
-		     4 - cc.error, cc.assert, cc.warn, cc.log will print on canvas, available only on web.<br/>
-		     5 - cc.error, cc.assert, cc.warn will print on canvas, available only on web.        <br/>
-		     6 - cc.error, cc.assert will print on canvas, available only on web.                 <br/>
-		2. showFPS<br/>
-		     Left bottom corner fps information will show when "showFPS" equals true, otherwise it will be hide.<br/>
-		3. exposeClassName<br/>
-		     Expose class name to chrome debug tools, the class intantiate performance is a little bit slower when exposed.<br/>
-		4. frameRate<br/>
-		     "frameRate" set the wanted frame rate for your game, but the real fps depends on your game implementation and the running environment.<br/>
-		5. id<br/>
-		     "gameCanvas" sets the id of your canvas element on the web page, it's useful only on web.<br/>
-		6. renderMode<br/>
-		     "renderMode" sets the renderer type, only useful on web :<br/>
-		     0 - Automatically chosen by engine<br/>
-		     1 - Forced to use canvas renderer<br/>
-		     2 - Forced to use WebGL renderer, but this will be ignored on mobile browsers<br/>
-		7. scenes<br/>
-		     "scenes" include available scenes in the current bundle.<br/>
-		<br/>
-		Please DO NOT modify this object directly, it won't have any effect.<br/>
-		!#zh
-		当前的游戏配置，包括：                                                                  <br/>
-		1. debugMode（debug 模式，但是在浏览器中这个选项会被忽略）                                <br/>
-		     "debugMode" 各种设置选项的意义。                                                   <br/>
-		         0 - 没有消息被打印出来。                                                       <br/>
-		         1 - cc.error，cc.assert，cc.warn，cc.log 将打印在 console 中。                  <br/>
-		         2 - cc.error，cc.assert，cc.warn 将打印在 console 中。                          <br/>
-		         3 - cc.error，cc.assert 将打印在 console 中。                                   <br/>
-		         4 - cc.error，cc.assert，cc.warn，cc.log 将打印在 canvas 中（仅适用于 web 端）。 <br/>
-		         5 - cc.error，cc.assert，cc.warn 将打印在 canvas 中（仅适用于 web 端）。         <br/>
-		         6 - cc.error，cc.assert 将打印在 canvas 中（仅适用于 web 端）。                  <br/>
-		2. showFPS（显示 FPS）                                                            <br/>
-		     当 showFPS 为 true 的时候界面的左下角将显示 fps 的信息，否则被隐藏。              <br/>
-		3. exposeClassName                                                           <br/>
-		     暴露类名让 Chrome DevTools 可以识别，如果开启会稍稍降低类的创建过程的性能，但对对象构造没有影响。 <br/>
-		4. frameRate (帧率)                                                              <br/>
-		     “frameRate” 设置想要的帧率你的游戏，但真正的FPS取决于你的游戏实现和运行环境。      <br/>
-		5. id                                                                            <br/>
-		     "gameCanvas" Web 页面上的 Canvas Element ID，仅适用于 web 端。                         <br/>
-		6. renderMode（渲染模式）                                                         <br/>
-		     “renderMode” 设置渲染器类型，仅适用于 web 端：                              <br/>
-		         0 - 通过引擎自动选择。                                                     <br/>
-		         1 - 强制使用 canvas 渲染。
-		         2 - 强制使用 WebGL 渲染，但是在部分 Android 浏览器中这个选项会被忽略。     <br/>
-		7. scenes                                                                         <br/>
-		     “scenes” 当前包中可用场景。                                                   <br/>
-		<br/>
-		注意：请不要直接修改这个对象，它不会有任何效果。 */
-		config: any;		
-		/**
-		!#en Callback when the scripts of engine have been load.
-		!#zh 当引擎完成启动后的回调函数。 
-		*/
-		onStart(): void;		
-		/**
-		!#en Set frameRate of game.
-		!#zh 设置游戏帧率。
-		@param frameRate frameRate 
-		*/
-		setFrameRate(frameRate: number): void;		
-		/**
-		!#en Run the game frame by frame.
-		!#zh 执行一帧游戏循环。 
-		*/
-		step(): void;		
-		/**
-		!#en Pause the game main loop. This will pause:
-		game logic execution, rendering process, event manager, background music and all audio effects.
-		This is different with cc.director.pause which only pause the game logic execution.
-		!#zh 暂停游戏主循环。包含：游戏逻辑，渲染，事件处理，背景音乐和所有音效。这点和只暂停游戏逻辑的 cc.director.pause 不同。 
-		*/
-		pause(): void;		
-		/**
-		!#en Resume the game from pause. This will resume:
-		game logic execution, rendering process, event manager, background music and all audio effects.
-		!#zh 恢复游戏主循环。包含：游戏逻辑，渲染，事件处理，背景音乐和所有音效。 
-		*/
-		resume(): void;		
-		/**
-		!#en Check whether the game is paused.
-		!#zh 判断游戏是否暂停。 
-		*/
-		isPaused(): boolean;		
-		/**
-		!#en Restart game.
-		!#zh 重新开始游戏 
-		*/
-		restart(): void;		
-		/**
-		!#en End game, it will close the game window
-		!#zh 退出游戏 
-		*/
-		end(): void;		
-		/**
-		!#en Prepare game.
-		!#zh 准备引擎，请不要直接调用这个函数。
-		@param cb cb 
-		*/
-		prepare(cb: Function): void;		
-		/**
-		!#en Run game with configuration object and onStart function.
-		!#zh 运行游戏，并且指定引擎配置和 onStart 的回调。
-		@param config Pass configuration object or onStart function
-		@param onStart function to be executed after game initialized 
-		*/
-		run(config?: any|Function, onStart?: Function): void;		
-		/**
-		!#en
-		Add a persistent root node to the game, the persistent node won't be destroyed during scene transition.<br/>
-		The target node must be placed in the root level of hierarchy, otherwise this API won't have any effect.
-		!#zh
-		声明常驻根节点，该节点不会被在场景切换中被销毁。<br/>
-		目标节点必须位于为层级的根节点，否则无效。
-		@param node The node to be made persistent 
-		*/
-		addPersistRootNode(node: Node): void;		
-		/**
-		!#en Remove a persistent root node.
-		!#zh 取消常驻根节点。
-		@param node The node to be removed from persistent node list 
-		*/
-		removePersistRootNode(node: Node): void;		
-		/**
-		!#en Check whether the node is a persistent root node.
-		!#zh 检查节点是否是常驻根节点。
-		@param node The node to be checked 
-		*/
-		isPersistRootNode(node: Node): boolean;	
 	}	
 	/** !#en
 	Class of all entities in Cocos Creator scenes.<br/>
@@ -4755,6 +4613,286 @@ declare module cc {
 		!#zh 用户调度最低优先级。 */
 		static PRIORITY_NON_SYSTEM: number;	
 	}	
+	/** !#en
+	cc.MotionStreak manages a Ribbon based on it's motion in absolute space.                 <br/>
+	You construct it with a fadeTime, minimum segment size, texture path, texture            <br/>
+	length and color. The fadeTime controls how long it takes each vertex in                 <br/>
+	the streak to fade out, the minimum segment size it how many pixels the                  <br/>
+	streak will move before adding a new ribbon segment, and the texture                     <br/>
+	length is the how many pixels the texture is stretched across. The texture               <br/>
+	is vertically aligned along the streak segment.
+	!#zh 运动轨迹，用于游戏对象的运动轨迹上实现拖尾渐隐效果。 */
+	export class MotionStreak extends Component {		
+		/** !#en
+		!#zh 在编辑器模式下预览拖尾效果。 */
+		preview: boolean;		
+		/** !#en The fade time to fade.
+		!#zh 拖尾的渐隐时间，以秒为单位。 */
+		fadeTime: number;		
+		/** !#en The minimum segment size.
+		!#zh 拖尾之间最小距离。 */
+		minSeg: number;		
+		/** !#en The stroke's width.
+		!#zh 拖尾的宽度。 */
+		stroke: number;		
+		/** !#en The texture of the MotionStreak.
+		!#zh 拖尾的贴图。 */
+		texture: Texture2D;		
+		/** !#en The color of the MotionStreak.
+		!#zh 拖尾的颜色 */
+		color: Color;		
+		/** !#en The fast Mode.
+		!#zh 是否启用了快速模式。当启用快速模式，新的点会被更快地添加，但精度较低。 */
+		fastMode: boolean;		
+		/**
+		!#en Remove all living segments of the ribbon.
+		!#zh 删除当前所有的拖尾片段。
+		
+		@example 
+		```js
+		// stop particle system.
+		myParticleSystem.stopSystem();
+		``` 
+		*/
+		reset(): void;	
+	}	
+	/** Particle System base class. <br/>
+	Attributes of a Particle System:<br/>
+	 - emmision rate of the particles<br/>
+	 - Gravity Mode (Mode A): <br/>
+	 - gravity <br/>
+	 - direction <br/>
+	 - speed +-  variance <br/>
+	 - tangential acceleration +- variance<br/>
+	 - radial acceleration +- variance<br/>
+	 - Radius Mode (Mode B):      <br/>
+	 - startRadius +- variance    <br/>
+	 - endRadius +- variance      <br/>
+	 - rotate +- variance         <br/>
+	 - Properties common to all modes: <br/>
+	 - life +- life variance      <br/>
+	 - start spin +- variance     <br/>
+	 - end spin +- variance       <br/>
+	 - start size +- variance     <br/>
+	 - end size +- variance       <br/>
+	 - start color +- variance    <br/>
+	 - end color +- variance      <br/>
+	 - life +- variance           <br/>
+	 - blending function          <br/>
+	 - texture                    <br/>
+	<br/>
+	cocos2d also supports particles generated by Particle Designer (http://particledesigner.71squared.com/).<br/>
+	'Radius Mode' in Particle Designer uses a fixed emit rate of 30 hz. Since that can't be guarateed in cocos2d,  <br/>
+	cocos2d uses a another approach, but the results are almost identical.<br/>
+	cocos2d supports all the variables used by Particle Designer plus a bit more:  <br/>
+	 - spinning particles (supported when using ParticleSystem)       <br/>
+	 - tangential acceleration (Gravity mode)                               <br/>
+	 - radial acceleration (Gravity mode)                                   <br/>
+	 - radius direction (Radius mode) (Particle Designer supports outwards to inwards direction only) <br/>
+	It is possible to customize any of the above mentioned properties in runtime. Example:   <br/> */
+	export class ParticleSystem extends _RendererUnderSG {		
+		/** !#en Play particle in edit mode.
+		!#zh 在编辑器模式下预览粒子，启用后选中粒子时，粒子将自动播放。 */
+		preview: boolean;		
+		/** !#en
+		If set custom to true, then use custom properties insteadof read particle file.
+		!#zh 是否自定义粒子属性。 */
+		custom: boolean;		
+		/** !#en The plist file.
+		!#zh plist 格式的粒子配置文件。 */
+		file: string;		
+		/** . */
+		texture: Texture2D;		
+		/** !#en Current quantity of particles that are being simulated.
+		!#zh 当前播放的粒子数量。 */
+		particleCount: number;		
+		/** !#en Specify the source Blend Factor.
+		!#zh 指定原图混合模式。 */
+		srcBlendFactor: BlendFactor;		
+		/** !#en Specify the destination Blend Factor.
+		!#zh 指定目标的混合模式。 */
+		dstBlendFactor: BlendFactor;		
+		/** !#en If set to true, the particle system will automatically start playing on onLoad.
+		!#zh 如果设置为 true 运行时会自动发射粒子。 */
+		playOnLoad: boolean;		
+		/** !#en Indicate whether the owner node will be auto-removed when it has no particles left.
+		!#zh 粒子播放完毕后自动销毁所在的节点。 */
+		autoRemoveOnFinish: boolean;		
+		/** !#en Indicate whether the particle system is activated.
+		!#zh 是否激活粒子。 */
+		active: boolean;		
+		/** !#en Maximum particles of the system.
+		!#zh 粒子最大数量。 */
+		totalParticles: number;		
+		/** !#en How many seconds the emitter wil run. -1 means 'forever'.
+		!#zh 发射器生存时间，单位秒，-1表示持续发射。 */
+		duration: number;		
+		/** !#en Emission rate of the particles.
+		!#zh 每秒发射的粒子数目。 */
+		emissionRate: number;		
+		/** !#en Life of each particle setter.
+		!#zh 粒子的运行时间。 */
+		life: number;		
+		/** !#en Variation of life.
+		!#zh 粒子的运行时间变化范围。 */
+		lifeVar: number;		
+		/** !#en Start color of each particle.
+		!#zh 粒子初始颜色。 */
+		startColor: Color;		
+		/** !#en Variation of the start color.
+		!#zh 粒子初始颜色变化范围。 */
+		startColorVar: Color;		
+		/** !#en Ending color of each particle.
+		!#zh 粒子结束颜色。 */
+		endColor: Color;		
+		/** !#en Variation of the end color.
+		!#zh 粒子结束颜色变化范围。 */
+		endColorVar: Color;		
+		/** !#en Angle of each particle setter.
+		!#zh 粒子角度。 */
+		angle: number;		
+		/** !#en Variation of angle of each particle setter.
+		!#zh 粒子角度变化范围。 */
+		angleVar: number;		
+		/** !#en Start size in pixels of each particle.
+		!#zh 粒子的初始大小。 */
+		startSize: number;		
+		/** !#en Variation of start size in pixels.
+		!#zh 粒子初始大小的变化范围。 */
+		startSizeVar: number;		
+		/** !#en End size in pixels of each particle.
+		!#zh 粒子结束时的大小。 */
+		endSize: number;		
+		/** !#en Variation of end size in pixels.
+		!#zh 粒子结束大小的变化范围。 */
+		endSizeVar: number;		
+		/** !#en Start angle of each particle.
+		!#zh 粒子开始自旋角度。 */
+		startSpin: number;		
+		/** !#en Variation of start angle.
+		!#zh 粒子开始自旋角度变化范围。 */
+		startSpinVar: number;		
+		/** !#en End angle of each particle.
+		!#zh 粒子结束自旋角度。 */
+		endSpin: number;		
+		/** !#en Variation of end angle.
+		!#zh 粒子结束自旋角度变化范围。 */
+		endSpinVar: number;		
+		/** !#en Source position of the emitter.
+		!#zh 发射器位置。 */
+		sourcePos: Vec2;		
+		/** !#en Variation of source position.
+		!#zh 发射器位置的变化范围。（横向和纵向） */
+		posVar: Vec2;		
+		/** !#en Particles movement type.
+		!#zh 粒子位置类型。 */
+		positionType: ParticleSystem.PositionType;		
+		/** !#en Particles emitter modes.
+		!#zh 发射器类型。 */
+		emitterMode: ParticleSystem.EmitterMode;		
+		/** !#en Gravity of the emitter.
+		!#zh 重力。 */
+		gravity: Vec2;		
+		/** !#en Speed of the emitter.
+		!#zh 速度。 */
+		speed: number;		
+		/** !#en Variation of the speed.
+		!#zh 速度变化范围。 */
+		speedVar: number;		
+		/** !#en Tangential acceleration of each particle. Only available in 'Gravity' mode.
+		!#zh 每个粒子的切向加速度，即垂直于重力方向的加速度，只有在重力模式下可用。 */
+		tangentialAccel: number;		
+		/** !#en Variation of the tangential acceleration.
+		!#zh 每个粒子的切向加速度变化范围。 */
+		tangentialAccelVar: number;		
+		/** !#en Acceleration of each particle. Only available in 'Gravity' mode.
+		!#zh 粒子径向加速度，即平行于重力方向的加速度，只有在重力模式下可用。 */
+		radialAccel: number;		
+		/** !#en Variation of the radial acceleration.
+		!#zh 粒子径向加速度变化范围。 */
+		radialAccelVar: number;		
+		/** !#en Indicate whether the rotation of each particle equals to its direction. Only available in 'Gravity' mode.
+		!#zh 每个粒子的旋转是否等于其方向，只有在重力模式下可用。 */
+		rotationIsDir: boolean;		
+		/** !#en Starting radius of the particles. Only available in 'Radius' mode.
+		!#zh 初始半径，表示粒子出生时相对发射器的距离，只有在半径模式下可用。 */
+		startRadius: number;		
+		/** !#en Variation of the starting radius.
+		!#zh 初始半径变化范围。 */
+		startRadiusVar: number;		
+		/** !#en Ending radius of the particles. Only available in 'Radius' mode.
+		!#zh 结束半径，只有在半径模式下可用。 */
+		endRadius: number;		
+		/** !#en Variation of the ending radius.
+		!#zh 结束半径变化范围。 */
+		endRadiusVar: number;		
+		/** !#en Number of degress to rotate a particle around the source pos per second. Only available in 'Radius' mode.
+		!#zh 粒子每秒围绕起始点的旋转角度，只有在半径模式下可用。 */
+		rotatePerS: number;		
+		/** !#en Variation of the degress to rotate a particle around the source pos per second.
+		!#zh 粒子每秒围绕起始点的旋转角度变化范围。 */
+		rotatePerSVar: number;		
+		/** !#en The Particle emitter lives forever.
+		!#zh 表示发射器永久存在 */
+		static DURATION_INFINITY: number;		
+		/** !#en The starting size of the particle is equal to the ending size.
+		!#zh 表示粒子的起始大小等于结束大小。 */
+		static START_SIZE_EQUAL_TO_END_SIZE: number;		
+		/** !#en The starting radius of the particle is equal to the ending radius.
+		!#zh 表示粒子的起始半径等于结束半径。 */
+		static START_RADIUS_EQUAL_TO_END_RADIUS: number;		
+		/**
+		!#en Add a particle to the emitter.
+		!#zh 添加一个粒子到发射器中。 
+		*/
+		addParticle(): boolean;		
+		/**
+		!#en Stop emitting particles. Running particles will continue to run until they die.
+		!#zh 停止发射器发射粒子，发射出去的粒子将继续运行，直至粒子生命结束。
+		
+		@example 
+		```js
+		// stop particle system.
+		myParticleSystem.stopSystem();
+		``` 
+		*/
+		stopSystem(): void;		
+		/**
+		!#en Kill all living particles.
+		!#zh 杀死所有存在的粒子，然后重新启动粒子发射器。
+		
+		@example 
+		```js
+		// play particle system.
+		myParticleSystem.resetSystem();
+		``` 
+		*/
+		resetSystem(): void;		
+		/**
+		!#en Whether or not the system is full.
+		!#zh 发射器中粒子是否大于等于设置的总粒子数量。 
+		*/
+		isFull(): boolean;		
+		/**
+		!#en
+		<p> Sets a new CCSpriteFrame as particle.</br>
+		WARNING: this method is experimental. Use setTextureWithRect instead.
+		</p>
+		!#zh
+		<p> 设置一个新的精灵帧为粒子。</br>
+		警告：这个函数只是试验，请使用 setTextureWithRect 实现。
+		</p>
+		@param spriteFrame spriteFrame 
+		*/
+		setDisplayFrame(spriteFrame: SpriteFrame): void;		
+		/**
+		!#en Sets a new texture with a rect. The rect is in texture position and size.
+		!#zh 设置一张新贴图和关联的矩形。
+		@param texture texture
+		@param rect rect 
+		*/
+		setTextureWithRect(texture: Texture2D, rect: Rect): void;	
+	}	
 	/** !#en Renders the TMX object.
 	!#zh 渲染 tmx object。 */
 	export class TMXObject {		
@@ -5370,147 +5508,6 @@ declare module cc {
 		getObjects(): any[];	
 	}	
 	/** !#en
-	 cc.NodePool is the cache pool designed for node type.<br/>
-	 It can helps you to improve your game performance for objects which need frequent release and recreate operations<br/>
-	
-	It's recommended to create cc.NodePool instances by node type, the type corresponds to node type in game design, not the class,
-	for example, a prefab is a specific node type. <br/>
-	When you create a node pool, you can pass a Component which contains `unuse`, `reuse` functions to control the content of node.<br/>
-	
-	Some common use case is :<br/>
-	     1. Bullets in game (die very soon, massive creation and recreation, no side effect on other objects)<br/>
-	     2. Blocks in candy crash (massive creation and recreation)<br/>
-	     etc...
-	!#zh
-	cc.NodePool 是用于管理节点对象的对象缓存池。<br/>
-	它可以帮助您提高游戏性能，适用于优化对象的反复创建和销毁<br/>
-	以前 cocos2d-x 中的 cc.pool 和新的节点事件注册系统不兼容，因此请使用 cc.NodePool 来代替。
-	
-	新的 NodePool 需要实例化之后才能使用，每种不同的节点对象池需要一个不同的对象池实例，这里的种类对应于游戏中的节点设计，一个 prefab 相当于一个种类的节点。<br/>
-	在创建缓冲池时，可以传入一个包含 unuse, reuse 函数的组件类型用于节点的回收和复用逻辑。<br/>
-	
-	一些常见的用例是：<br/>
-	     1.在游戏中的子弹（死亡很快，频繁创建，对其他对象无副作用）<br/>
-	     2.糖果粉碎传奇中的木块（频繁创建）。
-	     等等.... */
-	export class NodePool {		
-		/**
-		!#en
-		Constructor for creating a pool for a specific node template (usually a prefab). You can pass a component (type or name) argument for handling event for reusing and recycling node.
-		!#zh
-		使用构造函数来创建一个节点专用的对象池，您可以传递一个组件类型或名称，用于处理节点回收和复用时的事件逻辑。
-		@param poolHandlerComp !#en The constructor or the class name of the component to control the unuse/reuse logic. !#zh 处理节点回收和复用事件逻辑的组件类型或名称。
-		
-		@example 
-		```js
-		properties: {
-		   template: cc.Prefab
-		 },
-		 onLoad () {
-		// MyTemplateHandler is a component with 'unuse' and 'reuse' to handle events when node is reused or recycled.
-		   this.myPool = new cc.NodePool('MyTemplateHandler');
-		 }
-		``` 
-		*/
-		constructor(poolHandlerComp: [Function|String]);		
-		/** !#en The pool handler component, it could be the class name or the constructor.
-		!#zh 缓冲池处理组件，用于节点的回收和复用逻辑，这个属性可以是组件类名或组件的构造函数。 */
-		poolHandlerComp: Function|string;		
-		/**
-		!#en The current available size in the pool
-		!#zh 获取当前缓冲池的可用对象数量 
-		*/
-		size(): void;		
-		/**
-		!#en Destroy all cached nodes in the pool
-		!#zh 销毁对象池中缓存的所有节点 
-		*/
-		clear(): void;		
-		/**
-		!#en Put a new Node into the pool.
-		It will automatically remove the node from its parent without cleanup.
-		It will also invoke unuse method of the poolHandlerComp if exist.
-		!#zh 向缓冲池中存入一个不再需要的节点对象。
-		这个函数会自动将目标节点从父节点上移除，但是不会进行 cleanup 操作。
-		这个函数会调用 poolHandlerComp 的 unuse 函数，如果组件和函数都存在的话。
-		
-		@example 
-		```js
-		let myNode = cc.instantiate(this.template);
-		  this.myPool.put(myNode);
-		``` 
-		*/
-		put(): void;		
-		/**
-		!#en Get a obj from pool, if no available object in pool, null will be returned.
-		This function will invoke the reuse function of poolHandlerComp if exist.
-		!#zh 获取对象池中的对象，如果对象池没有可用对象，则返回空。
-		这个函数会调用 poolHandlerComp 的 reuse 函数，如果组件和函数都存在的话。
-		@param params !#en Params to pass to 'reuse' method in poolHandlerComp !#zh 向 poolHandlerComp 中的 'reuse' 函数传递的参数
-		
-		@example 
-		```js
-		let newNode = this.myPool.get();
-		``` 
-		*/
-		get(params: any): any;	
-	}	
-	/** !#en
-	 Attention: In creator, it's strongly not recommended to use cc.pool to manager cc.Node.
-	 We provided {{#crossLink "NodePool"}}cc.NodePool{{/crossLink}} instead.
-	
-	 cc.pool is a singleton object serves as an object cache pool.<br/>
-	 It can helps you to improve your game performance for objects which need frequent release and recreate operations<br/>
-	!#zh
-	首先请注意，在 Creator 中我们强烈不建议使用 cc.pool 来管理 cc.Node 节点对象，请使用 {{#crossLink "NodePool"}}cc.NodePool{{/crossLink}} 代替
-	因为 cc.pool 是面向类来设计的，而 cc.Node 中使用 Component 来进行组合，它的类永远都一样，实际却千差万别。
-	
-	cc.pool 是一个单例对象，用作为对象缓存池。<br/>
-	它可以帮助您提高游戏性能，适用于优化对象的反复创建和销毁<br/> */
-	export class pool {		
-		/**
-		!#en Put the obj in pool.
-		!#zh 加入对象到对象池中。
-		@param obj The need put in pool object.
-		
-		@example 
-		```js
-		---------------------------------
-		var sp = new _ccsg.Sprite("a.png");
-		this.addChild(sp);
-		cc.pool.putInPool(sp);
-		cc.pool.getFromPool(_ccsg.Sprite, "a.png");
-		
-		``` 
-		*/
-		putInPool(obj: any): void;		
-		/**
-		!#en Check if this kind of obj has already in pool.
-		!#zh 检查对象池中是否有指定对象的存在。
-		@param objClass The check object class. 
-		*/
-		hasObject(objClass: any): boolean;		
-		/**
-		!#en Remove the obj if you want to delete it.
-		!#zh 移除在对象池中指定的对象。 
-		*/
-		removeObject(): void;		
-		/**
-		!#en Get the obj from pool.
-		!#zh 获取对象池中的指定对象。 
-		*/
-		getFromPool(): any;		
-		/**
-		!#en Remove all objs in pool and reset the pool.
-		!#zh 移除对象池中的所有对象，并且重置对象池。 
-		*/
-		drainAllPools(): void;	
-	}	
-	/** !#en Class for audio data handling.
-	!#zh 音频资源类。 */
-	export class AudioClip extends RawAsset {	
-	}	
-	/** !#en
 	Base class for handling assets used in Fireball. This class can be instantiate.
 	
 	You may want to override:<br/>
@@ -5548,6 +5545,10 @@ declare module cc {
 		@param callback callback 
 		*/
 		createNode(callback: (error: string, node: any) => void): void;	
+	}	
+	/** !#en Class for audio data handling.
+	!#zh 音频资源类。 */
+	export class AudioClip extends RawAsset {	
 	}	
 	/** !#en Class for BitmapFont handling.
 	!#zh 位图字体资源类。 */
@@ -5647,9 +5648,50 @@ declare module cc {
 	!#zh 文本资源类。 */
 	export class TextAsset extends Asset {	
 	}	
+	/** !#en
+	Camera is usefull when making reel game or other games which need scroll screen.
+	Using camera will be more efficient than moving node to scroll screen.
+	Camera
+	!#zh
+	摄像机在制作卷轴或是其他需要移动屏幕的游戏时比较有用，使用摄像机将会比移动节点来移动屏幕更加高效。 */
+	export class Camera extends _RendererUnderSG {		
+		/** !#en
+		The camera zoom ratio.
+		!#zh
+		摄像机缩放比率 */
+		zoomRatio: number;		
+		/** !#en
+		Current active camera, the scene should only have one active camera at the same time.
+		!#zh
+		当前激活的摄像机，场景中在同一时间内只能有一个激活的摄像机。 */
+		static main: Camera;		
+		/**
+		!#en
+		Add the specified target to camera.
+		!#zh
+		将指定的节点添加到摄像机中。
+		@param target target 
+		*/
+		addTarget(target: Node): void;		
+		/**
+		!#en
+		Remove the specified target from camera.
+		!#zh
+		将指定的节点从摄像机中移除。
+		@param target target 
+		*/
+		removeTarget(target: Node): void;		
+		/**
+		!#en
+		Get all camera targets.
+		!#zh
+		获取所有摄像机目标节点。 
+		*/
+		getTargets(): [Node];	
+	}	
 	/** !#en Box Collider.
 	!#zh 包围盒碰撞组件 */
-	export class BoxCollider extends Component {		
+	export class BoxCollider extends Collider implements Collider.Box {		
 		/** !#en Position offset
 		!#zh 位置偏移量 */
 		offset: Vec2;		
@@ -5659,7 +5701,7 @@ declare module cc {
 	}	
 	/** !#en Circle Collider.
 	!#zh 圆形碰撞组件 */
-	export class CircleCollider extends Component {		
+	export class CircleCollider extends Collider implements Collider.Circle {		
 		/** !#en Position offset
 		!#zh 位置偏移量 */
 		offset: Vec2;		
@@ -5875,13 +5917,244 @@ declare module cc {
 	}	
 	/** !#en Polygon Collider.
 	!#zh 多边形碰撞组件 */
-	export class PolygonCollider extends Component {		
+	export class PolygonCollider extends Collider implements Collider.Polygon {		
 		/** !#en Position offset
 		!#zh 位置偏移量 */
 		offset: Vec2;		
 		/** !#en Polygon points
 		!#zh 多边形顶点数组 */
 		points: [Vec2];	
+	}	
+	/** !#en
+	EventTarget is an object to which an event is dispatched when something has occurred.
+	Entity are the most common event targets, but other objects can be event targets too.
+	
+	Event targets are an important part of the Fireball event model.
+	The event target serves as the focal point for how events flow through the scene graph.
+	When an event such as a mouse click or a keypress occurs, Fireball dispatches an event object
+	into the event flow from the root of the hierarchy. The event object then makes its way through
+	the scene graph until it reaches the event target, at which point it begins its return trip through
+	the scene graph. This round-trip journey to the event target is conceptually divided into three phases:
+	- The capture phase comprises the journey from the root to the last node before the event target's node
+	- The target phase comprises only the event target node
+	- The bubbling phase comprises any subsequent nodes encountered on the return trip to the root of the tree
+	See also: http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
+	
+	Event targets can implement the following methods:
+	 - _getCapturingTargets
+	 - _getBubblingTargets
+	
+	!#zh
+	事件目标是事件触发时，分派的事件对象，Node 是最常见的事件目标，
+	但是其他对象也可以是事件目标。<br/> */
+	export class EventTarget {		
+		/**
+		!#en
+		Register an callback of a specific event type on the EventTarget.
+		!#zh
+		注册事件目标的特定事件类型回调。
+		@param type A string representing the event type to listen for.
+		@param callback The callback that will be invoked when the event is dispatched.
+		                             The callback is ignored if it is a duplicate (the callbacks are unique).
+		@param target The target to invoke the callback, can be null
+		@param useCapture When set to true, the capture argument prevents callback
+		                             from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE.
+		                             When false, callback will NOT be invoked when event's eventPhase attribute value is CAPTURING_PHASE.
+		                             Either way, callback will be invoked when event's eventPhase attribute value is AT_TARGET.
+		
+		@example 
+		```js
+		node.on(cc.Node.EventType.TOUCH_END, function (event) {
+		    cc.log("this is callback");
+		}, node);
+		``` 
+		*/
+		on(type: string, callback: (event: Event.EventCustom) => void, target?: any, useCapture?: boolean): (event: Event.EventCustom) => void;
+		on<T>(type: string, callback: (event: T) => void, target?: any, useCapture?: boolean): (event: T) => void;		
+		/**
+		!#en
+		Removes the callback previously registered with the same type, callback, target and or useCapture.
+		!#zh
+		删除之前与同类型，回调，目标或 useCapture 注册的回调。
+		@param type A string representing the event type being removed.
+		@param callback The callback to remove.
+		@param target The target to invoke the callback, if it's not given, only callback without target will be removed
+		@param useCapture Specifies whether the callback being removed was registered as a capturing callback or not.
+		                             If not specified, useCapture defaults to false. If a callback was registered twice,
+		                             one with capture and one without, each must be removed separately. Removal of a capturing callback
+		                             does not affect a non-capturing version of the same listener, and vice versa.
+		
+		@example 
+		```js
+		// register touchEnd eventListener
+		var touchEnd = node.on(cc.Node.EventType.TOUCH_END, function (event) {
+		    cc.log("this is callback");
+		}, node);
+		// remove touchEnd eventListener
+		node.off(cc.Node.EventType.TOUCH_END, touchEnd, node);
+		``` 
+		*/
+		off(type: string, callback: Function, target?: any, useCapture?: boolean): void;		
+		/**
+		!#en Removes all callbacks previously registered with the same target (passed as parameter).
+		This is not for removing all listeners in the current event target,
+		and this is not for removing all listeners the target parameter have registered.
+		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
+		!#zh 在当前 EventTarget 上删除指定目标（target 参数）注册的所有事件监听器。
+		这个函数无法删除当前 EventTarget 的所有事件监听器，也无法删除 target 参数所注册的所有事件监听器。
+		这个函数只能删除 target 参数在当前 EventTarget 上注册的所有事件监听器。
+		@param target The target to be searched for all related listeners 
+		*/
+		targetOff(target: any): void;		
+		/**
+		!#en
+		Register an callback of a specific event type on the EventTarget,
+		the callback will remove itself after the first time it is triggered.
+		!#zh
+		注册事件目标的特定事件类型回调，回调会在第一时间被触发后删除自身。
+		@param type A string representing the event type to listen for.
+		@param callback The callback that will be invoked when the event is dispatched.
+		                             The callback is ignored if it is a duplicate (the callbacks are unique).
+		@param target The target to invoke the callback, can be null
+		@param useCapture When set to true, the capture argument prevents callback
+		                             from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE.
+		                             When false, callback will NOT be invoked when event's eventPhase attribute value is CAPTURING_PHASE.
+		                             Either way, callback will be invoked when event's eventPhase attribute value is AT_TARGET.
+		
+		@example 
+		```js
+		node.once(cc.Node.EventType.TOUCH_END, function (event) {
+		    cc.log("this is callback");
+		}, node);
+		``` 
+		*/
+		once(type: string, callback: (event: Event.EventCustom) => void, target?: any, useCapture?: boolean): (event: Event.EventCustom) => void;
+		once<T>(type: string, callback: (event: T) => void, target?: any, useCapture?: boolean): (event: T) => void;		
+		/**
+		!#en
+		Dispatches an event into the event flow.
+		The event target is the EventTarget object upon which the dispatchEvent() method is called.
+		!#zh 分发事件到事件流中。
+		@param event The Event object that is dispatched into the event flow 
+		*/
+		dispatchEvent(event: Event): void;		
+		/**
+		!#en
+		Send an event to this object directly, this method will not propagate the event to any other objects.
+		The event will be created from the supplied message, you can get the "detail" argument from event.detail.
+		!#zh
+		该对象直接发送事件， 这种方法不会对事件传播到任何其他对象。
+		@param message the message to send
+		@param detail whatever argument the message needs 
+		*/
+		emit(message: string, detail?: any): void;	
+	}	
+	/** !#en Base class of all kinds of events.
+	!#zh 包含事件相关信息的对象。 */
+	export class Event {		
+		/**
+		
+		@param type The name of the event (case-sensitive), e.g. "click", "fire", or "submit"
+		@param bubbles A boolean indicating whether the event bubbles up through the tree or not 
+		*/
+		constructor(type: string, bubbles: boolean);		
+		/** !#en The name of the event (case-sensitive), e.g. "click", "fire", or "submit".
+		!#zh 事件类型。 */
+		type: string;		
+		/** !#en Indicate whether the event bubbles up through the tree or not.
+		!#zh 表示该事件是否进行冒泡。 */
+		bubbles: boolean;		
+		/** !#en A reference to the target to which the event was originally dispatched.
+		!#zh 最初事件触发的目标 */
+		target: any;		
+		/** !#en A reference to the currently registered target for the event.
+		!#zh 当前目标 */
+		currentTarget: any;		
+		/** !#en
+		Indicates which phase of the event flow is currently being evaluated.
+		Returns an integer value represented by 4 constants:
+		 - Event.NONE = 0
+		 - Event.CAPTURING_PHASE = 1
+		 - Event.AT_TARGET = 2
+		 - Event.BUBBLING_PHASE = 3
+		The phases are explained in the [section 3.1, Event dispatch and DOM event flow]
+		(http://www.w3.org/TR/DOM-Level-3-Events/#event-flow), of the DOM Level 3 Events specification.
+		!#zh 事件阶段 */
+		eventPhase: number;		
+		/**
+		!#en Reset the event for being stored in the object pool.
+		!#zh 重置对象池中存储的事件。 
+		*/
+		unuse(): string;		
+		/**
+		!#en Reuse the event for being used again by the object pool.
+		!#zh 用于对象池再次使用的事件。 
+		*/
+		reuse(): string;		
+		/**
+		!#en Stops propagation for current event.
+		!#zh 停止传递当前事件。 
+		*/
+		stopPropagation(): void;		
+		/**
+		!#en Stops propagation for current event immediately,
+		the event won't even be dispatched to the listeners attached in the current target.
+		!#zh 立即停止当前事件的传递，事件甚至不会被分派到所连接的当前目标。 
+		*/
+		stopPropagationImmediate(): void;		
+		/**
+		!#en Checks whether the event has been stopped.
+		!#zh 检查该事件是否已经停止传递. 
+		*/
+		isStopped(): boolean;		
+		/**
+		!#en
+		<p>
+		    Gets current target of the event                                                            <br/>
+		    note: It only be available when the event listener is associated with node.                <br/>
+		         It returns 0 when the listener is associated with fixed priority.
+		</p>
+		!#zh 获取当前目标节点 
+		*/
+		getCurrentTarget(): Node;		
+		/**
+		!#en Gets the event type.
+		!#zh 获取事件类型 
+		*/
+		getType(): string;		
+		/** !#en Code for event without type.
+		!#zh 没有类型的事件 */
+		static NO_TYPE: string;		
+		/** !#en The type code of Touch event.
+		!#zh 触摸事件类型 */
+		static TOUCH: string;		
+		/** !#en The type code of Mouse event.
+		!#zh 鼠标事件类型 */
+		static MOUSE: string;		
+		/** !#en The type code of Keyboard event.
+		!#zh 键盘事件类型 */
+		static KEYBOARD: string;		
+		/** !#en The type code of Acceleration event.
+		!#zh 加速器事件类型 */
+		static ACCELERATION: string;		
+		/** !#en Events not currently dispatched are in this phase
+		!#zh 尚未派发事件阶段 */
+		static NONE: number;		
+		/** !#en
+		The capturing phase comprises the journey from the root to the last node before the event target's node
+		see http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
+		!#zh 捕获阶段，包括事件目标节点之前从根节点到最后一个节点的过程。 */
+		static CAPTURING_PHASE: number;		
+		/** !#en
+		The target phase comprises only the event target node
+		see http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
+		!#zh 目标阶段仅包括事件目标节点。 */
+		static AT_TARGET: number;		
+		/** !#en
+		The bubbling phase comprises any subsequent nodes encountered on the return trip to the root of the hierarchy
+		see http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
+		!#zh 冒泡阶段， 包括回程遇到到层次根节点的任何后续节点。 */
+		static BUBBLING_PHASE: number;	
 	}	
 	/** !#en The animation component is used to play back animations.
 	
@@ -6313,7 +6586,7 @@ declare module cc {
 		!#zh 表示该组件自身是否启用。 */
 		enabled: boolean;		
 		/** !#en indicates whether this component is enabled and its node is also active in the hierarchy.
-		!#zh 表示该组件是否被启用并且所在的节点也处于激活状态。。 */
+		!#zh 表示该组件是否被启用并且所在的节点也处于激活状态。 */
 		enabledInHierarchy: boolean;		
 		/** !#en Returns a value which used to indicate the onLoad get called or not.
 		!#zh 返回一个值用来判断 onLoad 是否被调用过，不等于 0 时调用过，等于 0 时未调用。 */
@@ -6378,7 +6651,7 @@ declare module cc {
 		var test = node.addComponent("Test");
 		``` 
 		*/
-		addComponent<T extends Component>(type: typeof T): T;
+		addComponent<T extends Component>(type: {new(): T}): T;
 		addComponent(className: string): any;		
 		/**
 		!#en
@@ -6397,7 +6670,7 @@ declare module cc {
 		var test = node.getComponent("Test");
 		``` 
 		*/
-		getComponent<T extends Component>(type: typeof T): T;
+		getComponent<T extends Component>(type: {prototype: T}): T;
 		getComponent(className: string): any;		
 		/**
 		!#en Returns all components of supplied Type in the node.
@@ -6410,7 +6683,7 @@ declare module cc {
 		var tests = node.getComponents("Test");
 		``` 
 		*/
-		getComponents<T extends Component>(type: typeof T): T[];
+		getComponents<T extends Component>(type: {prototype: T}): T[];
 		getComponents(className: string): any[];		
 		/**
 		!#en Returns the component of supplied type in any of its children using depth first search.
@@ -6423,7 +6696,7 @@ declare module cc {
 		var Test = node.getComponentInChildren("Test");
 		``` 
 		*/
-		getComponentInChildren<T extends Component>(type: typeof T): T;
+		getComponentInChildren<T extends Component>(type: {prototype: T}): T;
 		getComponentInChildren(className: string): any;		
 		/**
 		!#en Returns the components of supplied type in self or any of its children using depth first search.
@@ -6436,7 +6709,7 @@ declare module cc {
 		var tests = node.getComponentsInChildren("Test");
 		``` 
 		*/
-		getComponentsInChildren<T extends Component>(type: typeof T): T[];
+		getComponentsInChildren<T extends Component>(type: {prototype: T}): T[];
 		getComponentsInChildren(className: string): any[];		
 		/**
 		!#en
@@ -6608,7 +6881,7 @@ declare module cc {
 		tabIndex: number;		
 		/** !#en The event handler to be called when EditBox began to edit text.
 		!#zh 开始编辑文本输入框触发的事件回调。 */
-		editingDidBegin: Component.EventHandler;		
+		editingDidBegan: Component.EventHandler;		
 		/** !#en The event handler to be called when EditBox text changes.
 		!#zh 编辑文本输入框时触发的事件回调。 */
 		textChanged: Component.EventHandler;		
@@ -6629,7 +6902,23 @@ declare module cc {
 		!#zh 判断 EditBox 是否获得了焦点
 		Note: only available on Web at the moment. 
 		*/
-		isFocused(): void;	
+		isFocused(): void;		
+		/**
+		!#en if you don't need the EditBox and it isn't in any running Scene, you should
+		call the destroy method on this component or the associated node explicitly.
+		Otherwise, the created DOM element won't be removed from web page.
+		!#zh
+		如果你不再使用 EditBox，并且组件未添加到场景中，那么你必须手动对组件或所在节点调用 destroy。
+		这样才能移除网页上的 DOM 节点，避免 Web 平台内存泄露。
+		
+		@example 
+		```js
+		editbox.node.parent = null;  // or  editbox.node.removeFromParent(false);
+		// when you don't need editbox anymore
+		editbox.node.destroy();
+		``` 
+		*/
+		destroy(): void;	
 	}	
 	/** !#en The Label Component.
 	!#zh 文字标签组件 */
@@ -7433,7 +7722,33 @@ declare module cc {
 		!#en If a video is playing, call this method to stop playing immediately.
 		!#zh 如果一个视频正在播放，调用这个接口可以立马停止播放。 
 		*/
-		stop(): void;	
+		stop(): void;		
+		/**
+		!#en Gets the duration of the video
+		!#zh 获取视频文件的播放总时长 
+		*/
+		getDuration(): number;		
+		/**
+		!#en Determine whether video is playing or not.
+		!#zh 判断当前视频是否处于播放状态 
+		*/
+		isPlaying(): boolean;		
+		/**
+		!#en if you don't need the VideoPlayer and it isn't in any running Scene, you should
+		call the destroy method on this component or the associated node explicitly.
+		Otherwise, the created DOM element won't be removed from web page.
+		!#zh
+		如果你不再使用 VideoPlayer，并且组件未添加到场景中，那么你必须手动对组件或所在节点调用 destroy。
+		这样才能移除网页上的 DOM 节点，避免 Web 平台内存泄露。
+		
+		@example 
+		```js
+		videoplayer.node.parent = null;  // or  videoplayer.node.removeFromParent(false);
+		// when you don't need videoplayer anymore
+		videoplayer.node.destroy();
+		``` 
+		*/
+		destroy(): void;	
 	}	
 	/** !#en
 	Handling touch events in a ViewGroup takes special care,
@@ -7456,7 +7771,23 @@ declare module cc {
 		url: string;		
 		/** !#en The webview's event callback , it will be triggered when certain webview event occurs.
 		!#zh WebView 的回调事件，当网页加载过程中，加载完成后或者加载出错时都会回调此函数 */
-		webviewLoadedEvents: Component.EventHandler[];	
+		webviewLoadedEvents: Component.EventHandler[];		
+		/**
+		!#en if you don't need the WebView and it isn't in any running Scene, you should
+		call the destroy method on this component or the associated node explicitly.
+		Otherwise, the created DOM element won't be removed from web page.
+		!#zh
+		如果你不再使用 WebView，并且组件未添加到场景中，那么你必须手动对组件或所在节点调用 destroy。
+		这样才能移除网页上的 DOM 节点，避免 Web 平台内存泄露。
+		
+		@example 
+		```js
+		webview.node.parent = null;  // or  webview.node.removeFromParent(false);
+		// when you don't need webview anymore
+		webview.node.destroy();
+		``` 
+		*/
+		destroy(): void;	
 	}	
 	/** !#en
 	Stores and manipulate the anchoring based on its parent.
@@ -7587,237 +7918,6 @@ declare module cc {
 		``` 
 		*/
 		updateAlignment(): void;	
-	}	
-	/** !#en
-	EventTarget is an object to which an event is dispatched when something has occurred.
-	Entity are the most common event targets, but other objects can be event targets too.
-	
-	Event targets are an important part of the Fireball event model.
-	The event target serves as the focal point for how events flow through the scene graph.
-	When an event such as a mouse click or a keypress occurs, Fireball dispatches an event object
-	into the event flow from the root of the hierarchy. The event object then makes its way through
-	the scene graph until it reaches the event target, at which point it begins its return trip through
-	the scene graph. This round-trip journey to the event target is conceptually divided into three phases:
-	- The capture phase comprises the journey from the root to the last node before the event target's node
-	- The target phase comprises only the event target node
-	- The bubbling phase comprises any subsequent nodes encountered on the return trip to the root of the tree
-	See also: http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
-	
-	Event targets can implement the following methods:
-	 - _getCapturingTargets
-	 - _getBubblingTargets
-	
-	!#zh
-	事件目标是事件触发时，分派的事件对象，Node 是最常见的事件目标，
-	但是其他对象也可以是事件目标。<br/> */
-	export class EventTarget {		
-		/**
-		!#en
-		Register an callback of a specific event type on the EventTarget.
-		!#zh
-		注册事件目标的特定事件类型回调。
-		@param type A string representing the event type to listen for.
-		@param callback The callback that will be invoked when the event is dispatched.
-		                             The callback is ignored if it is a duplicate (the callbacks are unique).
-		@param target The target to invoke the callback, can be null
-		@param useCapture When set to true, the capture argument prevents callback
-		                             from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE.
-		                             When false, callback will NOT be invoked when event's eventPhase attribute value is CAPTURING_PHASE.
-		                             Either way, callback will be invoked when event's eventPhase attribute value is AT_TARGET.
-		
-		@example 
-		```js
-		node.on(cc.Node.EventType.TOUCH_END, function (event) {
-		    cc.log("this is callback");
-		}, node);
-		``` 
-		*/
-		on(type: string, callback: (event: Event.EventCustom) => void, target?: any, useCapture?: boolean): (event: Event.EventCustom) => void;
-		on<T>(type: string, callback: (event: T) => void, target?: any, useCapture?: boolean): (event: T) => void;		
-		/**
-		!#en
-		Removes the callback previously registered with the same type, callback, target and or useCapture.
-		!#zh
-		删除之前与同类型，回调，目标或 useCapture 注册的回调。
-		@param type A string representing the event type being removed.
-		@param callback The callback to remove.
-		@param target The target to invoke the callback, if it's not given, only callback without target will be removed
-		@param useCapture Specifies whether the callback being removed was registered as a capturing callback or not.
-		                             If not specified, useCapture defaults to false. If a callback was registered twice,
-		                             one with capture and one without, each must be removed separately. Removal of a capturing callback
-		                             does not affect a non-capturing version of the same listener, and vice versa.
-		
-		@example 
-		```js
-		// register touchEnd eventListener
-		var touchEnd = node.on(cc.Node.EventType.TOUCH_END, function (event) {
-		    cc.log("this is callback");
-		}, node);
-		// remove touchEnd eventListener
-		node.off(cc.Node.EventType.TOUCH_END, touchEnd, node);
-		``` 
-		*/
-		off(type: string, callback: Function, target?: any, useCapture?: boolean): void;		
-		/**
-		!#en Removes all callbacks previously registered with the same target (passed as parameter).
-		This is not for removing all listeners in the current event target,
-		and this is not for removing all listeners the target parameter have registered.
-		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh 在当前 EventTarget 上删除指定目标（target 参数）注册的所有事件监听器。
-		这个函数无法删除当前 EventTarget 的所有事件监听器，也无法删除 target 参数所注册的所有事件监听器。
-		这个函数只能删除 target 参数在当前 EventTarget 上注册的所有事件监听器。
-		@param target The target to be searched for all related listeners 
-		*/
-		targetOff(target: any): void;		
-		/**
-		!#en
-		Register an callback of a specific event type on the EventTarget,
-		the callback will remove itself after the first time it is triggered.
-		!#zh
-		注册事件目标的特定事件类型回调，回调会在第一时间被触发后删除自身。
-		@param type A string representing the event type to listen for.
-		@param callback The callback that will be invoked when the event is dispatched.
-		                             The callback is ignored if it is a duplicate (the callbacks are unique).
-		@param target The target to invoke the callback, can be null
-		@param useCapture When set to true, the capture argument prevents callback
-		                             from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE.
-		                             When false, callback will NOT be invoked when event's eventPhase attribute value is CAPTURING_PHASE.
-		                             Either way, callback will be invoked when event's eventPhase attribute value is AT_TARGET.
-		
-		@example 
-		```js
-		node.once(cc.Node.EventType.TOUCH_END, function (event) {
-		    cc.log("this is callback");
-		}, node);
-		``` 
-		*/
-		once(type: string, callback: (event: Event.EventCustom) => void, target?: any, useCapture?: boolean): (event: Event.EventCustom) => void;
-		once<T>(type: string, callback: (event: T) => void, target?: any, useCapture?: boolean): (event: T) => void;		
-		/**
-		!#en
-		Dispatches an event into the event flow.
-		The event target is the EventTarget object upon which the dispatchEvent() method is called.
-		!#zh 分发事件到事件流中。
-		@param event The Event object that is dispatched into the event flow 
-		*/
-		dispatchEvent(event: Event): void;		
-		/**
-		!#en
-		Send an event to this object directly, this method will not propagate the event to any other objects.
-		The event will be created from the supplied message, you can get the "detail" argument from event.detail.
-		!#zh
-		该对象直接发送事件， 这种方法不会对事件传播到任何其他对象。
-		@param message the message to send
-		@param detail whatever argument the message needs 
-		*/
-		emit(message: string, detail?: any): void;	
-	}	
-	/** !#en Base class of all kinds of events.
-	!#zh 包含事件相关信息的对象。 */
-	export class Event {		
-		/**
-		
-		@param type The name of the event (case-sensitive), e.g. "click", "fire", or "submit"
-		@param bubbles A boolean indicating whether the event bubbles up through the tree or not 
-		*/
-		constructor(type: string, bubbles: boolean);		
-		/** !#en The name of the event (case-sensitive), e.g. "click", "fire", or "submit".
-		!#zh 事件类型。 */
-		type: string;		
-		/** !#en Indicate whether the event bubbles up through the tree or not.
-		!#zh 表示该事件是否进行冒泡。 */
-		bubbles: boolean;		
-		/** !#en A reference to the target to which the event was originally dispatched.
-		!#zh 最初事件触发的目标 */
-		target: any;		
-		/** !#en A reference to the currently registered target for the event.
-		!#zh 当前目标 */
-		currentTarget: any;		
-		/** !#en
-		Indicates which phase of the event flow is currently being evaluated.
-		Returns an integer value represented by 4 constants:
-		 - Event.NONE = 0
-		 - Event.CAPTURING_PHASE = 1
-		 - Event.AT_TARGET = 2
-		 - Event.BUBBLING_PHASE = 3
-		The phases are explained in the [section 3.1, Event dispatch and DOM event flow]
-		(http://www.w3.org/TR/DOM-Level-3-Events/#event-flow), of the DOM Level 3 Events specification.
-		!#zh 事件阶段 */
-		eventPhase: number;		
-		/**
-		!#en Reset the event for being stored in the object pool.
-		!#zh 重置对象池中存储的事件。 
-		*/
-		unuse(): string;		
-		/**
-		!#en Reuse the event for being used again by the object pool.
-		!#zh 用于对象池再次使用的事件。 
-		*/
-		reuse(): string;		
-		/**
-		!#en Stops propagation for current event.
-		!#zh 停止传递当前事件。 
-		*/
-		stopPropagation(): void;		
-		/**
-		!#en Stops propagation for current event immediately,
-		the event won't even be dispatched to the listeners attached in the current target.
-		!#zh 立即停止当前事件的传递，事件甚至不会被分派到所连接的当前目标。 
-		*/
-		stopPropagationImmediate(): void;		
-		/**
-		!#en Checks whether the event has been stopped.
-		!#zh 检查该事件是否已经停止传递. 
-		*/
-		isStopped(): boolean;		
-		/**
-		!#en
-		<p>
-		    Gets current target of the event                                                            <br/>
-		    note: It only be available when the event listener is associated with node.                <br/>
-		         It returns 0 when the listener is associated with fixed priority.
-		</p>
-		!#zh 获取当前目标节点 
-		*/
-		getCurrentTarget(): Node;		
-		/**
-		!#en Gets the event type.
-		!#zh 获取事件类型 
-		*/
-		getType(): string;		
-		/** !#en Code for event without type.
-		!#zh 没有类型的事件 */
-		static NO_TYPE: string;		
-		/** !#en The type code of Touch event.
-		!#zh 触摸事件类型 */
-		static TOUCH: string;		
-		/** !#en The type code of Mouse event.
-		!#zh 鼠标事件类型 */
-		static MOUSE: string;		
-		/** !#en The type code of Keyboard event.
-		!#zh 键盘事件类型 */
-		static KEYBOARD: string;		
-		/** !#en The type code of Acceleration event.
-		!#zh 加速器事件类型 */
-		static ACCELERATION: string;		
-		/** !#en Events not currently dispatched are in this phase
-		!#zh 尚未派发事件阶段 */
-		static NONE: number;		
-		/** !#en
-		The capturing phase comprises the journey from the root to the last node before the event target's node
-		see http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
-		!#zh 捕获阶段，包括事件目标节点之前从根节点到最后一个节点的过程。 */
-		static CAPTURING_PHASE: number;		
-		/** !#en
-		The target phase comprises only the event target node
-		see http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
-		!#zh 目标阶段仅包括事件目标节点。 */
-		static AT_TARGET: number;		
-		/** !#en
-		The bubbling phase comprises any subsequent nodes encountered on the return trip to the root of the hierarchy
-		see http://www.w3.org/TR/DOM-Level-3-Events/#event-flow
-		!#zh 冒泡阶段， 包括回程遇到到层次根节点的任何后续节点。 */
-		static BUBBLING_PHASE: number;	
 	}	
 	/** !#en
 	<p>
@@ -8214,9 +8314,10 @@ declare module cc {
 		fillRect(x?: number, y?: number, w?: number, h?: number): void;		
 		/**
 		!#en Erasing any previously drawn content.
-		!#zh 擦除之前绘制的所有内容的方法。 
+		!#zh 擦除之前绘制的所有内容的方法。
+		@param clean Whether to clean the graphics inner cache. 
 		*/
-		clear(): void;		
+		clear(clean?: boolean): void;		
 		/**
 		!#en Causes the point of the pen to move back to the start of the current path. It tries to add a straight line from the current point to the start.
 		!#zh 将笔点返回到当前路径起始点的。它尝试从当前点到起始点绘制一条直线。 
@@ -8232,6 +8333,739 @@ declare module cc {
 		!#zh 根据当前的画线样式，填充当前或已经存在的路径。 
 		*/
 		fill(): void;	
+	}	
+	/** Loader for resource loading process. It's a singleton object. */
+	export class loader extends Pipeline {		
+		/** The asset loader in cc.loader's pipeline, it's by default the first pipe.
+		It's used to identify an asset's type, and determine how to download it. */
+		static assetLoader: any;		
+		/** The downloader in cc.loader's pipeline, it's by default the second pipe.
+		It's used to download files with several handlers: pure text, image, script, audio, font, uuid.
+		You can add your own download function with addDownloadHandlers */
+		static downloader: any;		
+		/** The downloader in cc.loader's pipeline, it's by default the third pipe.
+		It's used to parse downloaded content with several handlers: JSON, image, plist, fnt, uuid.
+		You can add your own download function with addLoadHandlers */
+		static loader: any;		
+		/**
+		Add custom supported types handler or modify existing type handler for download process.
+		@param extMap Custom supported types with corresponded handler
+		
+		@example 
+		```js
+		cc.loader.addDownloadHandlers({
+		     // This will match all url with `.scene` extension or all url with `scene` type
+		     'scene' : function (url, callback) {}
+		 });
+		``` 
+		*/
+		static addDownloadHandlers(extMap: any): void;		
+		/**
+		Add custom supported types handler or modify existing type handler for load process.
+		@param extMap Custom supported types with corresponded handler
+		
+		@example 
+		```js
+		cc.loader.addLoadHandlers({
+		     // This will match all url with `.scene` extension or all url with `scene` type
+		     'scene' : function (url, callback) {}
+		 });
+		``` 
+		*/
+		static addLoadHandlers(extMap: any): void;		
+		/**
+		Load resources with a progression callback and a complete callback.
+		The progression callback is the same as Pipeline's {{#crossLink "LoadingItems/onProgress:method"}}onProgress{{/crossLink}}
+		The complete callback is almost the same as Pipeline's {{#crossLink "LoadingItems/onComplete:method"}}onComplete{{/crossLink}}
+		The only difference is when user pass a single url as resources, the complete callback will set its result directly as the second parameter.
+		@param resources Url list in an array
+		@param progressCallback Callback invoked when progression change
+		@param completeCallback Callback invoked when all resources loaded
+		
+		@example 
+		```js
+		cc.loader.load('a.png', function (err, tex) {
+		    cc.log('Result should be a texture: ' + (tex instanceof cc.Texture2D));
+		});
+		
+		cc.loader.load('http://example.com/a.png', function (err, tex) {
+		    cc.log('Should load a texture from external url: ' + (tex instanceof cc.Texture2D));
+		});
+		
+		cc.loader.load({url: 'http://example.com/getImageREST?file=a.png', type: 'png'}, function (err, tex) {
+		    cc.log('Should load a texture from RESTful API by specify the type: ' + (tex instanceof cc.Texture2D));
+		});
+		
+		cc.loader.load(['a.png', 'b.json'], function (errors, results) {
+		    if (errors) {
+		        for (var i = 0; i < errors.length; i++) {
+		            cc.log('Error url [' + errors[i] + ']: ' + results.getError(errors[i]));
+		        }
+		    }
+		    var aTex = results.getContent('a.png');
+		    var bJsonObj = results.getContent('b.json');
+		});
+		``` 
+		*/
+		static load(resources: string|string[]|{uuid?: string, url?: string, type?: string}, completeCallback?: Function): void;
+		static load(resources: string|string[]|{uuid?: string, url?: string, type?: string}, progressCallback: (completedCount: number, totalCount: number, item: any) => void, completeCallback: Function|null): void;		
+		/**
+		Load resources from the "resources" folder inside the "assets" folder of your project.<br>
+		<br>
+		Note: All asset URLs in Creator use forward slashes, URLs using backslashes will not work.
+		@param url Url of the target resource.
+		                      The url is relative to the "resources" folder, extensions must be omitted.
+		@param type Only asset of type will be loaded if this argument is supplied.
+		@param progressCallback Callback invoked when progression change.
+		@param completeCallback Callback invoked when the resource loaded.
+		
+		@example 
+		```js
+		// load the prefab (project/assets/resources/misc/character/cocos) from resources folder
+		cc.loader.loadRes('misc/character/cocos', function (err, prefab) {
+		    if (err) {
+		        cc.error(err.message || err);
+		        return;
+		    }
+		    cc.log('Result should be a prefab: ' + (prefab instanceof cc.Prefab));
+		});
+		
+		// load the sprite frame of (project/assets/resources/imgs/cocos.png) from resources folder
+		cc.loader.loadRes('imgs/cocos', cc.SpriteFrame, function (err, spriteFrame) {
+		    if (err) {
+		        cc.error(err.message || err);
+		        return;
+		    }
+		    cc.log('Result should be a sprite frame: ' + (spriteFrame instanceof cc.SpriteFrame));
+		});
+		``` 
+		*/
+		static loadRes(url: string, type: typeof cc.Asset, progressCallback: (completedCount: number, totalCount: number, item: any) => void, completeCallback: ((error: Error, resource: any) => void)|null): void;
+		static loadRes(url: string, type: typeof cc.Asset, completeCallback: (error: Error, resource: any) => void): void;
+		static loadRes(url: string, type: typeof cc.Asset): void;
+		static loadRes(url: string, progressCallback: (completedCount: number, totalCount: number, item: any) => void, completeCallback: ((error: Error, resource: any) => void)|null): void;
+		static loadRes(url: string, completeCallback: (error: Error, resource: any) => void): void;
+		static loadRes(url: string): void;		
+		/**
+		This method is like {{#crossLink "loader/loadRes:method"}}{{/crossLink}} except that it accepts array of url.
+		@param urls Array of URLs of the target resource.
+		                         The url is relative to the "resources" folder, extensions must be omitted.
+		@param type Only asset of type will be loaded if this argument is supplied.
+		@param progressCallback Callback invoked when progression change.
+		@param completeCallback A callback which is called when all assets have been loaded, or an error occurs.
+		
+		@example 
+		```js
+		// load the SpriteFrames from resources folder
+		var spriteFrames;
+		var urls = ['misc/characters/character_01', 'misc/weapons/weapons_01'];
+		cc.loader.loadResArray(urls, cc.SpriteFrame, function (err, assets) {
+		    if (err) {
+		        cc.error(err);
+		        return;
+		    }
+		    spriteFrames = assets;
+		    // ...
+		});
+		``` 
+		*/
+		static loadResArray(url: string[], type: typeof cc.Asset, progressCallback: (completedCount: number, totalCount: number, item: any) => void, completeCallback: ((error: Error, resource: any[]) => void)|null): void;
+		static loadResArray(url: string[], type: typeof cc.Asset, completeCallback: (error: Error, resource: any[]) => void): void;
+		static loadResArray(url: string[], type: typeof cc.Asset): void;
+		static loadResArray(url: string[], progressCallback: (completedCount: number, totalCount: number, item: any) => void, completeCallback: ((error: Error, resource: any[]) => void)|null): void;
+		static loadResArray(url: string[], completeCallback: (error: Error, resource: any[]) => void): void;
+		static loadResArray(url: string[]): void;		
+		/**
+		Load all assets in a folder inside the "assets/resources" folder of your project.<br>
+		<br>
+		Note: All asset URLs in Creator use forward slashes, URLs using backslashes will not work.
+		@param url Url of the target folder.
+		                      The url is relative to the "resources" folder, extensions must be omitted.
+		@param type Only asset of type will be loaded if this argument is supplied.
+		@param progressCallback Callback invoked when progression change.
+		@param completeCallback A callback which is called when all assets have been loaded, or an error occurs.
+		
+		@example 
+		```js
+		// load the texture (resources/imgs/cocos.png) and the corresponding sprite frame
+		cc.loader.loadResDir('imgs/cocos', function (err, assets) {
+		    if (err) {
+		        cc.error(err);
+		        return;
+		    }
+		    var texture = assets[0];
+		    var spriteFrame = assets[1];
+		});
+		
+		// load all textures in "resources/imgs/"
+		cc.loader.loadResDir('imgs', cc.Texture2D, function (err, textures) {
+		    var texture1 = textures[0];
+		    var texture2 = textures[1];
+		});
+		
+		// load all JSONs in "resources/data/"
+		cc.loader.loadResDir('data', function (err, objects, urls) {
+		    var data = objects[0];
+		    var url = urls[0];
+		});
+		``` 
+		*/
+		static loadResDir(url: string, type: typeof cc.Asset, progressCallback: (completedCount: number, totalCount: number, item: any) => void, completeCallback: ((error: Error, resource: any[], urls: string[]) => void)|null): void;
+		static loadResDir(url: string, type: typeof cc.Asset, completeCallback: (error: Error, resource: any[], urls: string[]) => void): void;
+		static loadResDir(url: string, type: typeof cc.Asset): void;
+		static loadResDir(url: string, progressCallback: (completedCount: number, totalCount: number, item: any) => void, completeCallback: ((error: Error, resource: any[], urls: string[]) => void)|null): void;
+		static loadResDir(url: string, completeCallback: (error: Error, resource: any[], urls: string[]) => void): void;
+		static loadResDir(url: string): void;		
+		/**
+		Get resource data by id. <br>
+		When you load resources with {{#crossLink "loader/load:method"}}{{/crossLink}} or {{#crossLink "loader/loadRes:method"}}{{/crossLink}},
+		the url will be the unique identity of the resource.
+		After loaded, you can acquire them by passing the url to this API.
+		@param url url
+		@param type Only asset of type will be returned if this argument is supplied. 
+		*/
+		static getRes(url: string, type?: Function): any;		
+		/**
+		!#en Get all resource dependencies of the requested asset in an array, including itself.
+		The owner parameter accept the following types: 1. The asset itself; 2. The resource url; 3. The asset's uuid.<br>
+		The returned array stores the dependencies with their uuids, after retrieve dependencies,
+		you can release them, access dependent assets by passing the uuid to {{#crossLink "loader/getRes:method"}}{{/crossLink}}, or other stuffs you want.<br>
+		For release all dependencies of an asset, please refer to {{#crossLink "loader/release:method"}}{{/crossLink}}
+		Here is some examples:
+		!#zh 获取一个指定资源的所有依赖资源，包含它自身，并保存在数组中返回。owner 参数接收以下几种类型：1. 资源 asset 对象；2. 资源目录下的 url；3. 资源的 uuid。<br>
+		返回的数组将仅保存依赖资源的 uuid，获取这些 uuid 后，你可以从 loader 释放这些资源；通过 {{#crossLink "loader/getRes:method"}}{{/crossLink}} 获取某个资源或者进行其他你需要的操作。<br>
+		想要释放一个资源及其依赖资源，可以参考 {{#crossLink "loader/release:method"}}{{/crossLink}}。下面是一些示例代码：
+		@param owner The owner asset or the resource url or the asset's uuid
+		
+		@example 
+		```js
+		// Release all dependencies of a loaded prefab
+		var deps = cc.loader.getDependsRecursively(prefab);
+		cc.loader.release(deps);
+		// Retrieve all dependent textures
+		var deps = cc.loader.getDependsRecursively('prefabs/sample');
+		var textures = [];
+		for (var i = 0; i < deps.length; ++i) {
+		    var item = cc.loader.getRes(deps[i]);
+		    if (item instanceof cc.Texture2D) {
+		        textures.push(item);
+		    }
+		}
+		``` 
+		*/
+		static getDependsRecursively(owner: Asset|RawAsset|string): any[];		
+		/**
+		!#en
+		Release the content of an asset or an array of assets by uuid.
+		Start from v1.3, this method will not only remove the cache of the asset in loader, but also clean up its content.
+		For example, if you release a texture, the texture asset and its gl texture data will be freed up.
+		In complexe project, you can use this function with {{#crossLink "loader/getDependsRecursively:method"}}{{/crossLink}} to free up memory in critical circumstances.
+		Notice, this method may cause the texture to be unusable, if there are still other nodes use the same texture, they may turn to black and report gl errors.
+		If you only want to remove the cache of an asset, please use {{#crossLink "pipeline/removeItem:method"}}{{/crossLink}}
+		!#zh
+		通过 id（通常是资源 url）来释放一个资源或者一个资源数组。
+		从 v1.3 开始，这个方法不仅会从 loader 中删除资源的缓存引用，还会清理它的资源内容。
+		比如说，当你释放一个 texture 资源，这个 texture 和它的 gl 贴图数据都会被释放。
+		在复杂项目中，我们建议你结合 {{#crossLink "loader/getDependsRecursively:method"}}{{/crossLink}} 来使用，便于在设备内存告急的情况下更快地释放不再需要的资源的内存。
+		注意，这个函数可能会导致资源贴图或资源所依赖的贴图不可用，如果场景中存在节点仍然依赖同样的贴图，它们可能会变黑并报 GL 错误。
+		如果你只想删除一个资源的缓存引用，请使用 {{#crossLink "pipeline/removeItem:method"}}{{/crossLink}}
+		@param asset asset
+		
+		@example 
+		```js
+		// Release a texture which is no longer need
+		cc.loader.release(texture);
+		// Release all dependencies of a loaded prefab
+		var deps = cc.loader.getDependsRecursively('prefabs/sample');
+		cc.loader.release(deps);
+		// If there is no instance of this prefab in the scene, the prefab and its dependencies like textures, sprite frames, etc, will be freed up.
+		// If you have some other nodes share a texture in this prefab, you can skip it in two ways:
+		// 1. Forbid auto release a texture before release
+		cc.loader.setAutoRelease(texture2d, false);
+		// 2. Remove it from the dependencies array
+		var deps = cc.loader.getDependsRecursively('prefabs/sample');
+		var index = deps.indexOf(texture2d._uuid);
+		if (index !== -1)
+		    deps.splice(index, 1);
+		cc.loader.release(deps);
+		``` 
+		*/
+		static release(asset: Asset|RawAsset|string|any[]): void;		
+		/**
+		!#en Release the asset by its object. Refer to {{#crossLink "loader/release:method"}}{{/crossLink}} for detailed informations.
+		!#zh 通过资源对象自身来释放资源。详细信息请参考 {{#crossLink "loader/release:method"}}{{/crossLink}}
+		@param asset asset 
+		*/
+		static releaseAsset(asset: Asset): void;		
+		/**
+		!#en Release the asset loaded by {{#crossLink "loader/loadRes:method"}}{{/crossLink}}. Refer to {{#crossLink "loader/release:method"}}{{/crossLink}} for detailed informations.
+		!#zh 释放通过 {{#crossLink "loader/loadRes:method"}}{{/crossLink}} 加载的资源。详细信息请参考 {{#crossLink "loader/release:method"}}{{/crossLink}}
+		@param url url
+		@param type Only asset of type will be released if this argument is supplied. 
+		*/
+		static releaseRes(url: string, type?: Function): void;		
+		/**
+		!#en Release the all assets loaded by {{#crossLink "loader/loadResDir:method"}}{{/crossLink}}. Refer to {{#crossLink "loader/release:method"}}{{/crossLink}} for detailed informations.
+		!#zh 释放通过 {{#crossLink "loader/loadResDir:method"}}{{/crossLink}} 加载的资源。详细信息请参考 {{#crossLink "loader/release:method"}}{{/crossLink}}
+		@param url url
+		@param type Only asset of type will be released if this argument is supplied. 
+		*/
+		static releaseResDir(url: string, type?: Function): void;		
+		/**
+		!#en Resource all assets. Refer to {{#crossLink "loader/release:method"}}{{/crossLink}} for detailed informations.
+		!#zh 释放所有资源。详细信息请参考 {{#crossLink "loader/release:method"}}{{/crossLink}} 
+		*/
+		static releaseAll(): void;		
+		/**
+		!#en
+		Indicates whether to release the asset when loading a new scene.<br>
+		By default, when loading a new scene, all assets in the previous scene will be released or preserved
+		according to whether the previous scene checked the "Auto Release Assets" option.
+		On the other hand, assets dynamically loaded by using `cc.loader.loadRes` or `cc.loader.loadResDir`
+		will not be affected by that option, remain not released by default.<br>
+		Use this API to change the default behavior on a single asset, to force preserve or release specified asset when scene switching.<br>
+		<br>
+		See: {{#crossLink "loader/setAutoReleaseRecursively:method"}}cc.loader.setAutoReleaseRecursively{{/crossLink}}, {{#crossLink "loader/isAutoRelease:method"}}cc.loader.isAutoRelease{{/crossLink}}
+		!#zh
+		设置当场景切换时是否自动释放资源。<br>
+		默认情况下，当加载新场景时，旧场景的资源根据旧场景是否勾选“Auto Release Assets”，将会被释放或者保留。
+		而使用 `cc.loader.loadRes` 或 `cc.loader.loadResDir` 动态加载的资源，则不受场景设置的影响，默认不自动释放。<br>
+		使用这个 API 可以在单个资源上改变这个默认行为，强制在切换场景时保留或者释放指定资源。<br>
+		<br>
+		参考：{{#crossLink "loader/setAutoReleaseRecursively:method"}}cc.loader.setAutoReleaseRecursively{{/crossLink}}，{{#crossLink "loader/isAutoRelease:method"}}cc.loader.isAutoRelease{{/crossLink}}
+		@param assetOrUrlOrUuid asset object or the raw asset's url or uuid
+		@param autoRelease indicates whether should release automatically
+		
+		@example 
+		```js
+		// auto release the texture event if "Auto Release Assets" disabled in current scene
+		cc.loader.setAutoRelease(texture2d, true);
+		// don't release the texture even if "Auto Release Assets" enabled in current scene
+		cc.loader.setAutoRelease(texture2d, false);
+		// first parameter can be url
+		cc.loader.setAutoRelease(audioUrl, false);
+		``` 
+		*/
+		static setAutoRelease(assetOrUrlOrUuid: Asset|string, autoRelease: boolean): void;		
+		/**
+		!#en
+		Indicates whether to release the asset and its referenced other assets when loading a new scene.<br>
+		By default, when loading a new scene, all assets in the previous scene will be released or preserved
+		according to whether the previous scene checked the "Auto Release Assets" option.
+		On the other hand, assets dynamically loaded by using `cc.loader.loadRes` or `cc.loader.loadResDir`
+		will not be affected by that option, remain not released by default.<br>
+		Use this API to change the default behavior on the specified asset and its recursively referenced assets, to force preserve or release specified asset when scene switching.<br>
+		<br>
+		See: {{#crossLink "loader/setAutoRelease:method"}}cc.loader.setAutoRelease{{/crossLink}}, {{#crossLink "loader/isAutoRelease:method"}}cc.loader.isAutoRelease{{/crossLink}}
+		!#zh
+		设置当场景切换时是否自动释放资源及资源引用的其它资源。<br>
+		默认情况下，当加载新场景时，旧场景的资源根据旧场景是否勾选“Auto Release Assets”，将会被释放或者保留。
+		而使用 `cc.loader.loadRes` 或 `cc.loader.loadResDir` 动态加载的资源，则不受场景设置的影响，默认不自动释放。<br>
+		使用这个 API 可以在指定资源及资源递归引用到的所有资源上改变这个默认行为，强制在切换场景时保留或者释放指定资源。<br>
+		<br>
+		参考：{{#crossLink "loader/setAutoRelease:method"}}cc.loader.setAutoRelease{{/crossLink}}，{{#crossLink "loader/isAutoRelease:method"}}cc.loader.isAutoRelease{{/crossLink}}
+		@param assetOrUrlOrUuid asset object or the raw asset's url or uuid
+		@param autoRelease indicates whether should release automatically
+		
+		@example 
+		```js
+		// auto release the SpriteFrame and its Texture event if "Auto Release Assets" disabled in current scene
+		cc.loader.setAutoReleaseRecursively(spriteFrame, true);
+		// don't release the SpriteFrame and its Texture even if "Auto Release Assets" enabled in current scene
+		cc.loader.setAutoReleaseRecursively(spriteFrame, false);
+		// don't release the Prefab and all the referenced assets
+		cc.loader.setAutoReleaseRecursively(prefab, false);
+		``` 
+		*/
+		static setAutoReleaseRecursively(assetOrUrlOrUuid: Asset|string, autoRelease: boolean): void;		
+		/**
+		!#en
+		Returns whether the asset is configured as auto released, despite how "Auto Release Assets" property is set on scene asset.<br>
+		<br>
+		See: {{#crossLink "loader/setAutoRelease:method"}}cc.loader.setAutoRelease{{/crossLink}}, {{#crossLink "loader/setAutoReleaseRecursively:method"}}cc.loader.setAutoReleaseRecursively{{/crossLink}}
+		
+		!#zh
+		返回指定的资源是否有被设置为自动释放，不论场景的“Auto Release Assets”如何设置。<br>
+		<br>
+		参考：{{#crossLink "loader/setAutoRelease:method"}}cc.loader.setAutoRelease{{/crossLink}}，{{#crossLink "loader/setAutoReleaseRecursively:method"}}cc.loader.setAutoReleaseRecursively{{/crossLink}}
+		@param assetOrUrl asset object or the raw asset's url 
+		*/
+		static isAutoRelease(assetOrUrl: Asset|string): boolean;	
+	}	
+	/** !#en
+	LoadingItems is the queue of items which can flow them into the loading pipeline.</br>
+	Please don't construct it directly, use {{#crossLink "LoadingItems.create"}}LoadingItems.create{{/crossLink}} instead, because we use an internal pool to recycle the queues.</br>
+	It hold a map of items, each entry in the map is a url to object key value pair.</br>
+	Each item always contains the following property:</br>
+	- id: The identification of the item, usually it's identical to url</br>
+	- url: The url </br>
+	- type: The type, it's the extension name of the url by default, could be specified manually too.</br>
+	- error: The error happened in pipeline will be stored in this property.</br>
+	- content: The content processed by the pipeline, the final result will also be stored in this property.</br>
+	- complete: The flag indicate whether the item is completed by the pipeline.</br>
+	- states: An object stores the states of each pipe the item go through, the state can be: Pipeline.ItemState.WORKING | Pipeline.ItemState.ERROR | Pipeline.ItemState.COMPLETE</br>
+	</br>
+	Item can hold other custom properties.</br>
+	Each LoadingItems object will be destroyed for recycle after onComplete callback</br>
+	So please don't hold its reference for later usage, you can copy properties in it though.
+	!#zh
+	LoadingItems 是一个加载对象队列，可以用来输送加载对象到加载管线中。</br>
+	请不要直接使用 new 构造这个类的对象，你可以使用 {{#crossLink "LoadingItems.create"}}LoadingItems.create{{/crossLink}} 来创建一个新的加载队列，这样可以允许我们的内部对象池回收并重利用加载队列。
+	它有一个 map 属性用来存放加载项，在 map 对象中已 url 为 key 值。</br>
+	每个对象都会包含下列属性：</br>
+	- id：该对象的标识，通常与 url 相同。</br>
+	- url：路径 </br>
+	- type: 类型，它这是默认的 URL 的扩展名，可以手动指定赋值。</br>
+	- error：pipeline 中发生的错误将被保存在这个属性中。</br>
+	- content: pipeline 中处理的临时结果，最终的结果也将被存储在这个属性中。</br>
+	- complete：该标志表明该对象是否通过 pipeline 完成。</br>
+	- states：该对象存储每个管道中对象经历的状态，状态可以是 Pipeline.ItemState.WORKING | Pipeline.ItemState.ERROR | Pipeline.ItemState.COMPLETE</br>
+	</br>
+	对象可容纳其他自定义属性。</br>
+	每个 LoadingItems 对象都会在 onComplete 回调之后被销毁，所以请不要持有它的引用并在结束回调之后依赖它的内容执行任何逻辑，有这种需求的话你可以提前复制它的内容。 */
+	export class LoadingItems extends CallbacksInvoker {		
+		/**
+		!#en This is a callback which will be invoked while an item flow out the pipeline.
+		You can pass the callback function in LoadingItems.create or set it later.
+		!#zh 这个回调函数将在 item 加载结束后被调用。你可以在构造时传递这个回调函数或者是在构造之后直接设置。
+		@param completedCount The number of the items that are already completed.
+		@param totalCount The total number of the items.
+		@param item The latest item which flow out the pipeline.
+		
+		@example 
+		```js
+		loadingItems.onProgress = function (completedCount, totalCount, item) {
+		     var progress = (100 * completedCount / totalCount).toFixed(2);
+		     cc.log(progress + '%');
+		 }
+		``` 
+		*/
+		onProgress(completedCount: number, totalCount: number, item: any): void;		
+		/**
+		!#en This is a callback which will be invoked while all items is completed,
+		You can pass the callback function in LoadingItems.create or set it later.
+		!#zh 该函数将在加载队列全部完成时被调用。你可以在构造时传递这个回调函数或者是在构造之后直接设置。
+		@param errors All errored urls will be stored in this array, if no error happened, then it will be null
+		@param items All items.
+		
+		@example 
+		```js
+		loadingItems.onComplete = function (errors, items) {
+		     if (error)
+		         cc.log('Completed with ' + errors.length + ' errors');
+		     else
+		         cc.log('Completed ' + items.totalCount + ' items');
+		 }
+		``` 
+		*/
+		onComplete(errors: any[], items: LoadingItems): void;		
+		/** !#en The map of all items.
+		!#zh 存储所有加载项的对象。 */
+		map: any;		
+		/** !#en The map of completed items.
+		!#zh 存储已经完成的加载项。 */
+		completed: any;		
+		/** !#en Total count of all items.
+		!#zh 所有加载项的总数。 */
+		totalCount: number;		
+		/** !#en Total count of completed items.
+		!#zh 所有完成加载项的总数。 */
+		completedCount: number;		
+		/** !#en Activated or not.
+		!#zh 是否启用。 */
+		active: boolean;		
+		/**
+		!#en The constructor function of LoadingItems, this will use recycled LoadingItems in the internal pool if possible.
+		You can pass onProgress and onComplete callbacks to visualize the loading process.
+		!#zh LoadingItems 的构造函数，这种构造方式会重用内部对象缓冲池中的 LoadingItems 队列，以尽量避免对象创建。
+		你可以传递 onProgress 和 onComplete 回调函数来获知加载进度信息。
+		@param pipeline The pipeline to process the queue.
+		@param urlList The items array.
+		@param onProgress The progression callback, refer to {{#crossLink "LoadingItems.onProgress"}}{{/crossLink}}
+		@param onComplete The completion callback, refer to {{#crossLink "LoadingItems.onComplete"}}{{/crossLink}}
+		
+		@example 
+		```js
+		LoadingItems.create(cc.loader, ['a.png', 'b.plist'], function (completedCount, totalCount, item) {
+		     var progress = (100 * completedCount / totalCount).toFixed(2);
+		     cc.log(progress + '%');
+		 }, function (errors, items) {
+		     if (errors) {
+		         for (var i = 0; i < errors.length; ++i) {
+		             cc.log('Error url: ' + errors[i] + ', error: ' + items.getError(errors[i]));
+		         }
+		     }
+		     else {
+		         var result_a = items.getContent('a.png');
+		         // ...
+		     }
+		 })
+		``` 
+		*/
+		static create(pipeline: Pipeline, urlList: any[], onProgress: Function, onComplete: Function): LoadingItems;		
+		/**
+		!#en Retrieve the LoadingItems queue object for an item.
+		!#zh 通过 item 对象获取它的 LoadingItems 队列。
+		@param item The item to query 
+		*/
+		static getQueue(item: any): LoadingItems;		
+		/**
+		!#en Complete an item in the LoadingItems queue, please do not call this method unless you know what's happening.
+		!#zh 通知 LoadingItems 队列一个 item 对象已完成，请不要调用这个函数，除非你知道自己在做什么。
+		@param item The item which has completed 
+		*/
+		static itemComplete(item: any): void;		
+		/**
+		!#en Add urls to the LoadingItems queue.
+		!#zh 向一个 LoadingItems 队列添加加载项。
+		@param urlList The url list to be appended, the url can be object or string 
+		*/
+		append(urlList: any[]): any[];		
+		/**
+		!#en Complete a LoadingItems queue, please do not call this method unless you know what's happening.
+		!#zh 完成一个 LoadingItems 队列，请不要调用这个函数，除非你知道自己在做什么。 
+		*/
+		allComplete(): void;		
+		/**
+		!#en Check whether all items are completed.
+		!#zh 检查是否所有加载项都已经完成。 
+		*/
+		isCompleted(): boolean;		
+		/**
+		!#en Check whether an item is completed.
+		!#zh 通过 id 检查指定加载项是否已经加载完成。
+		@param id The item's id. 
+		*/
+		isItemCompleted(id: string): boolean;		
+		/**
+		!#en Check whether an item exists.
+		!#zh 通过 id 检查加载项是否存在。
+		@param id The item's id. 
+		*/
+		exists(id: string): boolean;		
+		/**
+		!#en Returns the content of an internal item.
+		!#zh 通过 id 获取指定对象的内容。
+		@param id The item's id. 
+		*/
+		getContent(id: string): any;		
+		/**
+		!#en Returns the error of an internal item.
+		!#zh 通过 id 获取指定对象的错误信息。
+		@param id The item's id. 
+		*/
+		getError(id: string): any;		
+		/**
+		!#en Add a listener for an item, the callback will be invoked when the item is completed.
+		!#zh 监听加载项（通过 key 指定）的完成事件。
+		@param key key
+		@param callback can be null
+		@param target can be null 
+		*/
+		addListener(key: string, callback: Function, target: any): boolean;		
+		/**
+		!#en
+		Check if the specified key has any registered callback. </br>
+		If a callback is also specified, it will only return true if the callback is registered.
+		!#zh
+		检查指定的加载项是否有完成事件监听器。</br>
+		如果同时还指定了一个回调方法，并且回调有注册，它只会返回 true。
+		@param key key
+		@param callback callback
+		@param target target 
+		*/
+		hasListener(key: string, callback?: Function, target?: any): boolean;		
+		/**
+		!#en
+		Removes a listener. </br>
+		It will only remove when key, callback, target all match correctly.
+		!#zh
+		移除指定加载项已经注册的完成事件监听器。</br>
+		只会删除 key, callback, target 均匹配的监听器。
+		@param key key
+		@param callback callback
+		@param target target 
+		*/
+		remove(key: string, callback: Function, target: any): boolean;		
+		/**
+		!#en
+		Removes all callbacks registered in a certain event
+		type or all callbacks registered with a certain target.
+		!#zh 删除指定目标的所有完成事件监听器。
+		@param key The event key to be removed or the target to be removed 
+		*/
+		removeAllListeners(key: string|any): void;		
+		/**
+		!#en Complete an item in the LoadingItems queue, please do not call this method unless you know what's happening.
+		!#zh 通知 LoadingItems 队列一个 item 对象已完成，请不要调用这个函数，除非你知道自己在做什么。
+		@param id The item url 
+		*/
+		itemComplete(id: string): void;		
+		/**
+		!#en Destroy the LoadingItems queue, the queue object won't be garbage collected, it will be recycled, so every after destroy is not reliable.
+		!#zh 销毁一个 LoadingItems 队列，这个队列对象会被内部缓冲池回收，所以销毁后的所有内部信息都是不可依赖的。 
+		*/
+		destroy(): void;	
+	}	
+	/** !#en
+	A pipeline describes a sequence of manipulations, each manipulation is called a pipe.</br>
+	It's designed for loading process. so items should be urls, and the url will be the identity of each item during the process.</br>
+	A list of items can flow in the pipeline and it will output the results of all pipes.</br>
+	They flow in the pipeline like water in tubes, they go through pipe by pipe separately.</br>
+	Finally all items will flow out the pipeline and the process is finished.
+	
+	!#zh
+	pipeline 描述了一系列的操作，每个操作都被称为 pipe。</br>
+	它被设计来做加载过程的流程管理。所以 item 应该是 url，并且该 url 将是在处理中的每个 item 的身份标识。</br>
+	一个 item 列表可以在 pipeline 中流动，它将输出加载项经过所有 pipe 之后的结果。</br>
+	它们穿过 pipeline 就像水在管子里流动，将会按顺序流过每个 pipe。</br>
+	最后当所有加载项都流出 pipeline 时，整个加载流程就结束了。 */
+	export class Pipeline {		
+		/**
+		!#en
+		Constructor, pass an array of pipes to construct a new Pipeline,
+		the pipes will be chained in the given order.</br>
+		A pipe is an object which must contain an `id` in string and a `handle` function,
+		the id must be unique in the pipeline.</br>
+		It can also include `async` property to identify whether it's an asynchronous process.
+		!#zh
+		构造函数，通过一系列的 pipe 来构造一个新的 pipeline，pipes 将会在给定的顺序中被锁定。</br>
+		一个 pipe 就是一个对象，它包含了字符串类型的 ‘id’ 和 ‘handle’ 函数，在 pipeline 中 id 必须是唯一的。</br>
+		它还可以包括 ‘async’ 属性以确定它是否是一个异步过程。
+		@param pipes pipes
+		
+		@example 
+		```js
+		var pipeline = new Pipeline([
+		     {
+		         id: 'Downloader',
+		         handle: function (item, callback) {},
+		         async: true
+		     },
+		     {id: 'Parser', handle: function (item) {}, async: false}
+		 ]);
+		``` 
+		*/
+		constructor(pipes: any[]);		
+		/**
+		!#en
+		Insert a new pipe at the given index of the pipeline. </br>
+		A pipe must contain an `id` in string and a `handle` function, the id must be unique in the pipeline.
+		!#zh
+		在给定的索引位置插入一个新的 pipe。</br>
+		一个 pipe 必须包含一个字符串类型的 ‘id’ 和 ‘handle’ 函数，该 id 在 pipeline 必须是唯一标识。
+		@param pipe The pipe to be inserted
+		@param index The index to insert 
+		*/
+		insertPipe(pipe: any, index: number): void;		
+		/**
+		!#en
+		Add a new pipe at the end of the pipeline. </br>
+		A pipe must contain an `id` in string and a `handle` function, the id must be unique in the pipeline.
+		!#zh
+		添加一个新的 pipe 到 pipeline 尾部。 </br>
+		该 pipe 必须包含一个字符串类型 ‘id’ 和 ‘handle’ 函数，该 id 在 pipeline 必须是唯一标识。
+		@param pipe The pipe to be appended 
+		*/
+		appendPipe(pipe: any): void;		
+		/**
+		!#en
+		Let new items flow into the pipeline. </br>
+		Each item can be a simple url string or an object,
+		if it's an object, it must contain `id` property. </br>
+		You can specify its type by `type` property, by default, the type is the extension name in url. </br>
+		By adding a `skips` property including pipe ids, you can skip these pipe. </br>
+		The object can contain any supplementary property as you want. </br>
+		!#zh
+		让新的 item 流入 pipeline 中。</br>
+		这里的每个 item 可以是一个简单字符串类型的 url 或者是一个对象,
+		如果它是一个对象的话，他必须要包含 ‘id’ 属性。</br>
+		你也可以指定它的 ‘type’ 属性类型，默认情况下，该类型是 ‘url’ 的后缀名。</br>
+		也通过添加一个 包含 ‘skips’ 属性的 item 对象，你就可以跳过 skips 中包含的 pipe。</br>
+		该对象可以包含任何附加属性。
+		@param items items
+		
+		@example 
+		```js
+		pipeline.flowIn([
+		     'res/Background.png',
+		     {
+		         id: 'res/scene.json',
+		         type: 'scene',
+		         name: 'scene',
+		         skips: ['Downloader']
+		     }
+		 ]);
+		``` 
+		*/
+		flowIn(items: any[]): void;		
+		/**
+		!#en
+		Let new items flow into the pipeline and give a callback when the list of items are all completed. </br>
+		This is for loading dependencies for an existing item in flow, usually used in a pipe logic. </br>
+		For example, we have a loader for scene configuration file in JSON, the scene will only be fully loaded  </br>
+		after all its dependencies are loaded, then you will need to use function to flow in all dependencies  </br>
+		found in the configuration file, and finish the loader pipe only after all dependencies are loaded (in the callback).
+		!#zh
+		让新 items 流入 pipeline 并且当 item 列表完成时进行回调函数。</br>
+		这个 API 的使用通常是为了加载依赖项。</br>
+		例如：</br>
+		我们需要加载一个场景配置的 JSON 文件，该场景会将所有的依赖项全部都加载完毕以后，进行回调表示加载完毕。
+		@param urlList urlList
+		@param callback callback 
+		*/
+		flowInDeps(urlList: any[], callback: Function): any[];		
+		/**
+		!#en
+		Copy the item states from one source item to all destination items. </br>
+		It's quite useful when a pipe generate new items from one source item,</br>
+		then you should flowIn these generated items into pipeline, </br>
+		but you probably want them to skip all pipes the source item already go through,</br>
+		you can achieve it with this API. </br>
+		</br>
+		For example, an unzip pipe will generate more items, but you won't want them to pass unzip or download pipe again.
+		!#zh
+		从一个源 item 向所有目标 item 复制它的 pipe 状态，用于避免重复通过部分 pipe。</br>
+		当一个源 item 生成了一系列新的 items 时很有用，</br>
+		你希望让这些新的依赖项进入 pipeline，但是又不希望它们通过源 item 已经经过的 pipe，</br>
+		但是你可能希望他们源 item 已经通过并跳过所有 pipes，</br>
+		这个时候就可以使用这个 API。
+		@param srcItem The source item
+		@param dstItems A single destination item or an array of destination items 
+		*/
+		copyItemStates(srcItem: any, dstItems: any[]|any): void;		
+		/**
+		!#en Returns whether the pipeline is flowing (contains item) currently.
+		!#zh 获取 pipeline 当前是否正在处理中。 
+		*/
+		isFlowing(): boolean;		
+		/**
+		!#en Returns all items in pipeline. Returns null, please use API of Loader or LoadingItems.
+		!#zh 获取 pipeline 中的所有 items。返回 null，请使用 Loader / LoadingItems API。 
+		*/
+		getItems(): LoadingItems;		
+		/**
+		!#en Returns an item in pipeline.
+		!#zh 根据 id 获取一个 item
+		@param id The id of the item 
+		*/
+		getItem(id: any): any;		
+		/**
+		!#en Removes an completed item in pipeline.
+		It will only remove the cache in the pipeline or loader, its dependencies won't be released.
+		cc.loader provided another method to completely cleanup the resource and its dependencies,
+		please refer to {{#crossLink "loader/release:method"}}cc.loader.release{{/crossLink}}
+		!#zh 移除指定的已完成 item。
+		这将仅仅从 pipeline 或者 loader 中删除其缓存，并不会释放它所依赖的资源。
+		cc.loader 中提供了另一种删除资源及其依赖的清理方法，请参考 {{#crossLink "loader/release:method"}}cc.loader.release{{/crossLink}}
+		@param id The id of the item 
+		*/
+		removeItem(id: any): boolean;		
+		/**
+		!#en Clear the current pipeline, this function will clean up the items.
+		!#zh 清空当前 pipeline，该函数将清理 items。 
+		*/
+		clear(): void;	
 	}	
 	/** undefined */
 	export class WorldManifold {		
@@ -8730,7 +9564,7 @@ declare module cc {
 		@param selfCollider the collider belong to this rigidbody
 		@param otherCollider the collider belong to another rigidbody 
 		*/
-		onEndSolve(contact: PhysicsContact, selfCollider: PhysicsCollider, otherCollider: PhysicsCollider): void;		
+		onPostSolve(contact: PhysicsContact, selfCollider: PhysicsCollider, otherCollider: PhysicsCollider): void;		
 		/** !#en
 		Is this a fast moving body that should be prevented from tunneling through
 		other moving bodies?
@@ -8906,707 +9740,6 @@ declare module cc {
 		获取链接到此刚体的所有关节 
 		*/
 		getInertia(): [Joint];	
-	}	
-	/** Loader for resource loading process. It's a singleton object. */
-	export class loader extends Pipeline {		
-		/** The downloader in cc.loader's pipeline, it's by default the first pipe.
-		It's used to download files with several handlers: pure text, image, script, audio, font, uuid.
-		You can add your own download function with addDownloadHandlers */
-		static downloader: any;		
-		/** The downloader in cc.loader's pipeline, it's by default the second pipe.
-		It's used to parse downloaded content with several handlers: JSON, image, plist, fnt, uuid.
-		You can add your own download function with addLoadHandlers */
-		static loader: any;		
-		/**
-		Add custom supported types handler or modify existing type handler for download process.
-		@param extMap Custom supported types with corresponded handler
-		
-		@example 
-		```js
-		cc.loader.addDownloadHandlers({
-		     // This will match all url with `.scene` extension or all url with `scene` type
-		     'scene' : function (url, callback) {}
-		 });
-		``` 
-		*/
-		static addDownloadHandlers(extMap: any): void;		
-		/**
-		Add custom supported types handler or modify existing type handler for load process.
-		@param extMap Custom supported types with corresponded handler
-		
-		@example 
-		```js
-		cc.loader.addLoadHandlers({
-		     // This will match all url with `.scene` extension or all url with `scene` type
-		     'scene' : function (url, callback) {}
-		 });
-		``` 
-		*/
-		static addLoadHandlers(extMap: any): void;		
-		/**
-		Load resources with a progression callback and a complete callback.
-		The progression callback is the same as Pipeline's {{#crossLink "LoadingItems/onProgress:method"}}onProgress{{/crossLink}}
-		The complete callback is almost the same as Pipeline's {{#crossLink "LoadingItems/onComplete:method"}}onComplete{{/crossLink}}
-		The only difference is when user pass a single url as resources, the complete callback will set its result directly as the second parameter.
-		@param resources Url list in an array
-		@param progressCallback Callback invoked when progression change
-		@param completeCallback Callback invoked when all resources loaded
-		
-		@example 
-		```js
-		cc.loader.load('a.png', function (err, tex) {
-		    cc.log('Result should be a texture: ' + (tex instanceof cc.Texture2D));
-		});
-		
-		cc.loader.load('http://example.com/a.png', function (err, tex) {
-		    cc.log('Should load a texture from external url: ' + (tex instanceof cc.Texture2D));
-		});
-		
-		cc.loader.load({url: 'http://example.com/getImageREST?file=a.png', type: 'png'}, function (err, tex) {
-		    cc.log('Should load a texture from RESTful API by specify the type: ' + (tex instanceof cc.Texture2D));
-		});
-		
-		cc.loader.load(['a.png', 'b.json'], function (errors, results) {
-		    if (errors) {
-		        for (var i = 0; i < errors.length; i++) {
-		            cc.log('Error url [' + errors[i] + ']: ' + results.getError(errors[i]));
-		        }
-		    }
-		    var aTex = results.getContent('a.png');
-		    var bJsonObj = results.getContent('b.json');
-		});
-		``` 
-		*/
-		static load(resources: string|string[]|{uuid?: string, url?: string, type?: string}, completeCallback?: Function): void;
-		static load(resources: string|string[]|{uuid?: string, url?: string, type?: string}, progressCallback: Function, completeCallback: Function|null): void;		
-		/**
-		Load resources from the "resources" folder inside the "assets" folder of your project.<br>
-		<br>
-		Note: All asset URLs in Creator use forward slashes, URLs using backslashes will not work.
-		@param url Url of the target resource.
-		                      The url is relative to the "resources" folder, extensions must be omitted.
-		@param type Only asset of type will be loaded if this argument is supplied.
-		@param progressCallback Callback invoked when progression change.
-		@param completeCallback Callback invoked when the resource loaded.
-		
-		@example 
-		```js
-		// load the prefab (project/assets/resources/misc/character/cocos) from resources folder
-		cc.loader.loadRes('misc/character/cocos', function (err, prefab) {
-		    if (err) {
-		        cc.error(err.message || err);
-		        return;
-		    }
-		    cc.log('Result should be a prefab: ' + (prefab instanceof cc.Prefab));
-		});
-		
-		// load the sprite frame of (project/assets/resources/imgs/cocos.png) from resources folder
-		cc.loader.loadRes('imgs/cocos', cc.SpriteFrame, function (err, spriteFrame) {
-		    if (err) {
-		        cc.error(err.message || err);
-		        return;
-		    }
-		    cc.log('Result should be a sprite frame: ' + (spriteFrame instanceof cc.SpriteFrame));
-		});
-		``` 
-		*/
-		static loadRes(url: string, type: typeof cc.Asset, progressCallback: Function, completeCallback: ((error: Error, resource: any) => void)|null): void;
-		static loadRes(url: string, type: typeof cc.Asset, completeCallback: (error: Error, resource: any) => void): void;
-		static loadRes(url: string, type: typeof cc.Asset): void;
-		static loadRes(url: string, progressCallback: Function, completeCallback: ((error: Error, resource: any) => void)|null): void;
-		static loadRes(url: string, completeCallback: (error: Error, resource: any) => void): void;
-		static loadRes(url: string): void;		
-		/**
-		This method is like {{#crossLink "loader/loadRes:method"}}{{/crossLink}} except that it accepts array of url.
-		@param urls Array of URLs of the target resource.
-		                         The url is relative to the "resources" folder, extensions must be omitted.
-		@param type Only asset of type will be loaded if this argument is supplied.
-		@param progressCallback Callback invoked when progression change.
-		@param completeCallback A callback which is called when all assets have been loaded, or an error occurs.
-		
-		@example 
-		```js
-		// load the SpriteFrames from resources folder
-		var spriteFrames;
-		var urls = ['misc/characters/character_01', 'misc/weapons/weapons_01'];
-		cc.loader.loadResArray(urls, cc.SpriteFrame, function (err, assets) {
-		    if (err) {
-		        cc.error(err);
-		        return;
-		    }
-		    spriteFrames = assets;
-		    // ...
-		});
-		``` 
-		*/
-		static loadResArray(url: string[], type: typeof cc.Asset, progressCallback: Function, completeCallback: ((error: Error, resource: any[]) => void)|null): void;
-		static loadResArray(url: string[], type: typeof cc.Asset, completeCallback: (error: Error, resource: any[]) => void): void;
-		static loadResArray(url: string[], type: typeof cc.Asset): void;
-		static loadResArray(url: string[], progressCallback: Function, completeCallback: ((error: Error, resource: any[]) => void)|null): void;
-		static loadResArray(url: string[], completeCallback: (error: Error, resource: any[]) => void): void;
-		static loadResArray(url: string[]): void;		
-		/**
-		Load all assets in a folder inside the "assets/resources" folder of your project.<br>
-		<br>
-		Note: All asset URLs in Creator use forward slashes, URLs using backslashes will not work.
-		@param url Url of the target folder.
-		                      The url is relative to the "resources" folder, extensions must be omitted.
-		@param type Only asset of type will be loaded if this argument is supplied.
-		@param progressCallback Callback invoked when progression change.
-		@param completeCallback A callback which is called when all assets have been loaded, or an error occurs.
-		
-		@example 
-		```js
-		// load the texture (resources/imgs/cocos.png) and the corresponding sprite frame
-		cc.loader.loadResDir('imgs/cocos', function (err, assets) {
-		    if (err) {
-		        cc.error(err);
-		        return;
-		    }
-		    var texture = assets[0];
-		    var spriteFrame = assets[1];
-		});
-		
-		// load all textures in "resources/imgs/"
-		cc.loader.loadResDir('imgs', cc.Texture2D, function (err, textures) {
-		    var texture1 = textures[0];
-		    var texture2 = textures[1];
-		});
-		
-		// load all JSONs in "resources/data/"
-		cc.loader.loadResDir('data', function (err, objects, urls) {
-		    var data = objects[0];
-		    var url = urls[0];
-		});
-		``` 
-		*/
-		static loadResDir(url: string, type: typeof cc.Asset, progressCallback: Function, completeCallback: ((error: Error, resource: any[], urls: string[]) => void)|null): void;
-		static loadResDir(url: string, type: typeof cc.Asset, completeCallback: (error: Error, resource: any[], urls: string[]) => void): void;
-		static loadResDir(url: string, type: typeof cc.Asset): void;
-		static loadResDir(url: string, progressCallback: Function, completeCallback: ((error: Error, resource: any[], urls: string[]) => void)|null): void;
-		static loadResDir(url: string, completeCallback: (error: Error, resource: any[], urls: string[]) => void): void;
-		static loadResDir(url: string): void;		
-		/**
-		Get resource data by id. <br>
-		When you load resources with {{#crossLink "loader/load:method"}}{{/crossLink}} or {{#crossLink "loader/loadRes:method"}}{{/crossLink}},
-		the url will be the unique identity of the resource.
-		After loaded, you can acquire them by passing the url to this API.
-		@param url url
-		@param type Only asset of type will be returned if this argument is supplied. 
-		*/
-		static getRes(url: string, type?: Function): any;		
-		/**
-		!#en
-		Release the content of an asset or an array of assets by uuid.
-		Start from v1.3, this method will not only remove the cache of the asset in loader, but also clean up its content.
-		For example, if you release a texture, the texture asset and its gl texture data will be freed up.
-		In complexe project, you can use this function with {{#crossLink "loader/getDependsRecursively:method"}}{{/crossLink}} to free up memory in critical circumstances.
-		Notice, this method may cause the texture to be unusable, if there are still other nodes use the same texture, they may turn to black and report gl errors.
-		If you only want to remove the cache of an asset, please use {{#crossLink "pipeline/removeItem:method"}}{{/crossLink}}
-		!#zh
-		通过 id（通常是资源 url）来释放一个资源或者一个资源数组。
-		从 v1.3 开始，这个方法不仅会从 loader 中删除资源的缓存引用，还会清理它的资源内容。
-		比如说，当你释放一个 texture 资源，这个 texture 和它的 gl 贴图数据都会被释放。
-		在复杂项目中，我们建议你结合 {{#crossLink "loader/getDependsRecursively:method"}}{{/crossLink}} 来使用，便于在设备内存告急的情况下更快地释放不再需要的资源的内存。
-		注意，这个函数可能会导致资源贴图或资源所依赖的贴图不可用，如果场景中存在节点仍然依赖同样的贴图，它们可能会变黑并报 GL 错误。
-		如果你只想删除一个资源的缓存引用，请使用 {{#crossLink "pipeline/removeItem:method"}}{{/crossLink}}
-		@param asset asset
-		
-		@example 
-		```js
-		// Release a texture which is no longer need
-		cc.loader.release(texture);
-		// Release all dependencies of a loaded prefab
-		var deps = cc.loader.getDependsRecursively('prefabs/sample');
-		cc.loader.release(deps);
-		// If there is no instance of this prefab in the scene, the prefab and its dependencies like textures, sprite frames, etc, will be freed up.
-		// If you have some other nodes share a texture in this prefab, you can skip it in two ways:
-		// 1. Forbid auto release a texture before release
-		cc.loader.setAutoRelease(texture2d, false);
-		// 2. Remove it from the dependencies array
-		var deps = cc.loader.getDependsRecursively('prefabs/sample');
-		var index = deps.indexOf(texture2d._uuid);
-		if (index !== -1)
-		    deps.splice(index, 1);
-		cc.loader.release(deps);
-		``` 
-		*/
-		static release(asset: Asset|RawAsset|string|any[]): void;		
-		/**
-		!#en Release the asset by its object. Refer to {{#crossLink "loader/release:method"}}{{/crossLink}} for detailed informations.
-		!#zh 通过资源对象自身来释放资源。详细信息请参考 {{#crossLink "loader/release:method"}}{{/crossLink}}
-		@param asset asset 
-		*/
-		static releaseAsset(asset: Asset): void;		
-		/**
-		!#en Release the asset loaded by {{#crossLink "loader/loadRes:method"}}{{/crossLink}}. Refer to {{#crossLink "loader/release:method"}}{{/crossLink}} for detailed informations.
-		!#zh 释放通过 {{#crossLink "loader/loadRes:method"}}{{/crossLink}} 加载的资源。详细信息请参考 {{#crossLink "loader/release:method"}}{{/crossLink}}
-		@param url url
-		@param type Only asset of type will be released if this argument is supplied. 
-		*/
-		static releaseRes(url: string, type?: Function): void;		
-		/**
-		!#en Release the all assets loaded by {{#crossLink "loader/loadResDir:method"}}{{/crossLink}}. Refer to {{#crossLink "loader/release:method"}}{{/crossLink}} for detailed informations.
-		!#zh 释放通过 {{#crossLink "loader/loadResDir:method"}}{{/crossLink}} 加载的资源。详细信息请参考 {{#crossLink "loader/release:method"}}{{/crossLink}}
-		@param url url
-		@param type Only asset of type will be released if this argument is supplied. 
-		*/
-		static releaseResDir(url: string, type?: Function): void;		
-		/**
-		!#en Resource all assets. Refer to {{#crossLink "loader/release:method"}}{{/crossLink}} for detailed informations.
-		!#zh 释放所有资源。详细信息请参考 {{#crossLink "loader/release:method"}}{{/crossLink}} 
-		*/
-		static releaseAll(): void;		
-		/**
-		!#en
-		Indicates whether to release the asset when loading a new scene.<br>
-		By default, when loading a new scene, all assets in the previous scene will be released or preserved
-		according to whether the previous scene checked the "Auto Release Assets" option.
-		On the other hand, assets dynamically loaded by using `cc.loader.loadRes` or `cc.loader.loadResDir`
-		will not be affected by that option, remain not released by default.<br>
-		Use this API to change the default behavior on a single asset, to force preserve or release specified asset when scene switching.<br>
-		<br>
-		See: {{#crossLink "loader/setAutoReleaseRecursively:method"}}cc.loader.setAutoReleaseRecursively{{/crossLink}}, {{#crossLink "loader/isAutoRelease:method"}}cc.loader.isAutoRelease{{/crossLink}}
-		!#zh
-		设置当场景切换时是否自动释放资源。<br>
-		默认情况下，当加载新场景时，旧场景的资源根据旧场景是否勾选“Auto Release Assets”，将会被释放或者保留。
-		而使用 `cc.loader.loadRes` 或 `cc.loader.loadResDir` 动态加载的资源，则不受场景设置的影响，默认不自动释放。<br>
-		使用这个 API 可以在单个资源上改变这个默认行为，强制在切换场景时保留或者释放指定资源。<br>
-		<br>
-		参考：{{#crossLink "loader/setAutoReleaseRecursively:method"}}cc.loader.setAutoReleaseRecursively{{/crossLink}}，{{#crossLink "loader/isAutoRelease:method"}}cc.loader.isAutoRelease{{/crossLink}}
-		@param assetOrUrlOrUuid asset object or the raw asset's url or uuid
-		@param autoRelease indicates whether should release automatically
-		
-		@example 
-		```js
-		// auto release the texture event if "Auto Release Assets" disabled in current scene
-		cc.loader.setAutoRelease(texture2d, true);
-		// don't release the texture even if "Auto Release Assets" enabled in current scene
-		cc.loader.setAutoRelease(texture2d, false);
-		// first parameter can be url
-		cc.loader.setAutoRelease(audioUrl, false);
-		``` 
-		*/
-		static setAutoRelease(assetOrUrlOrUuid: Asset|string, autoRelease: boolean): void;		
-		/**
-		!#en
-		Indicates whether to release the asset and its referenced other assets when loading a new scene.<br>
-		By default, when loading a new scene, all assets in the previous scene will be released or preserved
-		according to whether the previous scene checked the "Auto Release Assets" option.
-		On the other hand, assets dynamically loaded by using `cc.loader.loadRes` or `cc.loader.loadResDir`
-		will not be affected by that option, remain not released by default.<br>
-		Use this API to change the default behavior on the specified asset and its recursively referenced assets, to force preserve or release specified asset when scene switching.<br>
-		<br>
-		See: {{#crossLink "loader/setAutoRelease:method"}}cc.loader.setAutoRelease{{/crossLink}}, {{#crossLink "loader/isAutoRelease:method"}}cc.loader.isAutoRelease{{/crossLink}}
-		!#zh
-		设置当场景切换时是否自动释放资源及资源引用的其它资源。<br>
-		默认情况下，当加载新场景时，旧场景的资源根据旧场景是否勾选“Auto Release Assets”，将会被释放或者保留。
-		而使用 `cc.loader.loadRes` 或 `cc.loader.loadResDir` 动态加载的资源，则不受场景设置的影响，默认不自动释放。<br>
-		使用这个 API 可以在指定资源及资源递归引用到的所有资源上改变这个默认行为，强制在切换场景时保留或者释放指定资源。<br>
-		<br>
-		参考：{{#crossLink "loader/setAutoRelease:method"}}cc.loader.setAutoRelease{{/crossLink}}，{{#crossLink "loader/isAutoRelease:method"}}cc.loader.isAutoRelease{{/crossLink}}
-		@param assetOrUrlOrUuid asset object or the raw asset's url or uuid
-		@param autoRelease indicates whether should release automatically
-		
-		@example 
-		```js
-		// auto release the SpriteFrame and its Texture event if "Auto Release Assets" disabled in current scene
-		cc.loader.setAutoReleaseRecursively(spriteFrame, true);
-		// don't release the SpriteFrame and its Texture even if "Auto Release Assets" enabled in current scene
-		cc.loader.setAutoReleaseRecursively(spriteFrame, false);
-		// don't release the Prefab and all the referenced assets
-		cc.loader.setAutoReleaseRecursively(prefab, false);
-		``` 
-		*/
-		static setAutoReleaseRecursively(assetOrUrlOrUuid: Asset|string, autoRelease: boolean): void;		
-		/**
-		!#en
-		Returns whether the asset is configured as auto released, despite how "Auto Release Assets" property is set on scene asset.<br>
-		<br>
-		See: {{#crossLink "loader/setAutoRelease:method"}}cc.loader.setAutoRelease{{/crossLink}}, {{#crossLink "loader/setAutoReleaseRecursively:method"}}cc.loader.setAutoReleaseRecursively{{/crossLink}}
-		
-		!#zh
-		返回指定的资源是否有被设置为自动释放，不论场景的“Auto Release Assets”如何设置。<br>
-		<br>
-		参考：{{#crossLink "loader/setAutoRelease:method"}}cc.loader.setAutoRelease{{/crossLink}}，{{#crossLink "loader/setAutoReleaseRecursively:method"}}cc.loader.setAutoReleaseRecursively{{/crossLink}}
-		@param assetOrUrl asset object or the raw asset's url 
-		*/
-		static isAutoRelease(assetOrUrl: Asset|string): boolean;	
-	}	
-	/** !#en
-	LoadingItems is the queue of items which can flow them into the loading pipeline.</br>
-	Please don't construct it directly, use {{#crossLink "LoadingItems.create"}}LoadingItems.create{{/crossLink}} instead, because we use an internal pool to recycle the queues.</br>
-	It hold a map of items, each entry in the map is a url to object key value pair.</br>
-	Each item always contains the following property:</br>
-	- id: The identification of the item, usually it's identical to url</br>
-	- url: The url </br>
-	- type: The type, it's the extension name of the url by default, could be specified manually too.</br>
-	- error: The error happened in pipeline will be stored in this property.</br>
-	- content: The content processed by the pipeline, the final result will also be stored in this property.</br>
-	- complete: The flag indicate whether the item is completed by the pipeline.</br>
-	- states: An object stores the states of each pipe the item go through, the state can be: Pipeline.ItemState.WORKING | Pipeline.ItemState.ERROR | Pipeline.ItemState.COMPLETE</br>
-	</br>
-	Item can hold other custom properties.</br>
-	Each LoadingItems object will be destroyed for recycle after onComplete callback</br>
-	So please don't hold its reference for later usage, you can copy properties in it though.
-	!#zh
-	LoadingItems 是一个加载对象队列，可以用来输送加载对象到加载管线中。</br>
-	请不要直接使用 new 构造这个类的对象，你可以使用 {{#crossLink "LoadingItems.create"}}LoadingItems.create{{/crossLink}} 来创建一个新的加载队列，这样可以允许我们的内部对象池回收并重利用加载队列。
-	它有一个 map 属性用来存放加载项，在 map 对象中已 url 为 key 值。</br>
-	每个对象都会包含下列属性：</br>
-	- id：该对象的标识，通常与 url 相同。</br>
-	- url：路径 </br>
-	- type: 类型，它这是默认的 URL 的扩展名，可以手动指定赋值。</br>
-	- error：pipeline 中发生的错误将被保存在这个属性中。</br>
-	- content: pipeline 中处理的临时结果，最终的结果也将被存储在这个属性中。</br>
-	- complete：该标志表明该对象是否通过 pipeline 完成。</br>
-	- states：该对象存储每个管道中对象经历的状态，状态可以是 Pipeline.ItemState.WORKING | Pipeline.ItemState.ERROR | Pipeline.ItemState.COMPLETE</br>
-	</br>
-	对象可容纳其他自定义属性。</br>
-	每个 LoadingItems 对象都会在 onComplete 回调之后被销毁，所以请不要持有它的引用并在结束回调之后依赖它的内容执行任何逻辑，有这种需求的话你可以提前复制它的内容。 */
-	export class LoadingItems extends CallbacksInvoker {		
-		/**
-		!#en This is a callback which will be invoked while an item flow out the pipeline.
-		You can pass the callback function in LoadingItems.create or set it later.
-		!#zh 这个回调函数将在 item 加载结束后被调用。你可以在构造时传递这个回调函数或者是在构造之后直接设置。
-		@param completedCount The number of the items that are already completed.
-		@param totalCount The total number of the items.
-		@param item The latest item which flow out the pipeline.
-		
-		@example 
-		```js
-		loadingItems.onProgress = function (completedCount, totalCount, item) {
-		     var progress = (100 * completedCount / totalCount).toFixed(2);
-		     cc.log(progress + '%');
-		 }
-		``` 
-		*/
-		onProgress(completedCount: number, totalCount: number, item: any): void;		
-		/**
-		!#en This is a callback which will be invoked while all items is completed,
-		You can pass the callback function in LoadingItems.create or set it later.
-		!#zh 该函数将在加载队列全部完成时被调用。你可以在构造时传递这个回调函数或者是在构造之后直接设置。
-		@param errors All errored urls will be stored in this array, if no error happened, then it will be null
-		@param items All items.
-		
-		@example 
-		```js
-		loadingItems.onComplete = function (errors, items) {
-		     if (error)
-		         cc.log('Completed with ' + errors.length + ' errors');
-		     else
-		         cc.log('Completed ' + items.totalCount + ' items');
-		 }
-		``` 
-		*/
-		onComplete(errors: any[], items: LoadingItems): void;		
-		/** !#en The map of all items.
-		!#zh 存储所有加载项的对象。 */
-		map: any;		
-		/** !#en The map of completed items.
-		!#zh 存储已经完成的加载项。 */
-		completed: any;		
-		/** !#en Total count of all items.
-		!#zh 所有加载项的总数。 */
-		totalCount: number;		
-		/** !#en Total count of completed items.
-		!#zh 所有完成加载项的总数。 */
-		completedCount: number;		
-		/** !#en Activated or not.
-		!#zh 是否启用。 */
-		active: boolean;		
-		/**
-		!#en The constructor function of LoadingItems, this will use recycled LoadingItems in the internal pool if possible.
-		You can pass onProgress and onComplete callbacks to visualize the loading process.
-		!#zh LoadingItems 的构造函数，这种构造方式会重用内部对象缓冲池中的 LoadingItems 队列，以尽量避免对象创建。
-		你可以传递 onProgress 和 onComplete 回调函数来获知加载进度信息。
-		@param pipeline The pipeline to process the queue.
-		@param urlList The items array.
-		@param onProgress The progression callback, refer to {{#crossLink "LoadingItems.onProgress"}}{{/crossLink}}
-		@param onComplete The completion callback, refer to {{#crossLink "LoadingItems.onComplete"}}{{/crossLink}}
-		
-		@example 
-		```js
-		LoadingItems.create(cc.loader, ['a.png', 'b.plist'], function (completedCount, totalCount, item) {
-		     var progress = (100 * completedCount / totalCount).toFixed(2);
-		     cc.log(progress + '%');
-		 }, function (errors, items) {
-		     if (errors) {
-		         for (var i = 0; i < errors.length; ++i) {
-		             cc.log('Error url: ' + errors[i] + ', error: ' + items.getError(errors[i]));
-		         }
-		     }
-		     else {
-		         var result_a = items.getContent('a.png');
-		         // ...
-		     }
-		 })
-		``` 
-		*/
-		static create(pipeline: Pipeline, urlList: any[], onProgress: Function, onComplete: Function): LoadingItems;		
-		/**
-		!#en Retrieve the LoadingItems queue object for an item.
-		!#zh 通过 item 对象获取它的 LoadingItems 队列。
-		@param item The item to query 
-		*/
-		static getQueue(item: any): LoadingItems;		
-		/**
-		!#en Complete an item in the LoadingItems queue, please do not call this method unless you know what's happening.
-		!#zh 通知 LoadingItems 队列一个 item 对象已完成，请不要调用这个函数，除非你知道自己在做什么。
-		@param item The item which has completed 
-		*/
-		static itemComplete(item: any): void;		
-		/**
-		!#en Add urls to the LoadingItems queue.
-		!#zh 向一个 LoadingItems 队列添加加载项。
-		@param urlList The url list to be appended, the url can be object or string 
-		*/
-		append(urlList: any[]): any[];		
-		/**
-		!#en Complete a LoadingItems queue, please do not call this method unless you know what's happening.
-		!#zh 完成一个 LoadingItems 队列，请不要调用这个函数，除非你知道自己在做什么。 
-		*/
-		allComplete(): void;		
-		/**
-		!#en Check whether all items are completed.
-		!#zh 检查是否所有加载项都已经完成。 
-		*/
-		isCompleted(): boolean;		
-		/**
-		!#en Check whether an item is completed.
-		!#zh 通过 id 检查指定加载项是否已经加载完成。
-		@param id The item's id. 
-		*/
-		isItemCompleted(id: string): boolean;		
-		/**
-		!#en Check whether an item exists.
-		!#zh 通过 id 检查加载项是否存在。
-		@param id The item's id. 
-		*/
-		exists(id: string): boolean;		
-		/**
-		!#en Returns the content of an internal item.
-		!#zh 通过 id 获取指定对象的内容。
-		@param id The item's id. 
-		*/
-		getContent(id: string): any;		
-		/**
-		!#en Returns the error of an internal item.
-		!#zh 通过 id 获取指定对象的错误信息。
-		@param id The item's id. 
-		*/
-		getError(id: string): any;		
-		/**
-		!#en Add a listener for an item, the callback will be invoked when the item is completed.
-		!#zh 监听加载项（通过 key 指定）的完成事件。
-		@param key key
-		@param callback can be null
-		@param target can be null 
-		*/
-		addListener(key: string, callback: Function, target: any): boolean;		
-		/**
-		!#en
-		Check if the specified key has any registered callback. </br>
-		If a callback is also specified, it will only return true if the callback is registered.
-		!#zh
-		检查指定的加载项是否有完成事件监听器。</br>
-		如果同时还指定了一个回调方法，并且回调有注册，它只会返回 true。
-		@param key key
-		@param callback callback
-		@param target target 
-		*/
-		hasListener(key: string, callback?: Function, target?: any): boolean;		
-		/**
-		!#en
-		Removes a listener. </br>
-		It will only remove when key, callback, target all match correctly.
-		!#zh
-		移除指定加载项已经注册的完成事件监听器。</br>
-		只会删除 key, callback, target 均匹配的监听器。
-		@param key key
-		@param callback callback
-		@param target target 
-		*/
-		remove(key: string, callback: Function, target: any): boolean;		
-		/**
-		!#en
-		Removes all callbacks registered in a certain event
-		type or all callbacks registered with a certain target.
-		!#zh 删除指定目标的所有完成事件监听器。
-		@param key The event key to be removed or the target to be removed 
-		*/
-		removeAllListeners(key: string|any): void;		
-		/**
-		!#en Complete an item in the LoadingItems queue, please do not call this method unless you know what's happening.
-		!#zh 通知 LoadingItems 队列一个 item 对象已完成，请不要调用这个函数，除非你知道自己在做什么。
-		@param id The item url 
-		*/
-		itemComplete(id: string): void;		
-		/**
-		!#en Destroy the LoadingItems queue, the queue object won't be garbage collected, it will be recycled, so every after destroy is not reliable.
-		!#zh 销毁一个 LoadingItems 队列，这个队列对象会被内部缓冲池回收，所以销毁后的所有内部信息都是不可依赖的。 
-		*/
-		destroy(): void;	
-	}	
-	/** !#en
-	A pipeline describes a sequence of manipulations, each manipulation is called a pipe.</br>
-	It's designed for loading process. so items should be urls, and the url will be the identity of each item during the process.</br>
-	A list of items can flow in the pipeline and it will output the results of all pipes.</br>
-	They flow in the pipeline like water in tubes, they go through pipe by pipe separately.</br>
-	Finally all items will flow out the pipeline and the process is finished.
-	
-	!#zh
-	pipeline 描述了一系列的操作，每个操作都被称为 pipe。</br>
-	它被设计来做加载过程的流程管理。所以 item 应该是 url，并且该 url 将是在处理中的每个 item 的身份标识。</br>
-	一个 item 列表可以在 pipeline 中流动，它将输出加载项经过所有 pipe 之后的结果。</br>
-	它们穿过 pipeline 就像水在管子里流动，将会按顺序流过每个 pipe。</br>
-	最后当所有加载项都流出 pipeline 时，整个加载流程就结束了。 */
-	export class Pipeline {		
-		/**
-		!#en
-		Constructor, pass an array of pipes to construct a new Pipeline,
-		the pipes will be chained in the given order.</br>
-		A pipe is an object which must contain an `id` in string and a `handle` function,
-		the id must be unique in the pipeline.</br>
-		It can also include `async` property to identify whether it's an asynchronous process.
-		!#zh
-		构造函数，通过一系列的 pipe 来构造一个新的 pipeline，pipes 将会在给定的顺序中被锁定。</br>
-		一个 pipe 就是一个对象，它包含了字符串类型的 ‘id’ 和 ‘handle’ 函数，在 pipeline 中 id 必须是唯一的。</br>
-		它还可以包括 ‘async’ 属性以确定它是否是一个异步过程。
-		@param pipes pipes
-		
-		@example 
-		```js
-		var pipeline = new Pipeline([
-		     {
-		         id: 'Downloader',
-		         handle: function (item, callback) {},
-		         async: true
-		     },
-		     {id: 'Parser', handle: function (item) {}, async: false}
-		 ]);
-		``` 
-		*/
-		constructor(pipes: any[]);		
-		/**
-		!#en
-		Insert a new pipe at the given index of the pipeline. </br>
-		A pipe must contain an `id` in string and a `handle` function, the id must be unique in the pipeline.
-		!#zh
-		在给定的索引位置插入一个新的 pipe。</br>
-		一个 pipe 必须包含一个字符串类型的 ‘id’ 和 ‘handle’ 函数，该 id 在 pipeline 必须是唯一标识。
-		@param pipe The pipe to be inserted
-		@param index The index to insert 
-		*/
-		insertPipe(pipe: any, index: number): void;		
-		/**
-		!#en
-		Add a new pipe at the end of the pipeline. </br>
-		A pipe must contain an `id` in string and a `handle` function, the id must be unique in the pipeline.
-		!#zh
-		添加一个新的 pipe 到 pipeline 尾部。 </br>
-		该 pipe 必须包含一个字符串类型 ‘id’ 和 ‘handle’ 函数，该 id 在 pipeline 必须是唯一标识。
-		@param pipe The pipe to be appended 
-		*/
-		appendPipe(pipe: any): void;		
-		/**
-		!#en
-		Let new items flow into the pipeline. </br>
-		Each item can be a simple url string or an object,
-		if it's an object, it must contain `id` property. </br>
-		You can specify its type by `type` property, by default, the type is the extension name in url. </br>
-		By adding a `skips` property including pipe ids, you can skip these pipe. </br>
-		The object can contain any supplementary property as you want. </br>
-		!#zh
-		让新的 item 流入 pipeline 中。</br>
-		这里的每个 item 可以是一个简单字符串类型的 url 或者是一个对象,
-		如果它是一个对象的话，他必须要包含 ‘id’ 属性。</br>
-		你也可以指定它的 ‘type’ 属性类型，默认情况下，该类型是 ‘url’ 的后缀名。</br>
-		也通过添加一个 包含 ‘skips’ 属性的 item 对象，你就可以跳过 skips 中包含的 pipe。</br>
-		该对象可以包含任何附加属性。
-		@param items items
-		
-		@example 
-		```js
-		pipeline.flowIn([
-		     'res/Background.png',
-		     {
-		         id: 'res/scene.json',
-		         type: 'scene',
-		         name: 'scene',
-		         skips: ['Downloader']
-		     }
-		 ]);
-		``` 
-		*/
-		flowIn(items: any[]): void;		
-		/**
-		!#en
-		Let new items flow into the pipeline and give a callback when the list of items are all completed. </br>
-		This is for loading dependencies for an existing item in flow, usually used in a pipe logic. </br>
-		For example, we have a loader for scene configuration file in JSON, the scene will only be fully loaded  </br>
-		after all its dependencies are loaded, then you will need to use function to flow in all dependencies  </br>
-		found in the configuration file, and finish the loader pipe only after all dependencies are loaded (in the callback).
-		!#zh
-		让新 items 流入 pipeline 并且当 item 列表完成时进行回调函数。</br>
-		这个 API 的使用通常是为了加载依赖项。</br>
-		例如：</br>
-		我们需要加载一个场景配置的 JSON 文件，该场景会将所有的依赖项全部都加载完毕以后，进行回调表示加载完毕。
-		@param urlList urlList
-		@param callback callback 
-		*/
-		flowInDeps(urlList: any[], callback: Function): any[];		
-		/**
-		!#en
-		Copy the item states from one source item to all destination items. </br>
-		It's quite useful when a pipe generate new items from one source item,</br>
-		then you should flowIn these generated items into pipeline, </br>
-		but you probably want them to skip all pipes the source item already go through,</br>
-		you can achieve it with this API. </br>
-		</br>
-		For example, an unzip pipe will generate more items, but you won't want them to pass unzip or download pipe again.
-		!#zh
-		从一个源 item 向所有目标 item 复制它的 pipe 状态，用于避免重复通过部分 pipe。</br>
-		当一个源 item 生成了一系列新的 items 时很有用，</br>
-		你希望让这些新的依赖项进入 pipeline，但是又不希望它们通过源 item 已经经过的 pipe，</br>
-		但是你可能希望他们源 item 已经通过并跳过所有 pipes，</br>
-		这个时候就可以使用这个 API。
-		@param srcItem The source item
-		@param dstItems A single destination item or an array of destination items 
-		*/
-		copyItemStates(srcItem: any, dstItems: any[]|any): void;		
-		/**
-		!#en Returns whether the pipeline is flowing (contains item) currently.
-		!#zh 获取 pipeline 当前是否正在处理中。 
-		*/
-		isFlowing(): boolean;		
-		/**
-		!#en Returns all items in pipeline.
-		!#zh 获取 pipeline 中的所有 items。 
-		*/
-		getItems(): LoadingItems;		
-		/**
-		!#en Returns an item in pipeline.
-		!#zh 根据 id 获取一个 item
-		@param id The id of the item 
-		*/
-		getItem(id: any): any;		
-		/**
-		!#en Removes an completed item in pipeline.
-		It will only remove the cache in the pipeline or loader, its dependencies won't be released.
-		cc.loader provided another method to completely cleanup the resource and its dependencies,
-		please refer to {{#crossLink "loader/release:method"}}cc.loader.release{{/crossLink}}
-		!#zh 移除指定的已完成 item。
-		这将仅仅从 pipeline 或者 loader 中删除其缓存，并不会释放它所依赖的资源。
-		cc.loader 中提供了另一种删除资源及其依赖的清理方法，请参考 {{#crossLink "loader/release:method"}}cc.loader.release{{/crossLink}}
-		@param id The id of the item 
-		*/
-		removeItem(id: any): boolean;		
-		/**
-		!#en Clear the current pipeline, this function will clean up the items.
-		!#zh 清空当前 pipeline，该函数将清理 items。 
-		*/
-		clear(): void;	
 	}	
 	/** <p>
 	 This class manages all events of input. include: touch, mouse, accelerometer, keyboard                                       <br/>
@@ -9911,7 +10044,9 @@ declare module cc {
 		TOUCH_TIMEOUT = 0,
 		BATCH_VERTEX_COUNT = 0,
 		ENABLE_GC_FOR_NATIVE_OBJECTS = 0,
-		ENABLE_TILEDMAP_CULLING = 0,	
+		ENABLE_TILEDMAP_CULLING = 0,
+		DOWNLOAD_MAX_CONCURRENT = 0,
+		ENABLE_TRANSPARENT_CANVAS = 0,	
 	}	
 	/** The base class of most of all the objects in Fireball. */
 	export class Object {		
@@ -10634,236 +10769,6 @@ declare module cc {
 		*/
 		static builtinRaw(url: string): string;	
 	}	
-	/** !#en
-	A cc.SpriteFrame has:<br/>
-	 - texture: A cc.Texture2D that will be used by the _ccsg.Sprite<br/>
-	 - rectangle: A rectangle of the texture
-	
-	!#zh
-	一个 SpriteFrame 包含：<br/>
-	 - 纹理：会被 Sprite 使用的 Texture2D 对象。<br/>
-	 - 矩形：在纹理中的矩形区域。 */
-	export class SpriteFrame extends Asset implements EventTarget {		
-		/**
-		!#en
-		Constructor of SpriteFrame class.
-		!#zh
-		SpriteFrame 类的构造函数。
-		@param filename filename
-		@param rect rect
-		@param rotated Whether the frame is rotated in the texture
-		@param offset The offset of the frame in the texture
-		@param originalSize The size of the frame in the texture 
-		*/
-		constructor(filename?: string|Texture2D, rect?: Rect, rotated?: boolean, offset?: Vec2, originalSize?: Size);		
-		/** !#en Top border of the sprite
-		!#zh sprite 的顶部边框 */
-		insetTop: number;		
-		/** !#en Bottom border of the sprite
-		!#zh sprite 的底部边框 */
-		insetBottom: number;		
-		/** !#en Left border of the sprite
-		!#zh sprite 的左边边框 */
-		insetLeft: number;		
-		/** !#en Right border of the sprite
-		!#zh sprite 的左边边框 */
-		insetRight: number;		
-		/**
-		!#en Returns whether the texture have been loaded
-		!#zh 返回是否已加载纹理 
-		*/
-		textureLoaded(): boolean;		
-		/**
-		Add a event listener for texture loaded event.
-		@param callback callback
-		@param target target 
-		*/
-		addLoadedEventListener(callback: Function, target: any): void;		
-		/**
-		!#en Returns whether the sprite frame is rotated in the texture.
-		!#zh 获取 SpriteFrame 是否旋转 
-		*/
-		isRotated(): boolean;		
-		/**
-		!#en Set whether the sprite frame is rotated in the texture.
-		!#zh 设置 SpriteFrame 是否旋转
-		@param bRotated bRotated 
-		*/
-		setRotated(bRotated: boolean): void;		
-		/**
-		!#en Returns the rect of the sprite frame in the texture.
-		!#zh 获取 SpriteFrame 的纹理矩形区域 
-		*/
-		getRect(): Rect;		
-		/**
-		!#en Sets the rect of the sprite frame in the texture.
-		!#zh 设置 SpriteFrame 的纹理矩形区域
-		@param rect rect 
-		*/
-		setRect(rect: Rect): void;		
-		/**
-		!#en Returns the original size of the trimmed image.
-		!#zh 获取修剪前的原始大小 
-		*/
-		getOriginalSize(): Size;		
-		/**
-		!#en Sets the original size of the trimmed image.
-		!#zh 设置修剪前的原始大小
-		@param size size 
-		*/
-		setOriginalSize(size: Size): void;		
-		/**
-		!#en Returns the texture of the frame.
-		!#zh 获取使用的纹理实例 
-		*/
-		getTexture(): Texture2D;		
-		/**
-		!#en Returns the offset of the frame in the texture.
-		!#zh 获取偏移量 
-		*/
-		getOffset(): Vec2;		
-		/**
-		!#en Sets the offset of the frame in the texture.
-		!#zh 设置偏移量
-		@param offsets offsets 
-		*/
-		setOffset(offsets: Vec2): void;		
-		/**
-		!#en Clone the sprite frame.
-		!#zh 克隆 SpriteFrame 
-		*/
-		clone(): SpriteFrame;		
-		/**
-		#en Set SpriteFrame with Texture, rect, rotated, offset and originalSize.<br/>
-		#zh 通过 Texture，rect，rotated，offset 和 originalSize 设置 SpriteFrame
-		@param textureOrTextureFile textureOrTextureFile
-		@param rect rect
-		@param rotated rotated
-		@param offset offset
-		@param originalSize originalSize 
-		*/
-		setTexture(textureOrTextureFile: string|Texture2D, rect?: Rect, rotated?: boolean, offset?: Vec2, originalSize?: Size): boolean;		
-		/**
-		!#en If a loading scene (or prefab) is marked as `asyncLoadAssets`, all the textures of the SpriteFrame which
-		associated by user's custom Components in the scene, will not preload automatically.
-		These textures will be load when Sprite component is going to render the SpriteFrames.
-		You can call this method if you want to load the texture early.
-		!#zh 当加载中的场景或 Prefab 被标记为 `asyncLoadAssets` 时，用户在场景中由自定义组件关联到的所有 SpriteFrame 的贴图都不会被提前加载。
-		只有当 Sprite 组件要渲染这些 SpriteFrame 时，才会检查贴图是否加载。如果你希望加载过程提前，你可以手工调用这个方法。
-		
-		@example 
-		```js
-		if (spriteFrame.textureLoaded()) {
-		    this._onSpriteFrameLoaded();
-		}
-		else {
-		    spriteFrame.once('load', this._onSpriteFrameLoaded, this);
-		    spriteFrame.ensureLoadTexture();
-		}
-		``` 
-		*/
-		ensureLoadTexture(): void;		
-		/**
-		!#en
-		Register an callback of a specific event type on the EventTarget.
-		!#zh
-		注册事件目标的特定事件类型回调。
-		@param type A string representing the event type to listen for.
-		@param callback The callback that will be invoked when the event is dispatched.
-		                             The callback is ignored if it is a duplicate (the callbacks are unique).
-		@param target The target to invoke the callback, can be null
-		@param useCapture When set to true, the capture argument prevents callback
-		                             from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE.
-		                             When false, callback will NOT be invoked when event's eventPhase attribute value is CAPTURING_PHASE.
-		                             Either way, callback will be invoked when event's eventPhase attribute value is AT_TARGET.
-		
-		@example 
-		```js
-		node.on(cc.Node.EventType.TOUCH_END, function (event) {
-		    cc.log("this is callback");
-		}, node);
-		``` 
-		*/
-		on(type: string, callback: (event: Event.EventCustom) => void, target?: any, useCapture?: boolean): (event: Event.EventCustom) => void;
-		on<T>(type: string, callback: (event: T) => void, target?: any, useCapture?: boolean): (event: T) => void;		
-		/**
-		!#en
-		Removes the callback previously registered with the same type, callback, target and or useCapture.
-		!#zh
-		删除之前与同类型，回调，目标或 useCapture 注册的回调。
-		@param type A string representing the event type being removed.
-		@param callback The callback to remove.
-		@param target The target to invoke the callback, if it's not given, only callback without target will be removed
-		@param useCapture Specifies whether the callback being removed was registered as a capturing callback or not.
-		                             If not specified, useCapture defaults to false. If a callback was registered twice,
-		                             one with capture and one without, each must be removed separately. Removal of a capturing callback
-		                             does not affect a non-capturing version of the same listener, and vice versa.
-		
-		@example 
-		```js
-		// register touchEnd eventListener
-		var touchEnd = node.on(cc.Node.EventType.TOUCH_END, function (event) {
-		    cc.log("this is callback");
-		}, node);
-		// remove touchEnd eventListener
-		node.off(cc.Node.EventType.TOUCH_END, touchEnd, node);
-		``` 
-		*/
-		off(type: string, callback: Function, target?: any, useCapture?: boolean): void;		
-		/**
-		!#en Removes all callbacks previously registered with the same target (passed as parameter).
-		This is not for removing all listeners in the current event target,
-		and this is not for removing all listeners the target parameter have registered.
-		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
-		!#zh 在当前 EventTarget 上删除指定目标（target 参数）注册的所有事件监听器。
-		这个函数无法删除当前 EventTarget 的所有事件监听器，也无法删除 target 参数所注册的所有事件监听器。
-		这个函数只能删除 target 参数在当前 EventTarget 上注册的所有事件监听器。
-		@param target The target to be searched for all related listeners 
-		*/
-		targetOff(target: any): void;		
-		/**
-		!#en
-		Register an callback of a specific event type on the EventTarget,
-		the callback will remove itself after the first time it is triggered.
-		!#zh
-		注册事件目标的特定事件类型回调，回调会在第一时间被触发后删除自身。
-		@param type A string representing the event type to listen for.
-		@param callback The callback that will be invoked when the event is dispatched.
-		                             The callback is ignored if it is a duplicate (the callbacks are unique).
-		@param target The target to invoke the callback, can be null
-		@param useCapture When set to true, the capture argument prevents callback
-		                             from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE.
-		                             When false, callback will NOT be invoked when event's eventPhase attribute value is CAPTURING_PHASE.
-		                             Either way, callback will be invoked when event's eventPhase attribute value is AT_TARGET.
-		
-		@example 
-		```js
-		node.once(cc.Node.EventType.TOUCH_END, function (event) {
-		    cc.log("this is callback");
-		}, node);
-		``` 
-		*/
-		once(type: string, callback: (event: Event.EventCustom) => void, target?: any, useCapture?: boolean): (event: Event.EventCustom) => void;
-		once<T>(type: string, callback: (event: T) => void, target?: any, useCapture?: boolean): (event: T) => void;		
-		/**
-		!#en
-		Dispatches an event into the event flow.
-		The event target is the EventTarget object upon which the dispatchEvent() method is called.
-		!#zh 分发事件到事件流中。
-		@param event The Event object that is dispatched into the event flow 
-		*/
-		dispatchEvent(event: Event): void;		
-		/**
-		!#en
-		Send an event to this object directly, this method will not propagate the event to any other objects.
-		The event will be created from the supplied message, you can get the "detail" argument from event.detail.
-		!#zh
-		该对象直接发送事件， 这种方法不会对事件传播到任何其他对象。
-		@param message the message to send
-		@param detail whatever argument the message needs 
-		*/
-		emit(message: string, detail?: any): void;	
-	}	
 	/** <p>
 	This class allows to easily create OpenGL or Canvas 2D textures from images, text or raw data.                                    <br/>
 	The created cc.Texture2D object will always have power-of-two dimensions.                                                <br/>
@@ -11542,12 +11447,12 @@ declare module cc {
 		setSiblingIndex(index: number): void;		
 		/**
 		!#en
-		Remove itself from its parent node. If cleanup is true, then also remove all actions and callbacks. <br/>
-		If the cleanup parameter is not passed, it will force a cleanup. <br/>
+		Remove itself from its parent node. If cleanup is `true`, then also remove all events and actions. <br/>
+		If the cleanup parameter is not passed, it will force a cleanup, so it is recommended that you always pass in the `false` parameter when calling this API.<br/>
 		If the node orphan, then nothing happens.
 		!#zh
-		从父节点中删除一个节点。cleanup 参数为 true，那么在这个节点上所有的动作和回调都会被删除，反之则不会。<br/>
-		如果不传入 cleanup 参数，默认是 true 的。<br/>
+		从父节点中删除该节点。如果不传入 cleanup 参数或者传入 `true`，那么这个节点上所有绑定的事件、action 都会被删除。<br/>
+		因此建议调用这个 API 时总是传入 `false` 参数。<br/>
 		如果这个节点是一个孤节点，那么什么都不会发生。
 		@param cleanup true if all actions and callbacks on this node should be removed, false otherwise.
 		
@@ -11639,7 +11544,7 @@ declare module cc {
 		var test = node.getComponent("Test");
 		``` 
 		*/
-		getComponent<T extends Component>(type: typeof T): T;
+		getComponent<T extends Component>(type: {prototype: T}): T;
 		getComponent(className: string): any;		
 		/**
 		!#en Returns all components of supplied type in the node.
@@ -11652,7 +11557,7 @@ declare module cc {
 		var tests = node.getComponents("Test");
 		``` 
 		*/
-		getComponents<T extends Component>(type: typeof T): T[];
+		getComponents<T extends Component>(type: {prototype: T}): T[];
 		getComponents(className: string): any[];		
 		/**
 		!#en Returns the component of supplied type in any of its children using depth first search.
@@ -11665,7 +11570,7 @@ declare module cc {
 		var Test = node.getComponentInChildren("Test");
 		``` 
 		*/
-		getComponentInChildren<T extends Component>(type: typeof T): T;
+		getComponentInChildren<T extends Component>(type: {prototype: T}): T;
 		getComponentInChildren(className: string): any;		
 		/**
 		!#en Returns all components of supplied type in self or any of its children.
@@ -11678,7 +11583,7 @@ declare module cc {
 		var tests = node.getComponentsInChildren("Test");
 		``` 
 		*/
-		getComponentsInChildren<T extends Component>(type: typeof T): T[];
+		getComponentsInChildren<T extends Component>(type: {prototype: T}): T[];
 		getComponentsInChildren(className: string): any[];		
 		/**
 		!#en Adds a component class to the node. You can also add component to node by passing in the name of the script.
@@ -11691,7 +11596,7 @@ declare module cc {
 		var test = node.addComponent("Test");
 		``` 
 		*/
-		addComponent<T extends Component>(type: typeof T): T;
+		addComponent<T extends Component>(type: {new(): T}): T;
 		addComponent(className: string): any;		
 		/**
 		!#en
@@ -11724,6 +11629,251 @@ declare module cc {
 		``` 
 		*/
 		destroyAllChildren(): void;		
+		/**
+		!#en
+		Register an callback of a specific event type on the EventTarget.
+		!#zh
+		注册事件目标的特定事件类型回调。
+		@param type A string representing the event type to listen for.
+		@param callback The callback that will be invoked when the event is dispatched.
+		                             The callback is ignored if it is a duplicate (the callbacks are unique).
+		@param target The target to invoke the callback, can be null
+		@param useCapture When set to true, the capture argument prevents callback
+		                             from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE.
+		                             When false, callback will NOT be invoked when event's eventPhase attribute value is CAPTURING_PHASE.
+		                             Either way, callback will be invoked when event's eventPhase attribute value is AT_TARGET.
+		
+		@example 
+		```js
+		node.on(cc.Node.EventType.TOUCH_END, function (event) {
+		    cc.log("this is callback");
+		}, node);
+		``` 
+		*/
+		on(type: string, callback: (event: Event.EventCustom) => void, target?: any, useCapture?: boolean): (event: Event.EventCustom) => void;
+		on<T>(type: string, callback: (event: T) => void, target?: any, useCapture?: boolean): (event: T) => void;		
+		/**
+		!#en
+		Removes the callback previously registered with the same type, callback, target and or useCapture.
+		!#zh
+		删除之前与同类型，回调，目标或 useCapture 注册的回调。
+		@param type A string representing the event type being removed.
+		@param callback The callback to remove.
+		@param target The target to invoke the callback, if it's not given, only callback without target will be removed
+		@param useCapture Specifies whether the callback being removed was registered as a capturing callback or not.
+		                             If not specified, useCapture defaults to false. If a callback was registered twice,
+		                             one with capture and one without, each must be removed separately. Removal of a capturing callback
+		                             does not affect a non-capturing version of the same listener, and vice versa.
+		
+		@example 
+		```js
+		// register touchEnd eventListener
+		var touchEnd = node.on(cc.Node.EventType.TOUCH_END, function (event) {
+		    cc.log("this is callback");
+		}, node);
+		// remove touchEnd eventListener
+		node.off(cc.Node.EventType.TOUCH_END, touchEnd, node);
+		``` 
+		*/
+		off(type: string, callback: Function, target?: any, useCapture?: boolean): void;		
+		/**
+		!#en Removes all callbacks previously registered with the same target (passed as parameter).
+		This is not for removing all listeners in the current event target,
+		and this is not for removing all listeners the target parameter have registered.
+		It's only for removing all listeners (callback and target couple) registered on the current event target by the target parameter.
+		!#zh 在当前 EventTarget 上删除指定目标（target 参数）注册的所有事件监听器。
+		这个函数无法删除当前 EventTarget 的所有事件监听器，也无法删除 target 参数所注册的所有事件监听器。
+		这个函数只能删除 target 参数在当前 EventTarget 上注册的所有事件监听器。
+		@param target The target to be searched for all related listeners 
+		*/
+		targetOff(target: any): void;		
+		/**
+		!#en
+		Register an callback of a specific event type on the EventTarget,
+		the callback will remove itself after the first time it is triggered.
+		!#zh
+		注册事件目标的特定事件类型回调，回调会在第一时间被触发后删除自身。
+		@param type A string representing the event type to listen for.
+		@param callback The callback that will be invoked when the event is dispatched.
+		                             The callback is ignored if it is a duplicate (the callbacks are unique).
+		@param target The target to invoke the callback, can be null
+		@param useCapture When set to true, the capture argument prevents callback
+		                             from being invoked when the event's eventPhase attribute value is BUBBLING_PHASE.
+		                             When false, callback will NOT be invoked when event's eventPhase attribute value is CAPTURING_PHASE.
+		                             Either way, callback will be invoked when event's eventPhase attribute value is AT_TARGET.
+		
+		@example 
+		```js
+		node.once(cc.Node.EventType.TOUCH_END, function (event) {
+		    cc.log("this is callback");
+		}, node);
+		``` 
+		*/
+		once(type: string, callback: (event: Event.EventCustom) => void, target?: any, useCapture?: boolean): (event: Event.EventCustom) => void;
+		once<T>(type: string, callback: (event: T) => void, target?: any, useCapture?: boolean): (event: T) => void;		
+		/**
+		!#en
+		Dispatches an event into the event flow.
+		The event target is the EventTarget object upon which the dispatchEvent() method is called.
+		!#zh 分发事件到事件流中。
+		@param event The Event object that is dispatched into the event flow 
+		*/
+		dispatchEvent(event: Event): void;		
+		/**
+		!#en
+		Send an event to this object directly, this method will not propagate the event to any other objects.
+		The event will be created from the supplied message, you can get the "detail" argument from event.detail.
+		!#zh
+		该对象直接发送事件， 这种方法不会对事件传播到任何其他对象。
+		@param message the message to send
+		@param detail whatever argument the message needs 
+		*/
+		emit(message: string, detail?: any): void;	
+	}	
+	/** !#en
+	A cc.SpriteFrame has:<br/>
+	 - texture: A cc.Texture2D that will be used by the _ccsg.Sprite<br/>
+	 - rectangle: A rectangle of the texture
+	
+	!#zh
+	一个 SpriteFrame 包含：<br/>
+	 - 纹理：会被 Sprite 使用的 Texture2D 对象。<br/>
+	 - 矩形：在纹理中的矩形区域。 */
+	export class SpriteFrame extends Asset implements EventTarget {		
+		/**
+		!#en
+		Constructor of SpriteFrame class.
+		!#zh
+		SpriteFrame 类的构造函数。
+		@param filename filename
+		@param rect rect
+		@param rotated Whether the frame is rotated in the texture
+		@param offset The offset of the frame in the texture
+		@param originalSize The size of the frame in the texture 
+		*/
+		constructor(filename?: string|Texture2D, rect?: Rect, rotated?: boolean, offset?: Vec2, originalSize?: Size);		
+		/** !#en Top border of the sprite
+		!#zh sprite 的顶部边框 */
+		insetTop: number;		
+		/** !#en Bottom border of the sprite
+		!#zh sprite 的底部边框 */
+		insetBottom: number;		
+		/** !#en Left border of the sprite
+		!#zh sprite 的左边边框 */
+		insetLeft: number;		
+		/** !#en Right border of the sprite
+		!#zh sprite 的左边边框 */
+		insetRight: number;		
+		/**
+		!#en Returns whether the texture have been loaded
+		!#zh 返回是否已加载纹理 
+		*/
+		textureLoaded(): boolean;		
+		/**
+		Add a event listener for texture loaded event.
+		@param callback callback
+		@param target target 
+		*/
+		addLoadedEventListener(callback: Function, target: any): void;		
+		/**
+		!#en Returns whether the sprite frame is rotated in the texture.
+		!#zh 获取 SpriteFrame 是否旋转 
+		*/
+		isRotated(): boolean;		
+		/**
+		!#en Set whether the sprite frame is rotated in the texture.
+		!#zh 设置 SpriteFrame 是否旋转
+		@param bRotated bRotated 
+		*/
+		setRotated(bRotated: boolean): void;		
+		/**
+		!#en Returns the rect of the sprite frame in the texture.
+		!#zh 获取 SpriteFrame 的纹理矩形区域 
+		*/
+		getRect(): Rect;		
+		/**
+		!#en Sets the rect of the sprite frame in the texture.
+		!#zh 设置 SpriteFrame 的纹理矩形区域
+		@param rect rect 
+		*/
+		setRect(rect: Rect): void;		
+		/**
+		!#en Returns the original size of the trimmed image.
+		!#zh 获取修剪前的原始大小 
+		*/
+		getOriginalSize(): Size;		
+		/**
+		!#en Sets the original size of the trimmed image.
+		!#zh 设置修剪前的原始大小
+		@param size size 
+		*/
+		setOriginalSize(size: Size): void;		
+		/**
+		!#en Returns the texture of the frame.
+		!#zh 获取使用的纹理实例 
+		*/
+		getTexture(): Texture2D;		
+		/**
+		!#en Returns the offset of the frame in the texture.
+		!#zh 获取偏移量 
+		*/
+		getOffset(): Vec2;		
+		/**
+		!#en Sets the offset of the frame in the texture.
+		!#zh 设置偏移量
+		@param offsets offsets 
+		*/
+		setOffset(offsets: Vec2): void;		
+		/**
+		!#en Clone the sprite frame.
+		!#zh 克隆 SpriteFrame 
+		*/
+		clone(): SpriteFrame;		
+		/**
+		#en Set SpriteFrame with Texture, rect, rotated, offset and originalSize.<br/>
+		#zh 通过 Texture，rect，rotated，offset 和 originalSize 设置 SpriteFrame
+		@param textureOrTextureFile textureOrTextureFile
+		@param rect rect
+		@param rotated rotated
+		@param offset offset
+		@param originalSize originalSize 
+		*/
+		setTexture(textureOrTextureFile: string|Texture2D, rect?: Rect, rotated?: boolean, offset?: Vec2, originalSize?: Size): boolean;		
+		/**
+		!#en If a loading scene (or prefab) is marked as `asyncLoadAssets`, all the textures of the SpriteFrame which
+		associated by user's custom Components in the scene, will not preload automatically.
+		These textures will be load when Sprite component is going to render the SpriteFrames.
+		You can call this method if you want to load the texture early.
+		!#zh 当加载中的场景或 Prefab 被标记为 `asyncLoadAssets` 时，用户在场景中由自定义组件关联到的所有 SpriteFrame 的贴图都不会被提前加载。
+		只有当 Sprite 组件要渲染这些 SpriteFrame 时，才会检查贴图是否加载。如果你希望加载过程提前，你可以手工调用这个方法。
+		
+		@example 
+		```js
+		if (spriteFrame.textureLoaded()) {
+		    this._onSpriteFrameLoaded();
+		}
+		else {
+		    spriteFrame.once('load', this._onSpriteFrameLoaded, this);
+		    spriteFrame.ensureLoadTexture();
+		}
+		``` 
+		*/
+		ensureLoadTexture(): void;		
+		/**
+		!#en
+		If you do not need to use the SpriteFrame temporarily, you can call this method so that its texture could be garbage collected. Then when you need to render the SpriteFrame, you should call `ensureLoadTexture` manually to reload texture.
+		!#zh
+		当你暂时不再使用这个 SpriteFrame 时，可以调用这个方法来保证引用的贴图对象能被 GC。然后当你要渲染 SpriteFrame 时，你需要手动调用 `ensureLoadTexture` 来重新加载贴图。
+		
+		@example 
+		```js
+		spriteFrame.clearTexture();
+		// when you need the SpriteFrame again...
+		spriteFrame.once('load', onSpriteFrameLoaded);
+		spriteFrame.ensureLoadTexture();
+		``` 
+		*/
+		clearTexture(): void;		
 		/**
 		!#en
 		Register an callback of a specific event type on the EventTarget.
@@ -12299,9 +12449,9 @@ declare module cc {
 		
 		@example 
 		```js
-		var a = new cc.rect(0, 0, 10, 10);
-		var b = new cc.rect(5, 5, 5, 5);
-		var c = new cc.rect(20, 20, 10, 10);
+		var a = new cc.Rect(0, 0, 10, 10);
+		var b = new cc.Rect(5, 5, 5, 5);
+		var c = new cc.Rect(20, 20, 10, 10);
 		cc.Rect.contain(a, b); //  1;
 		cc.Rect.contain(b, a); // -1;
 		cc.Rect.contain(a, c); //  0;
@@ -12314,7 +12464,7 @@ declare module cc {
 		
 		@example 
 		```js
-		var a = new cc.rect(0, 0, 10, 10);
+		var a = new cc.Rect(0, 0, 10, 10);
 		a.clone();// Rect {x: 0, y: 0, width: 10, height: 10}
 		``` 
 		*/
@@ -12326,8 +12476,8 @@ declare module cc {
 		
 		@example 
 		```js
-		var a = new cc.rect(0, 0, 10, 10);
-		var b = new cc.rect(0, 0, 10, 10);
+		var a = new cc.Rect(0, 0, 10, 10);
+		var b = new cc.Rect(0, 0, 10, 10);
 		a.equals(b);// true;
 		``` 
 		*/
@@ -12341,8 +12491,8 @@ declare module cc {
 		
 		@example 
 		```js
-		var a = new cc.rect(0, 0, 10, 10);
-		var b = new cc.rect(50, 50, 100, 100);
+		var a = new cc.Rect(0, 0, 10, 10);
+		var b = new cc.Rect(50, 50, 100, 100);
 		update (dt) {
 		   // method 1;
 		   var c = a.lerp(b, dt * 0.1);
@@ -12358,7 +12508,7 @@ declare module cc {
 		
 		@example 
 		```js
-		var a = new cc.rect(0, 0, 10, 10);
+		var a = new cc.Rect(0, 0, 10, 10);
 		a.toString();// "(0.00, 0.00, 10.00, 10.00)";
 		``` 
 		*/
@@ -12391,8 +12541,8 @@ declare module cc {
 		
 		@example 
 		```js
-		var a = new cc.rect(0, 0, 10, 10);
-		var b = new cc.rect(0, 0, 20, 20);
+		var a = new cc.Rect(0, 0, 10, 10);
+		var b = new cc.Rect(0, 0, 20, 20);
 		a.intersects(b);// true
 		``` 
 		*/
@@ -12405,8 +12555,8 @@ declare module cc {
 		
 		@example 
 		```js
-		var a = new cc.rect(0, 0, 10, 10);
-		var b = new cc.v2(0, 5);
+		var a = new cc.Rect(0, 0, 10, 10);
+		var b = new cc.Vec2(0, 5);
 		a.contains(b);// true
 		``` 
 		*/
@@ -12418,8 +12568,8 @@ declare module cc {
 		
 		@example 
 		```js
-		var a = new cc.rect(0, 0, 10, 10);
-		var b = new cc.rect(0, 0, 20, 20);
+		var a = new cc.Rect(0, 0, 10, 10);
+		var b = new cc.Rect(0, 0, 20, 20);
 		a.containsRect(b);// true
 		``` 
 		*/
@@ -13022,142 +13172,35 @@ declare module cc {
 		!#zh 返回 x = 1 和 y = 0 的 Vec2 对象。 */
 		static RIGHT: Vec2;	
 	}	
-	/** !#en
-	PhysicsBoxCollider also inherits from {{#crossLink "PhysicsCollider"}}PhysicsCollider{{/crossLink}}
-	!#zh
-	PhysicsBoxCollider 同样也继承自 {{#crossLink "PhysicsCollider"}}PhysicsCollider{{/crossLink}} */
-	export class PhysicsBoxCollider extends BoxCollider implements PhysicsCollider {		
-		/**
-		!#en
-		Apply current changes to collider, this will regenerate inner box2d fixtures.
-		!#zh
-		应用当前 collider 中的修改，调用此函数会重新生成内部 box2d 的夹具。 
-		*/
-		apply(): void;		
-		/**
-		!#en
-		Get the world aabb of the collider
-		!#zh
-		获取碰撞体的世界坐标系下的包围盒 
-		*/
-		getAABB(): void;		
-		/** !#en
-		The density.
-		!#zh
-		密度 */
-		density: number;		
-		/** !#en
-		A sensor collider collects contact information but never generates a collision response
-		!#zh
-		一个传感器类型的碰撞体会产生碰撞回调，但是不会发生物理碰撞效果。 */
-		sensor: boolean;		
-		/** !#en
-		The friction coefficient, usually in the range [0,1].
-		!#zh
-		摩擦系数，取值一般在 [0, 1] 之间 */
-		friction: number;		
-		/** !#en
-		The restitution (elasticity) usually in the range [0,1].
-		!#zh
-		弹性系数，取值一般在 [0, 1]之间 */
-		restitution: number;	
+	/** undefined */
+	export class PhysicsBoxCollider extends PhysicsCollider implements Collider.Box {		
+		/** !#en Position offset
+		!#zh 位置偏移量 */
+		offset: Vec2;		
+		/** !#en Box size
+		!#zh 包围盒大小 */
+		size: Size;	
 	}	
-	/** !#en
-	PhysicsChainCollider also inherits from {{#crossLink "PhysicsCollider"}}PhysicsCollider{{/crossLink}}
-	!#zh
-	PhysicsPolygonCollider 同样也继承自 {{#crossLink "PhysicsCollider"}}PhysicsCollider{{/crossLink}} */
-	export class PhysicsChainCollider extends PolygonCollider implements PhysicsCollider {		
-		/**
-		!#en
-		Apply current changes to collider, this will regenerate inner box2d fixtures.
-		!#zh
-		应用当前 collider 中的修改，调用此函数会重新生成内部 box2d 的夹具。 
-		*/
-		apply(): void;		
-		/**
-		!#en
-		Get the world aabb of the collider
-		!#zh
-		获取碰撞体的世界坐标系下的包围盒 
-		*/
-		getAABB(): void;		
-		/** !#en
-		The density.
-		!#zh
-		密度 */
-		density: number;		
-		/** !#en
-		A sensor collider collects contact information but never generates a collision response
-		!#zh
-		一个传感器类型的碰撞体会产生碰撞回调，但是不会发生物理碰撞效果。 */
-		sensor: boolean;		
-		/** !#en
-		The friction coefficient, usually in the range [0,1].
-		!#zh
-		摩擦系数，取值一般在 [0, 1] 之间 */
-		friction: number;		
-		/** !#en
-		The restitution (elasticity) usually in the range [0,1].
-		!#zh
-		弹性系数，取值一般在 [0, 1]之间 */
-		restitution: number;	
+	/** undefined */
+	export class PhysicsChainCollider extends PolygonCollider {		
+		/** !#en Whether the chain is loop
+		!#zh 链条是否首尾相连 */
+		loop: boolean;		
+		/** !#en Chain points
+		!#zh 链条顶点数组 */
+		points: [Vec2];	
 	}	
-	/** !#en
-	PhysicsCircleCollider also inherits from {{#crossLink "PhysicsCollider"}}PhysicsCollider{{/crossLink}}
-	!#zh
-	PhysicsPolygonCollider 同样也继承自 {{#crossLink "PhysicsCollider"}}PhysicsCollider{{/crossLink}} */
-	export class PhysicsCircleCollider extends PolygonCollider implements PhysicsCollider {		
-		/**
-		!#en
-		Apply current changes to collider, this will regenerate inner box2d fixtures.
-		!#zh
-		应用当前 collider 中的修改，调用此函数会重新生成内部 box2d 的夹具。 
-		*/
-		apply(): void;		
-		/**
-		!#en
-		Get the world aabb of the collider
-		!#zh
-		获取碰撞体的世界坐标系下的包围盒 
-		*/
-		getAABB(): void;		
-		/** !#en
-		The density.
-		!#zh
-		密度 */
-		density: number;		
-		/** !#en
-		A sensor collider collects contact information but never generates a collision response
-		!#zh
-		一个传感器类型的碰撞体会产生碰撞回调，但是不会发生物理碰撞效果。 */
-		sensor: boolean;		
-		/** !#en
-		The friction coefficient, usually in the range [0,1].
-		!#zh
-		摩擦系数，取值一般在 [0, 1] 之间 */
-		friction: number;		
-		/** !#en
-		The restitution (elasticity) usually in the range [0,1].
-		!#zh
-		弹性系数，取值一般在 [0, 1]之间 */
-		restitution: number;	
+	/** undefined */
+	export class PhysicsCircleCollider extends PhysicsCollider implements Collider.Circle {		
+		/** !#en Position offset
+		!#zh 位置偏移量 */
+		offset: Vec2;		
+		/** !#en Circle radius
+		!#zh 圆形半径 */
+		radius: number;	
 	}	
 	/** undefined */
 	export class PhysicsCollider {		
-		/**
-		!#en
-		Apply current changes to collider, this will regenerate inner box2d fixtures.
-		!#zh
-		应用当前 collider 中的修改，调用此函数会重新生成内部 box2d 的夹具。 
-		*/
-		apply(): void;		
-		/**
-		!#en
-		Get the world aabb of the collider
-		!#zh
-		获取碰撞体的世界坐标系下的包围盒 
-		*/
-		getAABB(): void;		
 		/** !#en
 		The density.
 		!#zh
@@ -13177,47 +13220,35 @@ declare module cc {
 		The restitution (elasticity) usually in the range [0,1].
 		!#zh
 		弹性系数，取值一般在 [0, 1]之间 */
-		restitution: number;	
+		restitution: number;		
+		/** !#en
+		Physics collider will find the rigidbody component on the node and set to this property.
+		!#zh
+		碰撞体会在初始化时查找节点上是否存在刚体，如果查找成功则赋值到这个属性上。 */
+		body: RigidBody;		
+		/**
+		!#en
+		Apply current changes to collider, this will regenerate inner box2d fixtures.
+		!#zh
+		应用当前 collider 中的修改，调用此函数会重新生成内部 box2d 的夹具。 
+		*/
+		apply(): void;		
+		/**
+		!#en
+		Get the world aabb of the collider
+		!#zh
+		获取碰撞体的世界坐标系下的包围盒 
+		*/
+		getAABB(): void;	
 	}	
-	/** !#en
-	PhysicsPolygonCollider also inherits from {{#crossLink "PhysicsCollider"}}PhysicsCollider{{/crossLink}}
-	!#zh
-	PhysicsPolygonCollider 同样也继承自 {{#crossLink "PhysicsCollider"}}PhysicsCollider{{/crossLink}} */
-	export class PhysicsPolygonCollider extends PolygonCollider implements PhysicsCollider {		
-		/**
-		!#en
-		Apply current changes to collider, this will regenerate inner box2d fixtures.
-		!#zh
-		应用当前 collider 中的修改，调用此函数会重新生成内部 box2d 的夹具。 
-		*/
-		apply(): void;		
-		/**
-		!#en
-		Get the world aabb of the collider
-		!#zh
-		获取碰撞体的世界坐标系下的包围盒 
-		*/
-		getAABB(): void;		
-		/** !#en
-		The density.
-		!#zh
-		密度 */
-		density: number;		
-		/** !#en
-		A sensor collider collects contact information but never generates a collision response
-		!#zh
-		一个传感器类型的碰撞体会产生碰撞回调，但是不会发生物理碰撞效果。 */
-		sensor: boolean;		
-		/** !#en
-		The friction coefficient, usually in the range [0,1].
-		!#zh
-		摩擦系数，取值一般在 [0, 1] 之间 */
-		friction: number;		
-		/** !#en
-		The restitution (elasticity) usually in the range [0,1].
-		!#zh
-		弹性系数，取值一般在 [0, 1]之间 */
-		restitution: number;	
+	/** undefined */
+	export class PhysicsPolygonCollider extends PhysicsCollider implements Collider.Polygon {		
+		/** !#en Position offset
+		!#zh 位置偏移量 */
+		offset: Vec2;		
+		/** !#en Polygon points
+		!#zh 多边形顶点数组 */
+		points: [Vec2];	
 	}	
 	/** !#en
 	A distance joint constrains two points on two bodies
@@ -13280,7 +13311,7 @@ declare module cc {
 		!#zh
 		获取刚体世界坐标系下的锚点。 
 		*/
-		worldAnchor(): Vec2;		
+		getWorldAnchor(): Vec2;		
 		/**
 		!#en
 		Get the anchor point on connected rigidbody in world coordinates.
@@ -13604,33 +13635,6 @@ declare module cc {
 	}
 		
 	/****************************************************
-	* ParticleSystem
-	*****************************************************/
-	
-	export module ParticleSystem {		
-		/** !#en Enum for emitter modes
-		!#zh 发射模式 */
-		export enum EmitterMode {			
-			GRAVITY = 0,
-			RADIUS = 0,		
-		}	
-	}
-		
-	/****************************************************
-	* ParticleSystem
-	*****************************************************/
-	
-	export module ParticleSystem {		
-		/** !#en Enum for particles movement type.
-		!#zh 粒子位置类型 */
-		export enum PositionType {			
-			FREE = 0,
-			RELATIVE = 0,
-			GROUPED = 0,		
-		}	
-	}
-		
-	/****************************************************
 	* Node
 	*****************************************************/
 	
@@ -13672,6 +13676,33 @@ declare module cc {
 	}
 		
 	/****************************************************
+	* ParticleSystem
+	*****************************************************/
+	
+	export module ParticleSystem {		
+		/** !#en Enum for emitter modes
+		!#zh 发射模式 */
+		export enum EmitterMode {			
+			GRAVITY = 0,
+			RADIUS = 0,		
+		}	
+	}
+		
+	/****************************************************
+	* ParticleSystem
+	*****************************************************/
+	
+	export module ParticleSystem {		
+		/** !#en Enum for particles movement type.
+		!#zh 粒子位置类型 */
+		export enum PositionType {			
+			FREE = 0,
+			RELATIVE = 0,
+			GROUPED = 0,		
+		}	
+	}
+		
+	/****************************************************
 	* TiledMap
 	*****************************************************/
 	
@@ -13697,6 +13728,93 @@ declare module cc {
 			STAGGERAXIS_Y = 0,
 			STAGGERINDEX_ODD = 0,
 			STAGGERINDEX_EVEN = 0,		
+		}	
+	}
+		
+	/****************************************************
+	* Collider
+	*****************************************************/
+	
+	export module Collider {		
+		/** !#en Defines a Box Collider .
+		!#zh 用来定义包围盒碰撞体 */
+		export class Box {			
+			/** !#en Position offset
+			!#zh 位置偏移量 */
+			offset: Vec2;			
+			/** !#en Box size
+			!#zh 包围盒大小 */
+			size: Size;		
+		}	
+	}
+		
+	/****************************************************
+	* Collider
+	*****************************************************/
+	
+	export module Collider {		
+		/** !#en Defines a Circle Collider .
+		!#zh 用来定义圆形碰撞体 */
+		export class Circle {			
+			/** !#en Position offset
+			!#zh 位置偏移量 */
+			offset: Vec2;			
+			/** !#en Circle radius
+			!#zh 圆形半径 */
+			radius: number;		
+		}	
+	}
+		
+	/****************************************************
+	* Collider
+	*****************************************************/
+	
+	export module Collider {		
+		/** !#en Defines a Polygon Collider .
+		!#zh 用来定义多边形碰撞体 */
+		export class Polygon {			
+			/** !#en Position offset
+			!#zh 位置偏移量 */
+			offset: Vec2;			
+			/** !#en Polygon points
+			!#zh 多边形顶点数组 */
+			points: [Vec2];		
+		}	
+	}
+		
+	/****************************************************
+	* Event
+	*****************************************************/
+	
+	export module Event {		
+		/** !#en The Custom event
+		!#zh 自定义事件 */
+		export class EventCustom extends Event {			
+			/**
+			
+			@param type The name of the event (case-sensitive), e.g. "click", "fire", or "submit"
+			@param bubbles A boolean indicating whether the event bubbles up through the tree or not 
+			*/
+			constructor(type: string, bubbles: boolean);			
+			/** !#en A reference to the detailed data of the event
+			!#zh 事件的详细数据 */
+			detail: any;			
+			/**
+			!#en Sets user data
+			!#zh 设置用户数据
+			@param data data 
+			*/
+			setUserData(data: any): void;			
+			/**
+			!#en Gets user data
+			!#zh 获取用户数据 
+			*/
+			getUserData(): any;			
+			/**
+			!#en Gets event name
+			!#zh 获取事件名称 
+			*/
+			getEventName(): string;		
 		}	
 	}
 		
@@ -14053,7 +14171,8 @@ declare module cc {
 			BOUNCE_LEFT = 0,
 			BOUNCE_RIGHT = 0,
 			AUTOSCROLL_ENDED = 0,
-			TOUCH_UP = 0,		
+			TOUCH_UP = 0,
+			AUTOSCROLL_ENDED_WITH_THRESHOLD = 0,		
 		}	
 	}
 		
@@ -14152,42 +14271,6 @@ declare module cc {
 			LOADED = 0,
 			LOADING = 0,
 			ERROR = 0,		
-		}	
-	}
-		
-	/****************************************************
-	* Event
-	*****************************************************/
-	
-	export module Event {		
-		/** !#en The Custom event
-		!#zh 自定义事件 */
-		export class EventCustom extends Event {			
-			/**
-			
-			@param type The name of the event (case-sensitive), e.g. "click", "fire", or "submit"
-			@param bubbles A boolean indicating whether the event bubbles up through the tree or not 
-			*/
-			constructor(type: string, bubbles: boolean);			
-			/** !#en A reference to the detailed data of the event
-			!#zh 事件的详细数据 */
-			detail: any;			
-			/**
-			!#en Sets user data
-			!#zh 设置用户数据
-			@param data data 
-			*/
-			setUserData(data: any): void;			
-			/**
-			!#en Gets user data
-			!#zh 获取用户数据 
-			*/
-			getUserData(): any;			
-			/**
-			!#en Gets event name
-			!#zh 获取事件名称 
-			*/
-			getEventName(): string;		
 		}	
 	}
 		
@@ -14474,6 +14557,7 @@ declare module cc {
 		2. Image
 		3. Script
 		4. Audio
+		5. Assets
 		All unknown type will be downloaded as plain text.
 		You can pass custom supported types in the constructor. */
 		export class Downloader {			
@@ -15909,147 +15993,6 @@ declare module anysdk {
 }
 
 /** !#en
-The global main namespace of DragonBones, all classes, functions,
-properties and constants of DragonBones are defined in this namespace
-!#zh
-DragonBones 的全局的命名空间，
-与 DragonBones 相关的所有的类，函数，属性，常量都在这个命名空间中定义。 */
-declare module dragonBones {	
-	/** !#en
-	The Armature Display of DragonBones <br/>
-	<br/>
-	(Armature Display has a reference to a DragonBonesAsset and stores the state for ArmatureDisplay instance,
-	which consists of the current pose's bone SRT, slot colors, and which slot attachments are visible. <br/>
-	Multiple Armature Display can use the same DragonBonesAsset which includes all animations, skins, and attachments.) <br/>
-	!#zh
-	DragonBones 骨骼动画 <br/>
-	<br/>
-	(Armature Display 具有对骨骼数据的引用并且存储了骨骼实例的状态，
-	它由当前的骨骼动作，slot 颜色，和可见的 slot attachments 组成。<br/>
-	多个 Armature Display 可以使用相同的骨骼数据，其中包括所有的动画，皮肤和 attachments。)<br/> */
-	export class ArmatureDisplay extends cc._RendererUnderSG {		
-		/** !#en
-		The DragonBones data contains the armatures information (bind pose bones, slots, draw order,
-		attachments, skins, etc) and animations but does not hold any state.<br/>
-		Multiple ArmatureDisplay can share the same DragonBones data.
-		!#zh
-		骨骼数据包含了骨骼信息（绑定骨骼动作，slots，渲染顺序，
-		attachments，皮肤等等）和动画但不持有任何状态。<br/>
-		多个 ArmatureDisplay 可以共用相同的骨骼数据。 */
-		dragonAsset: DragonBonesAsset;		
-		/** !#en
-		The atlas asset for the DragonBones.
-		!#zh
-		骨骼数据所需的 Atlas Texture 数据。 */
-		dragonAtlasAsset: DragonBonesAtlasAsset;		
-		/** !#en The name of current armature.
-		!#zh 当前的 Armature 名称。 */
-		armatureName: string;		
-		/** !#en The name of current playing animation.
-		!#zh 当前播放的动画名称。 */
-		animationName: string;		
-		_defaultArmatureIndex: number;		
-		/** !#en The time scale of this armature.
-		!#zh 当前骨骼中所有动画的时间缩放率。 */
-		timeScale: number;		
-		/** !#en The play times of the default animation.
-		     -1 means using the value of config file;
-		     0 means repeat for ever
-		     >0 means repeat times
-		!#zh 播放默认动画的循环次数
-		     -1 表示使用配置文件中的默认值;
-		     0 表示无限循环
-		     >0 表示循环次数 */
-		playTimes: number;		
-		/** !#en Indicates whether open debug bones.
-		!#zh 是否显示 bone 的 debug 信息。 */
-		debugBones: boolean;		
-		/**
-		!#en
-		Play the specified animation.
-		Parameter animName specify the animation name.
-		Parameter playTimes specify the repeat times of the animation.
-		-1 means use the value of the config file.
-		0 means play the animation for ever.
-		>0 means repeat times.
-		!#zh
-		播放指定的动画.
-		animName 指定播放动画的名称。
-		playTimes 指定播放动画的次数。
-		-1 为使用配置文件中的次数。
-		0 为无限循环播放。
-		>0 为动画的重复次数。
-		@param animName animName
-		@param playTimes playTimes 
-		*/
-		playAnimation(animName: string, playTimes: number): dragonBones.AnimationState;		
-		/**
-		!#en
-		Get the all armature names in the DragonBones Data.
-		!#zh
-		获取 DragonBones 数据中所有的 armature 名称 
-		*/
-		getArmatureNames(): any[];		
-		/**
-		!#en
-		Get the all animation names of specified armature.
-		!#zh
-		获取指定的 armature 的所有动画名称。
-		@param armatureName armatureName 
-		*/
-		getAnimationNames(armatureName: string): any[];		
-		/**
-		!#en
-		Add event listener for the DragonBones Event.
-		!#zh
-		添加 DragonBones 事件监听器。
-		@param eventType eventType
-		@param listener listener
-		@param target target 
-		*/
-		addEventListener(eventType: dragonBones.EventObject, listener: Function, target: any): void;		
-		/**
-		!#en
-		Remove the event listener for the DragonBones Event.
-		!#zh
-		移除 DragonBones 事件监听器。
-		@param eventType eventType
-		@param listener listener
-		@param target target 
-		*/
-		removeEventListener(eventType: dragonBones.EventObject, listener: Function, target: any): void;		
-		/**
-		!#en
-		Build the armature for specified name.
-		!#zh
-		构建指定名称的 armature 对象
-		@param armatureName armatureName 
-		*/
-		buildArmature(armatureName: string): dragonBones.Armature;		
-		/**
-		!#en
-		Get the current armature object of the ArmatureDisplay.
-		!#zh
-		获取 ArmatureDisplay 当前使用的 Armature 对象 
-		*/
-		armature(): any;	
-	}	
-	/** !#en The skeleton data of dragonBones.
-	!#zh dragonBones 的 骨骼数据。 */
-	export class DragonBonesAsset extends cc.Asset {		
-		/** !#en See http://developer.egret.com/cn/github/egret-docs/DB/dbLibs/dataFormat/index.html
-		!#zh 可查看 DragonBones 官方文档 http://developer.egret.com/cn/github/egret-docs/DB/dbLibs/dataFormat/index.html */
-		dragonBonesJson: string;	
-	}	
-	/** !#en The skeleton atlas data of dragonBones.
-	!#zh dragonBones 的骨骼纹理数据。 */
-	export class DragonBonesAtlasAsset extends cc.Asset {		
-		atlasJson: string;		
-		texture: cc.Texture2D;	
-	}
-}
-
-/** !#en
 The global main namespace of Spine, all classes, functions,
 properties and constants of Spine are defined in this namespace
 !#zh
@@ -16405,6 +16348,147 @@ Please refer to the official documentation for its detailed usage: [http://en.es
 !#zh
 sp.spine 模块是 Spine 官方运行库的 API 入口，由 Spine 官方统一实现和维护，具体用法请参考：[http://zh.esotericsoftware.com/spine-using-runtimes](http://zh.esotericsoftware.com/spine-using-runtimes) */
 declare module sp.spine {
+}
+
+/** !#en
+The global main namespace of DragonBones, all classes, functions,
+properties and constants of DragonBones are defined in this namespace
+!#zh
+DragonBones 的全局的命名空间，
+与 DragonBones 相关的所有的类，函数，属性，常量都在这个命名空间中定义。 */
+declare module dragonBones {	
+	/** !#en
+	The Armature Display of DragonBones <br/>
+	<br/>
+	(Armature Display has a reference to a DragonBonesAsset and stores the state for ArmatureDisplay instance,
+	which consists of the current pose's bone SRT, slot colors, and which slot attachments are visible. <br/>
+	Multiple Armature Display can use the same DragonBonesAsset which includes all animations, skins, and attachments.) <br/>
+	!#zh
+	DragonBones 骨骼动画 <br/>
+	<br/>
+	(Armature Display 具有对骨骼数据的引用并且存储了骨骼实例的状态，
+	它由当前的骨骼动作，slot 颜色，和可见的 slot attachments 组成。<br/>
+	多个 Armature Display 可以使用相同的骨骼数据，其中包括所有的动画，皮肤和 attachments。)<br/> */
+	export class ArmatureDisplay extends cc._RendererUnderSG {		
+		/** !#en
+		The DragonBones data contains the armatures information (bind pose bones, slots, draw order,
+		attachments, skins, etc) and animations but does not hold any state.<br/>
+		Multiple ArmatureDisplay can share the same DragonBones data.
+		!#zh
+		骨骼数据包含了骨骼信息（绑定骨骼动作，slots，渲染顺序，
+		attachments，皮肤等等）和动画但不持有任何状态。<br/>
+		多个 ArmatureDisplay 可以共用相同的骨骼数据。 */
+		dragonAsset: DragonBonesAsset;		
+		/** !#en
+		The atlas asset for the DragonBones.
+		!#zh
+		骨骼数据所需的 Atlas Texture 数据。 */
+		dragonAtlasAsset: DragonBonesAtlasAsset;		
+		/** !#en The name of current armature.
+		!#zh 当前的 Armature 名称。 */
+		armatureName: string;		
+		/** !#en The name of current playing animation.
+		!#zh 当前播放的动画名称。 */
+		animationName: string;		
+		_defaultArmatureIndex: number;		
+		/** !#en The time scale of this armature.
+		!#zh 当前骨骼中所有动画的时间缩放率。 */
+		timeScale: number;		
+		/** !#en The play times of the default animation.
+		     -1 means using the value of config file;
+		     0 means repeat for ever
+		     >0 means repeat times
+		!#zh 播放默认动画的循环次数
+		     -1 表示使用配置文件中的默认值;
+		     0 表示无限循环
+		     >0 表示循环次数 */
+		playTimes: number;		
+		/** !#en Indicates whether open debug bones.
+		!#zh 是否显示 bone 的 debug 信息。 */
+		debugBones: boolean;		
+		/**
+		!#en
+		Play the specified animation.
+		Parameter animName specify the animation name.
+		Parameter playTimes specify the repeat times of the animation.
+		-1 means use the value of the config file.
+		0 means play the animation for ever.
+		>0 means repeat times.
+		!#zh
+		播放指定的动画.
+		animName 指定播放动画的名称。
+		playTimes 指定播放动画的次数。
+		-1 为使用配置文件中的次数。
+		0 为无限循环播放。
+		>0 为动画的重复次数。
+		@param animName animName
+		@param playTimes playTimes 
+		*/
+		playAnimation(animName: string, playTimes: number): dragonBones.AnimationState;		
+		/**
+		!#en
+		Get the all armature names in the DragonBones Data.
+		!#zh
+		获取 DragonBones 数据中所有的 armature 名称 
+		*/
+		getArmatureNames(): any[];		
+		/**
+		!#en
+		Get the all animation names of specified armature.
+		!#zh
+		获取指定的 armature 的所有动画名称。
+		@param armatureName armatureName 
+		*/
+		getAnimationNames(armatureName: string): any[];		
+		/**
+		!#en
+		Add event listener for the DragonBones Event.
+		!#zh
+		添加 DragonBones 事件监听器。
+		@param eventType eventType
+		@param listener listener
+		@param target target 
+		*/
+		addEventListener(eventType: dragonBones.EventObject, listener: Function, target: any): void;		
+		/**
+		!#en
+		Remove the event listener for the DragonBones Event.
+		!#zh
+		移除 DragonBones 事件监听器。
+		@param eventType eventType
+		@param listener listener
+		@param target target 
+		*/
+		removeEventListener(eventType: dragonBones.EventObject, listener: Function, target: any): void;		
+		/**
+		!#en
+		Build the armature for specified name.
+		!#zh
+		构建指定名称的 armature 对象
+		@param armatureName armatureName 
+		*/
+		buildArmature(armatureName: string): dragonBones.Armature;		
+		/**
+		!#en
+		Get the current armature object of the ArmatureDisplay.
+		!#zh
+		获取 ArmatureDisplay 当前使用的 Armature 对象 
+		*/
+		armature(): any;	
+	}	
+	/** !#en The skeleton data of dragonBones.
+	!#zh dragonBones 的 骨骼数据。 */
+	export class DragonBonesAsset extends cc.Asset {		
+		/** !#en See http://developer.egret.com/cn/github/egret-docs/DB/dbLibs/dataFormat/index.html
+		!#zh 可查看 DragonBones 官方文档 http://developer.egret.com/cn/github/egret-docs/DB/dbLibs/dataFormat/index.html */
+		dragonBonesJson: string;	
+	}	
+	/** !#en The skeleton atlas data of dragonBones.
+	!#zh dragonBones 的骨骼纹理数据。 */
+	export class DragonBonesAtlasAsset extends cc.Asset {		
+		atlasJson: string;		
+		texture: cc.Texture2D;	
+	}
 }
 
 /** !#en Some JavaScript decorators which can be accessed with "cc._decorator".
@@ -16956,7 +17040,8 @@ declare module cc.js {
 		@param cleanupFunc the callback method used to process the cleanup logic when the object is recycled.
 		@param size initializes the length of the array 
 		*/
-		constructor(cleanupFunc?: (obj: any) => void, size: number);		
+		constructor(cleanupFunc: (obj: any) => void, size: number);
+		constructor(size: number);		
 		/**
 		!#en
 		Get and initialize an object from pool. This method defaults to null and requires the user to implement it.
@@ -16985,4 +17070,3311 @@ declare module cc.js {
 		put(): void;	
 	}
 }
+declare namespace dragonBones {
+    /**
+     * @private
+     */
+    const enum ArmatureType {
+        Armature = 0,
+        MovieClip = 1,
+        Stage = 2,
+    }
+    /**
+     * @private
+     */
+    const enum DisplayType {
+        Image = 0,
+        Armature = 1,
+        Mesh = 2,
+    }
+    /**
+     * @private
+     */
+    const enum ExtensionType {
+        FFD = 0,
+        AdjustColor = 10,
+        BevelFilter = 11,
+        BlurFilter = 12,
+        DropShadowFilter = 13,
+        GlowFilter = 14,
+        GradientBevelFilter = 15,
+        GradientGlowFilter = 16,
+    }
+    /**
+     * @private
+     */
+    const enum EventType {
+        Frame = 10,
+        Sound = 11,
+    }
+    /**
+     * @private
+     */
+    const enum ActionType {
+        Play = 0,
+        Stop = 1,
+        GotoAndPlay = 2,
+        GotoAndStop = 3,
+        FadeIn = 4,
+        FadeOut = 5,
+    }
+    /**
+     * @private
+     */
+    const enum BlendMode {
+        Normal = 0,
+        Add = 1,
+        Alpha = 2,
+        Darken = 3,
+        Difference = 4,
+        Erase = 5,
+        HardLight = 6,
+        Invert = 7,
+        Layer = 8,
+        Lighten = 9,
+        Multiply = 10,
+        Overlay = 11,
+        Screen = 12,
+        Subtract = 13,
+    }
+    /**
+     * @private
+     */
+    interface Map<T> {
+        [key: string]: T;
+    }
+    /**
+     * DragonBones
+     */
+    class DragonBones {
+        /**
+         * @private
+         */
+        static PI_D: number;
+        /**
+         * @private
+         */
+        static PI_H: number;
+        /**
+         * @private
+         */
+        static PI_Q: number;
+        /**
+         * @private
+         */
+        static ANGLE_TO_RADIAN: number;
+        /**
+         * @private
+         */
+        static RADIAN_TO_ANGLE: number;
+        /**
+         * @private
+         */
+        static SECOND_TO_MILLISECOND: number;
+        static VERSION: string;
+        /**
+         * @private
+         */
+        static debug: boolean;
+        /**
+         * @private
+         */
+        static debugDraw: boolean;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 基础对象。
+     * @version DragonBones 4.5
+     */
+    abstract class BaseObject {
+        private static _hashCode;
+        private static _defaultMaxCount;
+        private static _maxCountMap;
+        private static _poolsMap;
+        private static _returnObject(object);
+        /**
+         * @language zh_CN
+         * 设置每种对象池的最大缓存数量。
+         * @param objectConstructor 对象类。
+         * @param maxCount 最大缓存数量。 (设置为 0 则不缓存)
+         * @version DragonBones 4.5
+         */
+        static setMaxCount(objectConstructor: typeof BaseObject, maxCount: number): void;
+        /**
+         * @language zh_CN
+         * 清除对象池缓存的对象。
+         * @param objectConstructor 对象类。 (不设置则清除所有缓存)
+         * @version DragonBones 4.5
+         */
+        static clearPool(objectConstructor?: typeof BaseObject): void;
+        /**
+         * @language zh_CN
+         * 从对象池中创建指定对象。
+         * @param objectConstructor 对象类。
+         * @version DragonBones 4.5
+         */
+        static borrowObject<T extends BaseObject>(objectConstructor: {
+            new (): T;
+        }): T;
+        /**
+         * @language zh_CN
+         * 对象的唯一标识。
+         * @version DragonBones 4.5
+         */
+        hashCode: number;
+        /**
+         * @private
+         */
+        protected abstract _onClear(): void;
+        /**
+         * @language zh_CN
+         * 清除数据并返还对象池。
+         * @version DragonBones 4.5
+         */
+        returnToPool(): void;
+    }
+}
+declare namespace dragonBones {
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 动画混合时，使用的淡出方式。
+     * @see dragonBones.Animation#fadeIn()
+     * @version DragonBones 4.5
+     */
+    const enum AnimationFadeOutMode {
+        /**
+         * @language zh_CN
+         * 不淡出动画。
+         * @version DragonBones 4.5
+         */
+        None = 0,
+        /**
+        * @language zh_CN
+         * 淡出同层的动画。
+         * @version DragonBones 4.5
+         */
+        SameLayer = 1,
+        /**
+         * @language zh_CN
+         * 淡出同组的动画。
+         * @version DragonBones 4.5
+         */
+        SameGroup = 2,
+        /**
+         * @language zh_CN
+         * 淡出同层并且同组的动画。
+         * @version DragonBones 4.5
+         */
+        SameLayerAndGroup = 3,
+        /**
+         * @language zh_CN
+         * 淡出所有动画。
+         * @version DragonBones 4.5
+         */
+        All = 4,
+    }
+    /**
+     * @language zh_CN
+     * 播放动画组件接口。 (Armature 和 WordClock 都实现了该接口)
+     * 任何实现了此接口的实例都可以加到 WorldClock 时钟中，由时钟统一控制动画的播放。
+     * @see dragonBones.WorldClock
+     * @see dragonBones.Armature
+     * @version DragonBones 3.0
+     */
+    interface IAnimateble {
+        /**
+        * @language zh_CN
+        * 更新一个指定的时间。
+        * @param passedTime 前进的时间。 (以秒为单位)
+        * @version DragonBones 3.0
+        */
+        advanceTime(passedTime: number): void;
+    }
+    /**
+     * @language zh_CN
+     * 动画控制器，用来播放动画数据，管理动画状态。
+     * @see dragonBones.AnimationData
+     * @see dragonBones.AnimationState
+     * @version DragonBones 3.0
+     */
+    class Animation extends BaseObject {
+        /**
+         * @private
+         */
+        private static _sortAnimationState(a, b);
+        /**
+         * @private
+         */
+        static toString(): string;
+        /**
+         * @language zh_CN
+         * 动画的播放速度。 [(-N~0): 倒转播放, 0: 停止播放, (0~1): 慢速播放, 1: 正常播放, (1~N): 快速播放]
+         * @default 1
+         * @version DragonBones 3.0
+         */
+        timeScale: number;
+        /**
+         * @private
+         */
+        _armature: Armature;
+        private _isPlaying;
+        private _time;
+        private _duration;
+        private _lastAnimationState;
+        private _animations;
+        private _animationNames;
+        private _animationStates;
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        private _fadeOut(fadeOutTime, layer, group, fadeOutMode, pauseFadeOut);
+        /**
+         * @language zh_CN
+         * 清除所有正在播放的动画状态。
+         * @version DragonBones 4.5
+         */
+        reset(): void;
+        /**
+         * @language zh_CN
+         * 暂停播放动画。
+         * @param animationName 动画状态的名称，如果未设置，则暂停所有动画状态。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 3.0
+         */
+        stop(animationName?: string): void;
+        /**
+         * @language zh_CN
+         * 播放动画。
+         * @param animationName 动画数据的名称，如果未设置，则播放默认动画，或将暂停状态切换为播放状态，或重新播放上一个正在播放的动画。
+         * @param playTimes 动画需要播放的次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]
+         * @returns 返回控制这个动画数据的动画状态。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 3.0
+         */
+        play(animationName?: string, playTimes?: number): AnimationState;
+        /**
+         * @language zh_CN
+         * 淡入播放指定名称的动画。
+         * @param animationName 动画数据的名称。
+         * @param playTimes 循环播放的次数。 [-1: 使用数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]
+         * @param fadeInTime 淡入的时间。 [-1: 使用数据默认值, [0~N]: N 秒淡入完毕] (以秒为单位)
+         * @param layer 混合的图层，图层高会优先获取混合权重。
+         * @param group 混合的组，用于给动画状态编组，方便混合淡出控制。
+         * @param fadeOutMode 淡出的模式。
+         * @param additiveBlending 以叠加的形式混合。
+         * @param displayControl 是否对显示对象属性可控。
+         * @param pauseFadeOut 暂停需要淡出的动画。
+         * @param pauseFadeIn 暂停需要淡入的动画，直到淡入结束才开始播放。
+         * @returns 返回控制这个动画数据的动画状态。
+         * @see dragonBones.AnimationFadeOutMode
+         * @see dragonBones.AnimationState
+         * @version DragonBones 4.5
+         */
+        fadeIn(animationName: string, fadeInTime?: number, playTimes?: number, layer?: number, group?: string, fadeOutMode?: AnimationFadeOutMode, additiveBlending?: boolean, displayControl?: boolean, pauseFadeOut?: boolean, pauseFadeIn?: boolean): AnimationState;
+        /**
+         * @language zh_CN
+         * 指定名称的动画从指定时间开始播放。
+         * @param animationName 动画数据的名称。
+         * @param time 时间。 (以秒为单位)
+         * @param playTimes 动画循环播放的次数。 [-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]
+         * @param toTime 播放到指定的时间，如果未设置则播放整个动画。
+         * @returns 返回控制这个动画数据的动画状态。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 4.5
+         */
+        gotoAndPlayByTime(animationName: string, time?: number, playTimes?: number, toTime?: number): AnimationState;
+        /**
+         * @language zh_CN
+         * 指定名称的动画从指定帧开始播放。
+         * @param animationName 动画数据的名称。
+         * @param frame 帧。
+         * @param playTimes 动画循环播放的次数。[-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]
+         * @param toFrame 播放到指定的帧，如果未设置则播放整个动画。
+         * @returns 返回控制这个动画数据的动画状态。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 4.5
+         */
+        gotoAndPlayByFrame(animationName: string, frame?: number, playTimes?: number, toFrame?: number): AnimationState;
+        /**
+         * @language zh_CN
+         * 指定名称的动画从指定进度开始播放。
+         * @param animationName 动画数据的名称。
+         * @param progress 进度。 [0~1]
+         * @param playTimes 动画循环播放的次数。[-1: 使用动画数据默认值, 0: 无限循环播放, [1~N]: 循环播放 N 次]
+         * @param toProgress 播放到指定的进度，如果未设置则播放整个动画。
+         * @returns 返回控制这个动画数据的动画状态。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 4.5
+         */
+        gotoAndPlayByProgress(animationName: string, progress?: number, playTimes?: number, toProgress?: number): AnimationState;
+        /**
+         * @language zh_CN
+         * 播放指定名称的动画到指定的时间并停止。
+         * @param animationName 动画数据的名称。
+         * @param time 时间。 (以秒为单位)
+         * @returns 返回控制这个动画数据的动画状态。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 4.5
+         */
+        gotoAndStopByTime(animationName: string, time?: number): AnimationState;
+        /**
+         * @language zh_CN
+         * 播放指定名称的动画到指定的帧并停止。
+         * @param animationName 动画数据的名称。
+         * @param frame 帧。
+         * @returns 返回控制这个动画数据的动画状态。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 4.5
+         */
+        gotoAndStopByFrame(animationName: string, frame?: number): AnimationState;
+        /**
+         * @language zh_CN
+         * 播放指定名称的动画到指定的进度并停止。
+         * @param animationName 动画数据的名称。
+         * @param progress 进度。 [0~1]
+         * @returns 返回控制这个动画数据的动画状态。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 4.5
+         */
+        gotoAndStopByProgress(animationName: string, progress?: number): AnimationState;
+        /**
+         * @language zh_CN
+         * 获取指定名称的动画状态。
+         * @param animationName 动画状态的名称。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 3.0
+         */
+        getState(animationName: string): AnimationState;
+        /**
+         * @language zh_CN
+         * 是否包含指定名称的动画数据。
+         * @param animationName 动画数据的名称。
+         * @see dragonBones.AnimationData
+         * @version DragonBones 3.0
+         */
+        hasAnimation(animationName: string): boolean;
+        /**
+         * @language zh_CN
+         * 动画是否处于播放状态。
+         * @version DragonBones 3.0
+         */
+        isPlaying: boolean;
+        /**
+         * @language zh_CN
+         * 所有动画状态是否均已播放完毕。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 3.0
+         */
+        isCompleted: boolean;
+        /**
+         * @language zh_CN
+         * 上一个正在播放的动画状态的名称。
+         * @see #lastAnimationState
+         * @version DragonBones 3.0
+         */
+        lastAnimationName: string;
+        /**
+         * @language zh_CN
+         * 上一个正在播放的动画状态。
+         * @see dragonBones.AnimationState
+         * @version DragonBones 3.0
+         */
+        lastAnimationState: AnimationState;
+        /**
+         * @language zh_CN
+         * 所有动画数据名称。
+         * @see #animations
+         * @version DragonBones 4.5
+         */
+        animationNames: Array<string>;
+        /**
+         * @language zh_CN
+         * 所有的动画数据。
+         * @see dragonBones.AnimationData
+         * @version DragonBones 4.5
+         */
+        animations: Map<AnimationData>;
+        /**
+         * @deprecated
+         * @see #play()
+         * @see #fadeIn()
+         * @see #gotoAndPlayByTime()
+         * @see #gotoAndPlayByFrame()
+         * @see #gotoAndPlayByProgress()
+         */
+        gotoAndPlay(animationName: string, fadeInTime?: number, duration?: number, playTimes?: number, layer?: number, group?: string, fadeOutMode?: AnimationFadeOutMode, pauseFadeOut?: boolean, pauseFadeIn?: boolean): AnimationState;
+        /**
+         * @deprecated
+         * @see #gotoAndStopByTime()
+         * @see #gotoAndStopByFrame()
+         * @see #gotoAndStopByProgress()
+         */
+        gotoAndStop(animationName: string, time?: number): AnimationState;
+        /**
+         * @deprecated
+         * @see #animationNames
+         * @see #animations
+         */
+        animationList: Array<string>;
+        /**
+         * @language zh_CN
+         * @deprecated
+         * @see #animationNames
+         * @see #animations
+         */
+        animationDataList: Array<AnimationData>;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 动画状态，播放动画时产生，可以对单个动画的播放进行更细致的控制和调节。
+     * @see dragonBones.Animation
+     * @see dragonBones.AnimationData
+     * @version DragonBones 3.0
+     */
+    class AnimationState extends BaseObject {
+        /**
+         * @private
+         */
+        static stateActionEnabled: boolean;
+        /**
+         * @private
+         */
+        static toString(): string;
+        /**
+         * @language zh_CN
+         * 是否对插槽的颜色，显示序列索引，深度排序，行为等拥有控制的权限。
+         * @see dragonBones.Slot#displayController
+         * @version DragonBones 3.0
+         */
+        displayControl: boolean;
+        /**
+         * @language zh_CN
+         * 是否以叠加的方式混合动画。
+         * @version DragonBones 3.0
+         */
+        additiveBlending: boolean;
+        /**
+         * @private
+         */
+        actionEnabled: boolean;
+        /**
+         * @language zh_CN
+         * 需要播放的次数。 [0: 无限循环播放, [1~N]: 循环播放 N 次]
+         * @version DragonBones 3.0
+         */
+        playTimes: number;
+        /**
+         * @language zh_CN
+         * 播放速度。 [(-N~0): 倒转播放, 0: 停止播放, (0~1): 慢速播放, 1: 正常播放, (1~N): 快速播放]
+         * @default 1
+         * @version DragonBones 3.0
+         */
+        timeScale: number;
+        /**
+         * @language zh_CN
+         * 进行动画混合时的权重。
+         * @default 1
+         * @version DragonBones 3.0
+         */
+        weight: number;
+        /**
+         * @language zh_CN
+         * 自动淡出时需要的时间，当设置一个大于等于 0 的值，动画状态将会在播放完成后自动淡出。 (以秒为单位)
+         * @default -1
+         * @version DragonBones 3.0
+         */
+        autoFadeOutTime: number;
+        /**
+         * @private
+         */
+        fadeTotalTime: number;
+        /**
+         * @private
+         */
+        private _isPlaying;
+        /**
+         * @private
+         */
+        private _isPausePlayhead;
+        /**
+         * @private
+         */
+        private _fadeTime;
+        /**
+         * @private
+         */
+        private _time;
+        /**
+         * @private
+         */
+        private _name;
+        /**
+         * @private
+         */
+        private _armature;
+        /**
+         * @private
+         */
+        private _animationData;
+        /**
+         * @private
+         */
+        private _zOrderTimeline;
+        /**
+         * @private
+         */
+        private _boneMask;
+        /**
+         * @private
+         */
+        private _boneTimelines;
+        /**
+         * @private
+         */
+        private _slotTimelines;
+        /**
+         * @private
+         */
+        private _ffdTimelines;
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        private _updateTimelineStates();
+        private _advanceFadeTime(passedTime);
+        /**
+         * @language zh_CN
+         * 继续播放。
+         * @version DragonBones 3.0
+         */
+        play(): void;
+        /**
+         * @language zh_CN
+         * 暂停播放。
+         * @version DragonBones 3.0
+         */
+        stop(): void;
+        /**
+         * @language zh_CN
+         * 淡出动画。
+         * @param fadeOutTime 淡出时间。 (以秒为单位)
+         * @param pausePlayhead 淡出时是否暂停动画。 [true: 暂停, false: 不暂停]
+         * @version DragonBones 3.0
+         */
+        fadeOut(fadeOutTime: number, pausePlayhead?: boolean): void;
+        /**
+         * @language zh_CN
+         * 是否包含指定的骨骼遮罩。
+         * @param name 指定的骨骼名称。
+         * @version DragonBones 3.0
+         */
+        containsBoneMask(name: string): boolean;
+        /**
+         * @language zh_CN
+         * 添加指定的骨骼遮罩。
+         * @param boneName 指定的骨骼名称。
+         * @param recursive 是否为该骨骼的子骨骼添加遮罩。
+         * @version DragonBones 3.0
+         */
+        addBoneMask(name: string, recursive?: boolean): void;
+        /**
+         * @language zh_CN
+         * 删除指定的骨骼遮罩。
+         * @param boneName 指定的骨骼名称。
+         * @param recursive 是否删除该骨骼的子骨骼遮罩。
+         * @version DragonBones 3.0
+         */
+        removeBoneMask(name: string, recursive?: boolean): void;
+        /**
+         * @language zh_CN
+         * 删除所有骨骼遮罩。
+         * @version DragonBones 3.0
+         */
+        removeAllBoneMask(): void;
+        /**
+         * @language zh_CN
+         * 动画图层。
+         * @see dragonBones.Animation#fadeIn()
+         * @version DragonBones 3.0
+         */
+        layer: number;
+        /**
+         * @language zh_CN
+         * 动画组。
+         * @see dragonBones.Animation#fadeIn()
+         * @version DragonBones 3.0
+         */
+        group: string;
+        /**
+         * @language zh_CN
+         * 动画名称。
+         * @see dragonBones.AnimationData#name
+         * @version DragonBones 3.0
+         */
+        name: string;
+        /**
+         * @language zh_CN
+         * 动画数据。
+         * @see dragonBones.AnimationData
+         * @version DragonBones 3.0
+         */
+        animationData: AnimationData;
+        /**
+         * @language zh_CN
+         * 是否播放完毕。
+         * @version DragonBones 3.0
+         */
+        isCompleted: boolean;
+        /**
+         * @language zh_CN
+         * 是否正在播放。
+         * @version DragonBones 3.0
+         */
+        isPlaying: boolean;
+        /**
+         * @language zh_CN
+         * 当前动画的播放次数。
+         * @version DragonBones 3.0
+         */
+        currentPlayTimes: number;
+        /**
+         * @language zh_CN
+         * 当前动画的总时间。 (以秒为单位)
+         * @version DragonBones 3.0
+         */
+        totalTime: number;
+        /**
+         * @language zh_CN
+         * 当前动画的播放时间。 (以秒为单位)
+         * @version DragonBones 3.0
+         */
+        currentTime: number;
+        /**
+         * @deprecated
+         */
+        autoTween: boolean;
+        /**
+         * @deprecated
+         * @see #animationData
+         */
+        clip: AnimationData;
+    }
+}
+declare namespace dragonBones {
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * WorldClock 提供时钟的支持，为每个加入到时钟的 IAnimatable 对象更新时间。
+     * @see dragonBones.IAnimatable
+     * @see dragonBones.Armature
+     * @version DragonBones 3.0
+     */
+    class WorldClock implements IAnimateble {
+        private static _clock;
+        /**
+         * @language zh_CN
+         * 一个可以直接使用的全局 WorldClock 实例.
+         * @version DragonBones 3.0
+         */
+        static clock: WorldClock;
+        /**
+         * @language zh_CN
+         * 当前的时间。 (以秒为单位)
+         * @version DragonBones 3.0
+         */
+        time: number;
+        /**
+         * @language zh_CN
+         * 时间流逝的速度，用于实现动画的变速播放。 [0: 停止播放, (0~1): 慢速播放, 1: 正常播放, (1~N): 快速播放]
+         * @default 1
+         * @version DragonBones 3.0
+         */
+        timeScale: number;
+        private _animatebles;
+        /**
+         * @language zh_CN
+         * 创建一个新的 WorldClock 实例。
+         * 通常并不需要单独创建 WorldClock 的实例，可以直接使用 WorldClock.clock 静态实例。
+         * (创建更多独立的 WorldClock 可以更灵活的为需要更新的 IAnimateble 实例分组，实现不同组不同速度的动画播放)
+         * @version DragonBones 3.0
+         */
+        constructor();
+        /**
+         * @language zh_CN
+         * 为所有的 IAnimatable 实例向前播放一个指定的时间。 (通常这个方法需要在 ENTER_FRAME 事件的响应函数中被调用)
+         * @param passedTime 前进的时间。 (以秒为单位，当设置为 -1 时将自动计算当前帧与上一帧的时间差)
+         * @version DragonBones 3.0
+         */
+        advanceTime(passedTime: number): void;
+        /**
+         * 是否包含指定的 IAnimatable 实例
+         * @param value 指定的 IAnimatable 实例。
+         * @returns  [true: 包含，false: 不包含]。
+         * @version DragonBones 3.0
+         */
+        contains(value: IAnimateble): boolean;
+        /**
+         * @language zh_CN
+         * 添加指定的 IAnimatable 实例。
+         * @param value IAnimatable 实例。
+         * @version DragonBones 3.0
+         */
+        add(value: IAnimateble): void;
+        /**
+         * @language zh_CN
+         * 移除指定的 IAnimatable 实例。
+         * @param value IAnimatable 实例。
+         * @version DragonBones 3.0
+         */
+        remove(value: IAnimateble): void;
+        /**
+         * @language zh_CN
+         * 清除所有的 IAnimatable 实例。
+         * @version DragonBones 3.0
+         */
+        clear(): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 基础变换对象。
+     * @version DragonBones 4.5
+     */
+    abstract class TransformObject extends BaseObject {
+        /**
+         * @language zh_CN
+         * 可以用于存储临时数据。
+         * @version DragonBones 3.0
+         */
+        userData: any;
+        /**
+         * @language zh_CN
+         * 对象的名称。
+         * @version DragonBones 3.0
+         */
+        name: string;
+        /**
+         * @language zh_CN
+         * 相对于骨架坐标系的矩阵。
+         * @version DragonBones 3.0
+         */
+        globalTransformMatrix: Matrix;
+        /**
+         * @language zh_CN
+         * 相对于骨架坐标系的变换。
+         * @see dragonBones.Transform
+         * @version DragonBones 3.0
+         */
+        global: Transform;
+        /**
+         * @language zh_CN
+         * 相对于骨架或父骨骼坐标系的绑定变换。
+         * @see dragonBones.Transform
+         * @version DragonBones 3.0
+         */
+        origin: Transform;
+        /**
+         * @language zh_CN
+         * 相对于骨架或父骨骼坐标系的偏移变换。
+         * @see dragonBones.Transform
+         * @version DragonBones 3.0
+         */
+        offset: Transform;
+        /**
+         * @private
+         */
+        _armature: Armature;
+        /**
+         * @private
+         */
+        _parent: Bone;
+        /**
+         * @private
+         */
+        protected _globalTransformMatrix: Matrix;
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        /**
+         * @language zh_CN
+         * 所属的骨架。
+         * @see dragonBones.Armature
+         * @version DragonBones 3.0
+         */
+        armature: Armature;
+        /**
+         * @language zh_CN
+         * 所属的父骨骼。
+         * @see dragonBones.Bone
+         * @version DragonBones 3.0
+         */
+        parent: Bone;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 骨架，是骨骼动画系统的核心，由显示容器、骨骼、插槽、动画、事件系统构成。
+     * @see dragonBones.ArmatureData
+     * @see dragonBones.Bone
+     * @see dragonBones.Slot
+     * @see dragonBones.Animation
+     * @see dragonBones.IArmatureDisplay
+     * @version DragonBones 3.0
+     */
+    class Armature extends BaseObject implements IAnimateble {
+        /**
+         * @private
+         */
+        static toString(): string;
+        private static _onSortSlots(a, b);
+        /**
+         * @language zh_CN
+         * 可以用于存储临时数据。
+         * @version DragonBones 3.0
+         */
+        userData: any;
+        /**
+         * @private
+         */
+        _cacheFrameIndex: number;
+        /**
+         * @private
+         */
+        _armatureData: ArmatureData;
+        /**
+         * @private
+         */
+        _skinData: SkinData;
+        /**
+         * @private
+         */
+        _animation: Animation;
+        /**
+         * @private
+         */
+        _display: IArmatureDisplay;
+        /**
+         * @private
+         */
+        _eventManager: IEventDispatcher;
+        private _delayDispose;
+        private _lockDispose;
+        private _slotsDirty;
+        private _replacedTexture;
+        private _bones;
+        private _slots;
+        private _actions;
+        private _events;
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        private _sortBones();
+        private _sortSlots();
+        private _doAction(value);
+        /**
+         * @private
+         */
+        _sortZOrder(slotIndices: Array<number>): void;
+        /**
+         * @private
+         */
+        _bufferAction(value: ActionData): void;
+        /**
+         * @language zh_CN
+         * 释放骨架。 (会回收到内存池)
+         * @version DragonBones 3.0
+         */
+        dispose(): void;
+        /**
+         * @language zh_CN
+         * 更新骨架和动画。 (可以使用时钟实例或显示容器来更新)
+         * @param passedTime 两帧之前的时间间隔。 (以秒为单位)
+         * @see dragonBones.IAnimateble
+         * @see dragonBones.WorldClock
+         * @see dragonBones.IArmatureDisplay
+         * @version DragonBones 3.0
+         */
+        advanceTime(passedTime: number): void;
+        /**
+         * @language zh_CN
+         * 更新骨骼和插槽的变换。 (当骨骼没有动画状态或动画状态播放完成时，骨骼将不在更新)
+         * @param boneName 指定的骨骼名称，如果未设置，将更新所有骨骼。
+         * @param updateSlotDisplay 是否更新插槽的显示对象。
+         * @see dragonBones.Bone
+         * @see dragonBones.Slot
+         * @version DragonBones 3.0
+         */
+        invalidUpdate(boneName?: string, updateSlotDisplay?: boolean): void;
+        /**
+         * @language zh_CN
+         * 获取指定名称的骨骼。
+         * @param name 骨骼的名称。
+         * @returns 骨骼。
+         * @see dragonBones.Bone
+         * @version DragonBones 3.0
+         */
+        getBone(name: string): Bone;
+        /**
+         * @language zh_CN
+         * 通过显示对象获取骨骼。
+         * @param display 显示对象。
+         * @returns 包含这个显示对象的骨骼。
+         * @see dragonBones.Bone
+         * @version DragonBones 3.0
+         */
+        getBoneByDisplay(display: any): Bone;
+        /**
+         * @language zh_CN
+         * 获取指定名称的插槽。
+         * @param name 插槽的名称。
+         * @returns 插槽。
+         * @see dragonBones.Slot
+         * @version DragonBones 3.0
+         */
+        getSlot(name: string): Slot;
+        /**
+         * @language zh_CN
+         * 通过显示对象获取插槽。
+         * @param display 显示对象。
+         * @returns 包含这个显示对象的插槽。
+         * @see dragonBones.Slot
+         * @version DragonBones 3.0
+         */
+        getSlotByDisplay(display: any): Slot;
+        /**
+         * @language zh_CN
+         * 替换骨架的主贴图，根据渲染引擎的不同，提供不同的贴图数据。
+         * @param texture 贴图。
+         * @version DragonBones 4.5
+         */
+        replaceTexture(texture: any): void;
+        /**
+         * @language zh_CN
+         * 获取所有骨骼。
+         * @see dragonBones.Bone
+         * @version DragonBones 3.0
+         */
+        getBones(): Array<Bone>;
+        /**
+         * @language zh_CN
+         * 获取所有插槽。
+         * @see dragonBones.Slot
+         * @version DragonBones 3.0
+         */
+        getSlots(): Array<Slot>;
+        /**
+         * @language zh_CN
+         * 骨架名称。
+         * @see dragonBones.ArmatureData#name
+         * @version DragonBones 3.0
+         */
+        name: string;
+        /**
+         * @language zh_CN
+         * 获取骨架数据。
+         * @see dragonBones.ArmatureData
+         * @version DragonBones 4.5
+         */
+        armatureData: ArmatureData;
+        /**
+         * @language zh_CN
+         * 获得动画控制器。
+         * @see dragonBones.Animation
+         * @version DragonBones 3.0
+         */
+        animation: Animation;
+        /**
+         * @language zh_CN
+         * 获取显示容器，插槽的显示对象都会以此显示容器为父级，根据渲染平台的不同，类型会不同，通常是 DisplayObjectContainer 类型。
+         * @version DragonBones 3.0
+         */
+        display: IArmatureDisplay | any;
+        /**
+         * @language zh_CN
+         * 获取父插槽。 (当此骨架是某个骨架的子骨架时，可以通过此属性向上查找从属关系)
+         * @see dragonBones.Slot
+         * @version DragonBones 4.5
+         */
+        parent: Slot;
+        /**
+         * @language zh_CN
+         * 动画缓存的帧率，当设置一个大于 0 的帧率时，将会开启动画缓存。
+         * 通过将动画数据缓存在内存中来提高运行性能，会有一定的内存开销。
+         * 帧率不宜设置的过高，通常跟动画的帧率相当且低于程序运行的帧率。
+         * 开启动画缓存后，某些功能将会失效，比如 Bone 和 Slot 的 offset 属性等。
+         * @see dragonBones.DragonBonesData#frameRate
+         * @see dragonBones.ArmatureData#frameRate
+         * @version DragonBones 4.5
+         */
+        cacheFrameRate: number;
+        /**
+         * @language zh_CN
+         * 替换骨架的主贴图，根据渲染引擎的不同，提供不同的贴图数据。
+         * @version DragonBones 4.5
+         */
+        replacedTexture: any;
+        /**
+         * @language zh_CN
+         * 开启动画缓存。
+         * @param frameRate 动画缓存的帧率
+         * @see #cacheFrameRate
+         * @version DragonBones 4.5
+         */
+        enableAnimationCache(frameRate: number): void;
+        /**
+         * @language zh_CN
+         * 是否包含指定类型的事件。
+         * @param type 事件类型。
+         * @returns  [true: 包含, false: 不包含]
+         * @version DragonBones 3.0
+         */
+        hasEventListener(type: EventStringType): void;
+        /**
+         * @language zh_CN
+         * 添加事件。
+         * @param type 事件类型。
+         * @param listener 事件回调。
+         * @version DragonBones 3.0
+         */
+        addEventListener(type: EventStringType, listener: Function, target: any): void;
+        /**
+         * @language zh_CN
+         * 移除事件。
+         * @param type 事件类型。
+         * @param listener 事件回调。
+         * @version DragonBones 3.0
+         */
+        removeEventListener(type: EventStringType, listener: Function, target: any): void;
+        /**
+         * @deprecated
+         */
+        addBone(value: Bone, parentName?: string): void;
+        /**
+         * @deprecated
+         */
+        addSlot(value: Slot, parentName: string): void;
+        /**
+         * @deprecated
+         */
+        removeBone(value: Bone): void;
+        /**
+         * @deprecated
+         */
+        removeSlot(value: Slot): void;
+        /**
+         * @deprecated
+         * @see #display
+         */
+        getDisplay(): any;
+        /**
+         * @deprecated
+         * @see #cacheFrameRate
+         */
+        enableCache: boolean;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 骨骼，一个骨架中可以包含多个骨骼，骨骼以树状结构组成骨架。
+     * 骨骼在骨骼动画体系中是最重要的逻辑单元之一，负责动画中的平移旋转缩放的实现。
+     * @see dragonBones.BoneData
+     * @see dragonBones.Armature
+     * @see dragonBones.Slot
+     * @version DragonBones 3.0
+     */
+    class Bone extends TransformObject {
+        /**
+         * @private
+         */
+        static toString(): string;
+        /**
+         * @language zh_CN
+         * 是否继承父骨骼的平移。 [true: 继承, false: 不继承]
+         * @version DragonBones 3.0
+         */
+        inheritTranslation: boolean;
+        /**
+         * @language zh_CN
+         * 是否继承父骨骼的旋转。 [true: 继承, false: 不继承]
+         * @version DragonBones 3.0
+         */
+        inheritRotation: boolean;
+        /**
+         * @language zh_CN
+         * 是否继承父骨骼的缩放。 [true: 继承, false: 不继承]
+         * @version DragonBones 4.5
+         */
+        inheritScale: boolean;
+        /**
+         * @language zh_CN
+         * IK 约束时骨骼方向是否为顺时针方向。 [true: 顺时针, false: 逆时针]
+         * @version DragonBones 4.5
+         */
+        ikBendPositive: boolean;
+        /**
+         * @language zh_CN
+         * IK 约束的权重。
+         * @version DragonBones 4.5
+         */
+        ikWeight: number;
+        /**
+         * @language zh_CN
+         * 骨骼长度。
+         * @version DragonBones 4.5
+         */
+        length: number;
+        /**
+         * @private
+         */
+        private _visible;
+        /**
+         * @private
+         */
+        private _ikChain;
+        /**
+         * @private
+         */
+        private _ikChainIndex;
+        /**
+         * @private
+         */
+        private _ik;
+        /**
+         * @private
+         */
+        private _bones;
+        /**
+         * @private
+         */
+        private _slots;
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        /**
+         * @private
+         */
+        private _updateGlobalTransformMatrix();
+        /**
+         * @private
+         */
+        private _computeIKA();
+        /**
+         * @private
+         */
+        private _computeIKB();
+        /**
+         * @inheritDoc
+         */
+        _setArmature(value: Armature): void;
+        /**
+         * @language zh_CN
+         * 下一帧更新变换。 (当骨骼没有动画状态或动画状态播放完成时，骨骼将不在更新)
+         * @version DragonBones 3.0
+         */
+        invalidUpdate(): void;
+        /**
+         * @language zh_CN
+         * 是否包含某个指定的骨骼或插槽。
+         * @returns [true: 包含，false: 不包含]
+         * @see dragonBones.TransformObject
+         * @version DragonBones 3.0
+         */
+        contains(child: TransformObject): boolean;
+        /**
+         * @language zh_CN
+         * 所有的子骨骼。
+         * @version DragonBones 3.0
+         */
+        getBones(): Array<Bone>;
+        /**
+         * @language zh_CN
+         * 所有的插槽。
+         * @see dragonBones.Slot
+         * @version DragonBones 3.0
+         */
+        getSlots(): Array<Slot>;
+        /**
+         * @private
+         */
+        ikChain: number;
+        /**
+         * @private
+         */
+        ikChainIndex: number;
+        /**
+         * @language zh_CN
+         * 当前的 IK 约束目标。
+         * @version DragonBones 4.5
+         */
+        ik: Bone;
+        /**
+         * @language zh_CN
+         * 控制此骨骼所有插槽的显示。
+         * @default true
+         * @see dragonBones.Slot
+         * @version DragonBones 3.0
+         */
+        visible: boolean;
+        /**
+         * @deprecated
+         * @see dragonBones.Armature#getSlot()
+         */
+        slot: Slot;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 骨架显示容器和事件的接口。
+     * @see dragonBones.Armature#display
+     * @version DragonBones 4.5
+     */
+    interface IArmatureDisplay extends IEventDispatcher {
+        /**
+         * @language zh_CN
+         * 释放显示对象和骨架。
+         * @version DragonBones 4.5
+         */
+        dispose(): void;
+        /**
+         * @language zh_CN
+         * 获取使用这个显示容器的骨架。
+         * @readOnly
+         * @see dragonBones.Armature
+         * @version DragonBones 4.5
+         */
+        armature: Armature;
+        /**
+         * @language zh_CN
+         * 获取使用骨架的动画控制器。
+         * @readOnly
+         * @see dragonBones.Animation
+         * @version DragonBones 4.5
+         */
+        animation: Animation;
+        /**
+         * @language zh_CN
+         * 由显示容器来更新骨架和动画。
+         * @param on 开启或关闭显示容器对骨架与动画的更新。
+         * @version DragonBones 4.5
+         */
+        advanceTimeBySelf(on: boolean): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 插槽，附着在骨骼上，控制显示对象的显示状态和属性。
+     * 一个骨骼上可以包含多个插槽。
+     * 一个插槽中可以包含多个显示对象，同一时间只能显示其中的一个显示对象，但可以在动画播放的过程中切换显示对象实现帧动画。
+     * 显示对象可以是普通的图片纹理，也可以是子骨架的显示容器，网格显示对象，还可以是自定义的其他显示对象。
+     * @see dragonBones.Armature
+     * @see dragonBones.Bone
+     * @see dragonBones.SlotData
+     * @version DragonBones 3.0
+     */
+    abstract class Slot extends TransformObject {
+        private static _helpPoint;
+        private static _helpMatrix;
+        /**
+         * @language zh_CN
+         * 子骨架是否继承父骨架的动画。 [true: 继承, false: 不继承]
+         * @default true
+         * @version DragonBones 4.5
+         */
+        inheritAnimation: boolean;
+        /**
+         * @language zh_CN
+         * 显示对象受到控制的对象，应设置为动画状态的名称或组名称，设置为 null 则表示受所有的动画状态控制。
+         * @default null
+         * @see dragonBones.AnimationState#displayControl
+         * @see dragonBones.AnimationState#name
+         * @see dragonBones.AnimationState#group
+         * @version DragonBones 4.5
+         */
+        displayController: string;
+        /**
+         * @private
+         */
+        _zOrder: number;
+        /**
+         * @private
+         */
+        _pivotX: number;
+        /**
+         * @private
+         */
+        _pivotY: number;
+        /**
+         * @private
+         */
+        _displayDataSet: SlotDisplayDataSet;
+        /**
+         * @private
+         */
+        _meshData: MeshData;
+        /**
+         * @private
+         */
+        _childArmature: Armature;
+        /**
+         * @private
+         */
+        _rawDisplay: any;
+        /**
+         * @private
+         */
+        _meshDisplay: any;
+        /**
+         * @private
+         */
+        _cacheFrames: Array<Matrix>;
+        /**
+         * @private
+         */
+        _colorTransform: ColorTransform;
+        /**
+         * @private
+         */
+        _ffdVertices: Array<number>;
+        /**
+         * @private
+         */
+        _replacedDisplayDataSet: Array<DisplayData>;
+        /**
+         * @private
+         */
+        protected _displayDirty: boolean;
+        /**
+         * @private
+         */
+        protected _blendModeDirty: boolean;
+        /**
+         * @private
+         */
+        protected _originDirty: boolean;
+        /**
+         * @private
+         */
+        protected _transformDirty: boolean;
+        /**
+         * @private
+         */
+        protected _displayIndex: number;
+        /**
+         * @private
+         */
+        protected _blendMode: BlendMode;
+        /**
+         * @private
+         */
+        protected _display: any;
+        /**
+         * @private
+         */
+        protected _localMatrix: Matrix;
+        /**
+         * @private
+         */
+        protected _displayList: Array<any | Armature>;
+        /**
+         * @private
+         */
+        protected _meshBones: Array<Bone>;
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        /**
+         * @private
+         */
+        protected abstract _initDisplay(value: any): void;
+        /**
+         * @private
+         */
+        protected abstract _disposeDisplay(value: any): void;
+        /**
+         * @private
+         */
+        protected abstract _onUpdateDisplay(): void;
+        /**
+         * @private
+         */
+        protected abstract _addDisplay(): void;
+        /**
+         * @private
+         */
+        protected abstract _replaceDisplay(value: any): void;
+        /**
+         * @private
+         */
+        protected abstract _removeDisplay(): void;
+        /**
+         * @private
+         */
+        protected abstract _updateZOrder(): void;
+        /**
+         * @private
+         */
+        protected abstract _updateBlendMode(): void;
+        /**
+         * @private
+         */
+        protected abstract _updateColor(): void;
+        /**
+         * @private
+         */
+        protected abstract _updateFilters(): void;
+        /**
+         * @private
+         */
+        protected abstract _updateFrame(): void;
+        /**
+         * @private
+         */
+        protected abstract _updateMesh(): void;
+        /**
+         * @private
+         */
+        protected abstract _updateTransform(): void;
+        private _isMeshBonesUpdate();
+        /**
+         * @private
+         */
+        protected _updatePivot(rawDisplayData: DisplayData, currentDisplayData: DisplayData, currentTextureData: TextureData): void;
+        /**
+         * @private
+         */
+        protected _updateDisplay(): void;
+        /**
+         * @private
+         */
+        protected _updateLocalTransformMatrix(): void;
+        /**
+         * @private
+         */
+        protected _updateGlobalTransformMatrix(): void;
+        /**
+         * @private Factory
+         */
+        _setDisplayList(value: Array<any>): boolean;
+        /**
+         * @language zh_CN
+         * 在下一帧更新显示对象的状态。
+         * @version DragonBones 4.5
+         */
+        invalidUpdate(): void;
+        /**
+         * @private
+         */
+        rawDisplay: any;
+        /**
+         * @private
+         */
+        MeshDisplay: any;
+        /**
+         * @language zh_CN
+         * 此时显示的显示对象在显示列表中的索引。
+         * @version DragonBones 4.5
+         */
+        displayIndex: number;
+        /**
+         * @language zh_CN
+         * 包含显示对象或子骨架的显示列表。
+         * @version DragonBones 3.0
+         */
+        displayList: Array<any>;
+        /**
+         * @language zh_CN
+         * 此时显示的显示对象。
+         * @version DragonBones 3.0
+         */
+        display: any;
+        /**
+         * @language zh_CN
+         * 此时显示的子骨架。
+         * @see dragonBones.Armature
+         * @version DragonBones 3.0
+         */
+        childArmature: Armature;
+        /**
+         * @deprecated
+         * @see #display
+         */
+        getDisplay(): any;
+        /**
+         * @deprecated
+         * @see #display
+         */
+        setDisplay(value: any): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @private
+     */
+    type EventStringType = string | "start" | "loopComplete" | "complete" | "fadeIn" | "fadeInComplete" | "fadeOut" | "fadeOutComplete" | "frameEvent" | "soundEvent";
+    /**
+     * @language zh_CN
+     * 事件接口。
+     * @version DragonBones 4.5
+     */
+    interface IEventDispatcher {
+        /**
+         * @language zh_CN
+         * 是否包含指定类型的事件。
+         * @param type 事件类型。
+         * @returns  [true: 包含, false: 不包含]
+         * @version DragonBones 4.5
+         */
+        hasEvent(type: EventStringType): boolean;
+        /**
+         * @language zh_CN
+         * 添加事件。
+         * @param type 事件类型。
+         * @param listener 事件回调。
+         * @version DragonBones 4.5
+         */
+        addEvent(type: EventStringType, listener: Function, target: any): void;
+        /**
+         * @language zh_CN
+         * 移除事件。
+         * @param type 事件类型。
+         * @param listener 事件回调。
+         * @version DragonBones 4.5
+         */
+        removeEvent(type: EventStringType, listener: Function, target: any): void;
+    }
+    /**
+     * @language zh_CN
+     * 事件数据。
+     * @version DragonBones 4.5
+     */
+    class EventObject extends BaseObject {
+        /**
+         * @language zh_CN
+         * 动画开始。
+         * @version DragonBones 4.5
+         */
+        static START: string;
+        /**
+         * @language zh_CN
+         * 动画循环播放一次完成。
+         * @version DragonBones 4.5
+         */
+        static LOOP_COMPLETE: string;
+        /**
+         * @language zh_CN
+         * 动画播放完成。
+         * @version DragonBones 4.5
+         */
+        static COMPLETE: string;
+        /**
+         * @language zh_CN
+         * 动画淡入开始。
+         * @version DragonBones 4.5
+         */
+        static FADE_IN: string;
+        /**
+         * @language zh_CN
+         * 动画淡入完成。
+         * @version DragonBones 4.5
+         */
+        static FADE_IN_COMPLETE: string;
+        /**
+         * @language zh_CN
+         * 动画淡出开始。
+         * @version DragonBones 4.5
+         */
+        static FADE_OUT: string;
+        /**
+         * @language zh_CN
+         * 动画淡出完成。
+         * @version DragonBones 4.5
+         */
+        static FADE_OUT_COMPLETE: string;
+        /**
+         * @language zh_CN
+         * 动画帧事件。
+         * @version DragonBones 4.5
+         */
+        static FRAME_EVENT: string;
+        /**
+         * @language zh_CN
+         * 动画声音事件。
+         * @version DragonBones 4.5
+         */
+        static SOUND_EVENT: string;
+        /**
+         * @private
+         */
+        static toString(): string;
+        /**
+         * @language zh_CN
+         * 事件类型。
+         * @version DragonBones 4.5
+         */
+        type: EventStringType;
+        /**
+         * @language zh_CN
+         * 事件名称。 (帧标签的名称或声音的名称)
+         * @version DragonBones 4.5
+         */
+        name: string;
+        /**
+         * @language zh_CN
+         * 扩展的数据。
+         * @version DragonBones 4.5
+         */
+        data: any;
+        /**
+         * @language zh_CN
+         * 发出事件的骨架。
+         * @version DragonBones 4.5
+         */
+        armature: Armature;
+        /**
+         * @language zh_CN
+         * 发出事件的骨骼。
+         * @version DragonBones 4.5
+         */
+        bone: Bone;
+        /**
+         * @language zh_CN
+         * 发出事件的插槽。
+         * @version DragonBones 4.5
+         */
+        slot: Slot;
+        /**
+         * @language zh_CN
+         * 发出事件的动画状态。
+         * @version DragonBones 4.5
+         */
+        animationState: AnimationState;
+        /**
+         * @private
+         */
+        frame: AnimationFrameData;
+        /**
+         * @language zh_CN
+         * 用户数据。
+         * @version DragonBones 4.5
+         */
+        userData: any;
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @private
+     */
+    class ColorTransform {
+        alphaMultiplier: number;
+        redMultiplier: number;
+        greenMultiplier: number;
+        blueMultiplier: number;
+        alphaOffset: number;
+        redOffset: number;
+        greenOffset: number;
+        blueOffset: number;
+        constructor(alphaMultiplier?: number, redMultiplier?: number, greenMultiplier?: number, blueMultiplier?: number, alphaOffset?: number, redOffset?: number, greenOffset?: number, blueOffset?: number);
+        copyFrom(value: ColorTransform): void;
+        identity(): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 2D 矩阵。
+     * @version DragonBones 3.0
+     */
+    class Matrix {
+        a: number;
+        b: number;
+        c: number;
+        d: number;
+        tx: number;
+        ty: number;
+        constructor(a?: number, b?: number, c?: number, d?: number, tx?: number, ty?: number);
+        /**
+         * @private
+         */
+        toString(): string;
+        /**
+         * @language zh_CN
+         * 复制矩阵。
+         * @param value 需要复制的矩阵。
+         * @version DragonBones 3.0
+         */
+        copyFrom(value: Matrix): void;
+        /**
+         * @language zh_CN
+         * 转换为恒等矩阵。
+         * @version DragonBones 3.0
+         */
+        identity(): void;
+        /**
+         * @language zh_CN
+         * 将当前矩阵与另一个矩阵相乘。
+         * @param value 需要相乘的矩阵。
+         * @version DragonBones 3.0
+         */
+        concat(value: Matrix): void;
+        /**
+         * @language zh_CN
+         * 转换为逆矩阵。
+         * @version DragonBones 3.0
+         */
+        invert(): void;
+        /**
+         * @language zh_CN
+         * 将矩阵转换应用于指定点。
+         * @param x 横坐标。
+         * @param y 纵坐标。
+         * @param result 应用转换之后的坐标。
+         * @params delta 是否忽略 tx，ty 对坐标的转换。
+         * @version DragonBones 3.0
+         */
+        transformPoint(x: number, y: number, result: {
+            x: number;
+            y: number;
+        }, delta?: boolean): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @private
+     */
+    class Point {
+        x: number;
+        y: number;
+        constructor(x?: number, y?: number);
+        copyFrom(value: Point): void;
+        clear(): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @private
+     */
+    class Rectangle {
+        x: number;
+        y: number;
+        width: number;
+        height: number;
+        constructor(x?: number, y?: number, width?: number, height?: number);
+        copyFrom(value: Rectangle): void;
+        clear(): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 2D 变换。
+     * @version DragonBones 3.0
+     */
+    class Transform {
+        /**
+         * @language zh_CN
+         * 水平位移。
+         * @version DragonBones 3.0
+         */
+        x: number;
+        /**
+         * @language zh_CN
+         * 垂直位移。
+         * @version DragonBones 3.0
+         */
+        y: number;
+        /**
+         * @language zh_CN
+         * 水平倾斜。 (以弧度为单位)
+         * @version DragonBones 3.0
+         */
+        skewX: number;
+        /**
+         * @language zh_CN
+         * 垂直倾斜。 (以弧度为单位)
+         * @version DragonBones 3.0
+         */
+        skewY: number;
+        /**
+         * @language zh_CN
+         * 水平缩放。
+         * @version DragonBones 3.0
+         */
+        scaleX: number;
+        /**
+         * @language zh_CN
+         * 垂直缩放。
+         * @version DragonBones 3.0
+         */
+        scaleY: number;
+        /**
+         * @private
+         */
+        static normalizeRadian(value: number): number;
+        /**
+         * @private
+         */
+        constructor(
+            /**
+             * @language zh_CN
+             * 水平位移。
+             * @version DragonBones 3.0
+             */
+            x?: number, 
+            /**
+             * @language zh_CN
+             * 垂直位移。
+             * @version DragonBones 3.0
+             */
+            y?: number, 
+            /**
+             * @language zh_CN
+             * 水平倾斜。 (以弧度为单位)
+             * @version DragonBones 3.0
+             */
+            skewX?: number, 
+            /**
+             * @language zh_CN
+             * 垂直倾斜。 (以弧度为单位)
+             * @version DragonBones 3.0
+             */
+            skewY?: number, 
+            /**
+             * @language zh_CN
+             * 水平缩放。
+             * @version DragonBones 3.0
+             */
+            scaleX?: number, 
+            /**
+             * @language zh_CN
+             * 垂直缩放。
+             * @version DragonBones 3.0
+             */
+            scaleY?: number);
+        /**
+         * @private
+         */
+        toString(): string;
+        /**
+         * @private
+         */
+        copyFrom(value: Transform): Transform;
+        /**
+         * @private
+         */
+        identity(): Transform;
+        /**
+         * @private
+         */
+        add(value: Transform): Transform;
+        /**
+         * @private
+         */
+        minus(value: Transform): Transform;
+        /**
+         * @private
+         */
+        fromMatrix(matrix: Matrix): Transform;
+        /**
+         * @language zh_CN
+         * 转换为矩阵。
+         * @param 矩阵。
+         * @version DragonBones 3.0
+         */
+        toMatrix(matrix: Matrix): Transform;
+        /**
+         * @language zh_CN
+         * 旋转。 (以弧度为单位)
+         * @version DragonBones 3.0
+         */
+        rotation: number;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @private
+     */
+    abstract class TimelineData<T extends FrameData<T>> extends BaseObject {
+        /**
+         * @private
+         */
+        static toString(): string;
+        scale: number;
+        /**
+         * @private
+         */
+        offset: number;
+        /**
+         * @private
+         */
+        frames: Array<T>;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    class ZOrderTimelineData extends TimelineData<ZOrderFrameData> {
+        static toString(): string;
+    }
+    /**
+     * @private
+     */
+    class BoneTimelineData extends TimelineData<BoneFrameData> {
+        static cacheFrame(cacheFrames: Array<Matrix>, cacheFrameIndex: number, globalTransformMatrix: Matrix): Matrix;
+        static toString(): string;
+        bone: BoneData;
+        originalTransform: Transform;
+        cachedFrames: Array<Matrix>;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        cacheFrames(cacheFrameCount: number): void;
+    }
+    /**
+     * @private
+     */
+    class SlotTimelineData extends TimelineData<SlotFrameData> {
+        static cacheFrame(cacheFrames: Array<Matrix>, cacheFrameIndex: number, globalTransformMatrix: Matrix): Matrix;
+        static toString(): string;
+        slot: SlotData;
+        cachedFrames: Array<Matrix>;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        cacheFrames(cacheFrameCount: number): void;
+    }
+    /**
+     * @private
+     */
+    class FFDTimelineData extends TimelineData<ExtensionFrameData> {
+        static toString(): string;
+        displayIndex: number;
+        skin: SkinData;
+        slot: SlotDisplayDataSet;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 动画数据。
+     * @version DragonBones 3.0
+     */
+    class AnimationData extends TimelineData<AnimationFrameData> {
+        /**
+         * @private
+         */
+        static toString(): string;
+        /**
+         * @private
+         */
+        hasAsynchronyTimeline: boolean;
+        /**
+         * @language zh_CN
+         * 持续的帧数。
+         * @version DragonBones 3.0
+         */
+        frameCount: number;
+        /**
+         * @language zh_CN
+         * 循环播放的次数。 [0: 无限循环播放, [1~N]: 循环播放 N 次]
+         * @version DragonBones 3.0
+         */
+        playTimes: number;
+        /**
+         * @language zh_CN
+         * 开始的时间。 (以秒为单位)
+         * @version DragonBones 3.0
+         */
+        position: number;
+        /**
+         * @language zh_CN
+         * 持续的时间。 (以秒为单位)
+         * @version DragonBones 3.0
+         */
+        duration: number;
+        /**
+         * @language zh_CN
+         * 淡入混合的时间。 (以秒为单位)
+         * @version DragonBones 3.0
+         */
+        fadeInTime: number;
+        /**
+         * @private
+         */
+        cacheTimeToFrameScale: number;
+        /**
+         * @language zh_CN
+         * 数据名称。
+         * @version DragonBones 3.0
+         */
+        name: string;
+        /**
+         * @private
+         */
+        animation: AnimationData;
+        /**
+         * @private
+         */
+        zOrderTimeline: TimelineData<ZOrderFrameData>;
+        /**
+         * @private
+         */
+        boneTimelines: Map<BoneTimelineData>;
+        /**
+         * @private
+         */
+        slotTimelines: Map<SlotTimelineData>;
+        /**
+         * @private
+         */
+        ffdTimelines: Map<Map<Map<FFDTimelineData>>>;
+        /**
+         * @private
+         */
+        cachedFrames: Array<boolean>;
+        /**
+         * @private
+         */
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        /**
+         * @private
+         */
+        cacheFrames(value: number): void;
+        /**
+         * @private
+         */
+        addBoneTimeline(value: BoneTimelineData): void;
+        /**
+         * @private
+         */
+        addSlotTimeline(value: SlotTimelineData): void;
+        /**
+         * @private
+         */
+        addFFDTimeline(value: FFDTimelineData): void;
+        /**
+         * @private
+         */
+        getBoneTimeline(name: string): BoneTimelineData;
+        /**
+         * @private
+         */
+        getSlotTimeline(name: string): SlotTimelineData;
+        /**
+         * @private
+         */
+        getFFDTimeline(skinName: string, slotName: string, displayIndex: number): FFDTimelineData;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 骨架数据。
+     * @see dragonBones.Armature
+     * @version DragonBones 3.0
+     */
+    class ArmatureData extends BaseObject {
+        private static _onSortSlots(a, b);
+        /**
+         * @private
+         */
+        static toString(): string;
+        /**
+         * @language zh_CN
+         * 动画帧率。
+         * @version DragonBones 3.0
+         */
+        frameRate: number;
+        /**
+         * @language zh_CN
+         * 骨架类型。
+         * @see dragonBones.ArmatureType
+         * @version DragonBones 3.0
+         */
+        type: ArmatureType;
+        /**
+         * @language zh_CN
+         * 数据名称。
+         * @version DragonBones 3.0
+         */
+        name: string;
+        /**
+         * @private
+         */
+        parent: DragonBonesData;
+        /**
+         * @private
+         */
+        userData: any;
+        /**
+         * @private
+         */
+        aabb: Rectangle;
+        /**
+         * @language zh_CN
+         * 所有的骨骼数据。
+         * @see dragonBones.BoneData
+         * @version DragonBones 3.0
+         */
+        bones: Map<BoneData>;
+        /**
+         * @language zh_CN
+         * 所有的插槽数据。
+         * @see dragonBones.SlotData
+         * @version DragonBones 3.0
+         */
+        slots: Map<SlotData>;
+        /**
+         * @language zh_CN
+         * 所有的皮肤数据。
+         * @see dragonBones.SkinData
+         * @version DragonBones 3.0
+         */
+        skins: Map<SkinData>;
+        /**
+         * @language zh_CN
+         * 所有的动画数据。
+         * @see dragonBones.AnimationData
+         * @version DragonBones 3.0
+         */
+        animations: Map<AnimationData>;
+        /**
+         * @private
+         */
+        actions: Array<ActionData>;
+        /**
+         * @private
+         */
+        cacheFrameRate: number;
+        /**
+         * @private
+         */
+        scale: number;
+        private _boneDirty;
+        private _slotDirty;
+        private _defaultSkin;
+        private _defaultAnimation;
+        private _sortedBones;
+        private _sortedSlots;
+        private _bonesChildren;
+        /**
+         * @private
+         */
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        private _sortBones();
+        private _sortSlots();
+        /**
+         * @private
+         */
+        cacheFrames(value: number): void;
+        /**
+         * @private
+         */
+        addBone(value: BoneData, parentName: string): void;
+        /**
+         * @private
+         */
+        addSlot(value: SlotData): void;
+        /**
+         * @private
+         */
+        addSkin(value: SkinData): void;
+        /**
+         * @private
+         */
+        addAnimation(value: AnimationData): void;
+        /**
+         * @language zh_CN
+         * 获取指定名称的骨骼数据。
+         * @param name 骨骼数据名称。
+         * @see dragonBones.BoneData
+         * @version DragonBones 3.0
+         */
+        getBone(name: string): BoneData;
+        /**
+         * @language zh_CN
+         * 获取指定名称的插槽数据。
+         * @param name 插槽数据名称。
+         * @see dragonBones.SlotData
+         * @version DragonBones 3.0
+         */
+        getSlot(name: string): SlotData;
+        /**
+         * @language zh_CN
+         * 获取指定名称的皮肤数据。
+         * @param name 皮肤数据名称。
+         * @see dragonBones.SkinData
+         * @version DragonBones 3.0
+         */
+        getSkin(name: string): SkinData;
+        /**
+         * @language zh_CN
+         * 获取指定名称的动画数据。
+         * @param name 动画数据名称。
+         * @see dragonBones.AnimationData
+         * @version DragonBones 3.0
+         */
+        getAnimation(name: string): AnimationData;
+        /**
+         * @private
+         */
+        sortedBones: Array<BoneData>;
+        /**
+         * @private
+         */
+        sortedSlots: Array<SlotData>;
+        /**
+         * @language zh_CN
+         * 获取默认的皮肤数据。
+         * @see dragonBones.SkinData
+         * @version DragonBones 4.5
+         */
+        defaultSkin: SkinData;
+        /**
+         * @language zh_CN
+         * 获取默认的动画数据。
+         * @see dragonBones.AnimationData
+         * @version DragonBones 4.5
+         */
+        defaultAnimation: AnimationData;
+    }
+    /**
+     * @language zh_CN
+     * 骨骼数据。
+     * @see dragonBones.Bone
+     * @version DragonBones 3.0
+     */
+    class BoneData extends BaseObject {
+        /**
+         * @private
+         */
+        static toString(): string;
+        /**
+         * @private
+         */
+        inheritTranslation: boolean;
+        /**
+         * @private
+         */
+        inheritRotation: boolean;
+        /**
+         * @private
+         */
+        inheritScale: boolean;
+        /**
+         * @private
+         */
+        bendPositive: boolean;
+        /**
+         * @private
+         */
+        chain: number;
+        /**
+         * @private
+         */
+        chainIndex: number;
+        /**
+         * @private
+         */
+        weight: number;
+        /**
+         * @private
+         */
+        length: number;
+        /**
+         * @language zh_CN
+         * 数据名称。
+         * @version DragonBones 3.0
+         */
+        name: string;
+        /**
+         * @language zh_CN
+         * 所属的父骨骼数据。
+         * @version DragonBones 3.0
+         */
+        parent: BoneData;
+        /**
+         * @private
+         */
+        ik: BoneData;
+        /**
+         * @private
+         */
+        transform: Transform;
+        /**
+         * @private
+         */
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @language zh_CN
+     * 插槽数据。
+     * @see dragonBones.Slot
+     * @version DragonBones 3.0
+     */
+    class SlotData extends BaseObject {
+        /**
+         * @private
+         */
+        static DEFAULT_COLOR: ColorTransform;
+        /**
+         * @private
+         */
+        static generateColor(): ColorTransform;
+        /**
+         * @private
+         */
+        static toString(): string;
+        /**
+         * @private
+         */
+        displayIndex: number;
+        /**
+         * @private
+         */
+        zOrder: number;
+        /**
+         * @private
+         */
+        blendMode: BlendMode;
+        /**
+         * @language zh_CN
+         * 数据名称。
+         * @version DragonBones 3.0
+         */
+        name: string;
+        /**
+         * @language zh_CN
+         * 所属的父骨骼数据。
+         * @see dragonBones.BoneData
+         * @version DragonBones 3.0
+         */
+        parent: BoneData;
+        /**
+         * @private
+         */
+        color: ColorTransform;
+        /**
+         * @private
+         */
+        actions: Array<ActionData>;
+        /**
+         * @private
+         */
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @language zh_CN
+     * 皮肤数据。
+     * @version DragonBones 3.0
+     */
+    class SkinData extends BaseObject {
+        /**
+         * @private
+         */
+        static toString(): string;
+        /**
+         * @language zh_CN
+         * 数据名称。
+         * @version DragonBones 3.0
+         */
+        name: string;
+        /**
+         * @private
+         */
+        slots: Map<SlotDisplayDataSet>;
+        /**
+         * @private
+         */
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        /**
+         * @private
+         */
+        addSlot(value: SlotDisplayDataSet): void;
+        /**
+         * @private
+         */
+        getSlot(name: string): SlotDisplayDataSet;
+    }
+    /**
+     * @private
+     */
+    class SlotDisplayDataSet extends BaseObject {
+        static toString(): string;
+        slot: SlotData;
+        displays: Array<DisplayData>;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    class DisplayData extends BaseObject {
+        static toString(): string;
+        isRelativePivot: boolean;
+        type: DisplayType;
+        name: string;
+        texture: TextureData;
+        armature: ArmatureData;
+        mesh: MeshData;
+        pivot: Point;
+        transform: Transform;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    class MeshData extends BaseObject {
+        static toString(): string;
+        skinned: boolean;
+        slotPose: Matrix;
+        uvs: Array<number>;
+        vertices: Array<number>;
+        vertexIndices: Array<number>;
+        boneIndices: Array<Array<number>>;
+        weights: Array<Array<number>>;
+        boneVertices: Array<Array<number>>;
+        bones: Array<BoneData>;
+        inverseBindPose: Array<Matrix>;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 龙骨数据，包含多个骨架数据。
+     * @see dragonBones.ArmatureData
+     * @version DragonBones 3.0
+     */
+    class DragonBonesData extends BaseObject {
+        /**
+         * @private
+         */
+        static toString(): string;
+        /**
+         * @language zh_CN
+         * 是否开启共享搜索。 [true: 开启, false: 不开启]
+         * @default false
+         * @see dragonBones.ArmatureData
+         * @version DragonBones 4.5
+         */
+        autoSearch: boolean;
+        /**
+         * @language zh_CN
+         * 动画帧频。
+         * @version DragonBones 3.0
+         */
+        frameRate: number;
+        /**
+         * @language zh_CN
+         * 数据名称。
+         * @version DragonBones 3.0
+         */
+        name: string;
+        /**
+         * @language zh_CN
+         * 所有的骨架数据。
+         * @see dragonBones.ArmatureData
+         * @version DragonBones 3.0
+         */
+        armatures: Map<ArmatureData>;
+        private _armatureNames;
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        /**
+         * @language zh_CN
+         * 获取指定名称的骨架。
+         * @param name 骨架数据骨架名称。
+         * @see dragonBones.ArmatureData
+         * @version DragonBones 3.0
+         */
+        getArmature(name: string): ArmatureData;
+        /**
+         * @language zh_CN
+         * 所有的骨架数据名称。
+         * @see #armatures
+         * @version DragonBones 3.0
+         */
+        armatureNames: Array<string>;
+        /**
+         * @deprecated
+         * @see dragonBones.BaseFactory#removeDragonBonesData()
+         */
+        dispose(): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @private
+     */
+    class ActionData extends BaseObject {
+        static toString(): string;
+        type: ActionType;
+        bone: BoneData;
+        slot: SlotData;
+        data: Array<any>;
+        constructor();
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    class EventData extends BaseObject {
+        static toString(): string;
+        type: EventType;
+        name: string;
+        data: any;
+        bone: BoneData;
+        slot: SlotData;
+        constructor();
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    abstract class FrameData<T> extends BaseObject {
+        position: number;
+        duration: number;
+        prev: T;
+        next: T;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    abstract class TweenFrameData<T> extends FrameData<T> {
+        static samplingCurve(curve: Array<number>, frameCount: number): Array<number>;
+        tweenEasing: number;
+        curve: Array<number>;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    class AnimationFrameData extends FrameData<AnimationFrameData> {
+        static toString(): string;
+        actions: Array<ActionData>;
+        events: Array<EventData>;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    class ZOrderFrameData extends FrameData<ZOrderFrameData> {
+        zOrder: Array<number>;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    class BoneFrameData extends TweenFrameData<BoneFrameData> {
+        static toString(): string;
+        tweenScale: boolean;
+        tweenRotate: number;
+        guideCurve: Array<number>;
+        transform: Transform;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    class SlotFrameData extends TweenFrameData<SlotFrameData> {
+        static DEFAULT_COLOR: ColorTransform;
+        static generateColor(): ColorTransform;
+        static toString(): string;
+        displayIndex: number;
+        color: ColorTransform;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+    /**
+     * @private
+     */
+    class ExtensionFrameData extends TweenFrameData<ExtensionFrameData> {
+        static toString(): string;
+        type: ExtensionType;
+        tweens: Array<number>;
+        keys: Array<number>;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @private
+     */
+    abstract class DataParser {
+        protected static DATA_VERSION_2_3: string;
+        protected static DATA_VERSION_3_0: string;
+        protected static DATA_VERSION_4_0: string;
+        protected static DATA_VERSION: string;
+        protected static TEXTURE_ATLAS: string;
+        protected static SUB_TEXTURE: string;
+        protected static FORMAT: string;
+        protected static IMAGE_PATH: string;
+        protected static WIDTH: string;
+        protected static HEIGHT: string;
+        protected static ROTATED: string;
+        protected static FRAME_X: string;
+        protected static FRAME_Y: string;
+        protected static FRAME_WIDTH: string;
+        protected static FRAME_HEIGHT: string;
+        protected static DRADON_BONES: string;
+        protected static ARMATURE: string;
+        protected static BONE: string;
+        protected static IK: string;
+        protected static SLOT: string;
+        protected static SKIN: string;
+        protected static DISPLAY: string;
+        protected static ANIMATION: string;
+        protected static Z_ORDER: string;
+        protected static FFD: string;
+        protected static FRAME: string;
+        protected static PIVOT: string;
+        protected static TRANSFORM: string;
+        protected static AABB: string;
+        protected static COLOR: string;
+        protected static FILTER: string;
+        protected static VERSION: string;
+        protected static IS_GLOBAL: string;
+        protected static FRAME_RATE: string;
+        protected static TYPE: string;
+        protected static NAME: string;
+        protected static PARENT: string;
+        protected static LENGTH: string;
+        protected static DATA: string;
+        protected static DISPLAY_INDEX: string;
+        protected static BLEND_MODE: string;
+        protected static INHERIT_TRANSLATION: string;
+        protected static INHERIT_ROTATION: string;
+        protected static INHERIT_SCALE: string;
+        protected static TARGET: string;
+        protected static BEND_POSITIVE: string;
+        protected static CHAIN: string;
+        protected static WEIGHT: string;
+        protected static FADE_IN_TIME: string;
+        protected static PLAY_TIMES: string;
+        protected static SCALE: string;
+        protected static OFFSET: string;
+        protected static POSITION: string;
+        protected static DURATION: string;
+        protected static TWEEN_EASING: string;
+        protected static TWEEN_ROTATE: string;
+        protected static TWEEN_SCALE: string;
+        protected static CURVE: string;
+        protected static GUIDE_CURVE: string;
+        protected static EVENT: string;
+        protected static SOUND: string;
+        protected static ACTION: string;
+        protected static ACTIONS: string;
+        protected static DEFAULT_ACTIONS: string;
+        protected static X: string;
+        protected static Y: string;
+        protected static SKEW_X: string;
+        protected static SKEW_Y: string;
+        protected static SCALE_X: string;
+        protected static SCALE_Y: string;
+        protected static ALPHA_OFFSET: string;
+        protected static RED_OFFSET: string;
+        protected static GREEN_OFFSET: string;
+        protected static BLUE_OFFSET: string;
+        protected static ALPHA_MULTIPLIER: string;
+        protected static RED_MULTIPLIER: string;
+        protected static GREEN_MULTIPLIER: string;
+        protected static BLUE_MULTIPLIER: string;
+        protected static UVS: string;
+        protected static VERTICES: string;
+        protected static TRIANGLES: string;
+        protected static WEIGHTS: string;
+        protected static SLOT_POSE: string;
+        protected static BONE_POSE: string;
+        protected static TWEEN: string;
+        protected static KEY: string;
+        protected static COLOR_TRANSFORM: string;
+        protected static TIMELINE: string;
+        protected static PIVOT_X: string;
+        protected static PIVOT_Y: string;
+        protected static Z: string;
+        protected static LOOP: string;
+        protected static AUTO_TWEEN: string;
+        protected static HIDE: string;
+        protected static _getArmatureType(value: string): ArmatureType;
+        protected static _getDisplayType(value: string): DisplayType;
+        protected static _getBlendMode(value: string): BlendMode;
+        protected static _getActionType(value: string): ActionType;
+        protected _data: DragonBonesData;
+        protected _armature: ArmatureData;
+        protected _skin: SkinData;
+        protected _slotDisplayDataSet: SlotDisplayDataSet;
+        protected _mesh: MeshData;
+        protected _animation: AnimationData;
+        protected _timeline: any;
+        protected _isOldData: boolean;
+        protected _isGlobalTransform: boolean;
+        protected _isAutoTween: boolean;
+        protected _animationTweenEasing: number;
+        protected _timelinePivot: Point;
+        protected _helpPoint: Point;
+        protected _helpTransformA: Transform;
+        protected _helpTransformB: Transform;
+        protected _helpMatrix: Matrix;
+        protected _rawBones: Array<BoneData>;
+        constructor();
+        /**
+         * @private
+         */
+        abstract parseDragonBonesData(rawData: any, scale: number): DragonBonesData;
+        /**
+         * @private
+         */
+        abstract parseTextureAtlasData(rawData: any, textureAtlasData: TextureAtlasData, scale: number): void;
+        private _getTimelineFrameMatrix(animation, timeline, position, transform);
+        protected _globalToLocal(armature: ArmatureData): void;
+        protected _mergeFrameToAnimationTimeline(framePostion: number, actions: Array<ActionData>, events: Array<EventData>): void;
+        /**
+         * @deprecated
+         * @see dragonBones.BaseFactory#parseDragonBonesData()
+         */
+        static parseDragonBonesData(rawData: any): DragonBonesData;
+        /**
+         * @deprecated
+         * @see dragonBones.BaseFactory#parsetTextureAtlasData()
+         */
+        static parseTextureAtlasData(rawData: any, scale?: number): any;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @private
+     */
+    class ObjectDataParser extends DataParser {
+        /**
+         * @private
+         */
+        protected static _getBoolean(rawData: any, key: string, defaultValue: boolean): boolean;
+        /**
+         * @private
+         */
+        protected static _getNumber(rawData: any, key: string, defaultValue: number): number;
+        /**
+         * @private
+         */
+        protected static _getString(rawData: any, key: string, defaultValue: string): string;
+        /**
+         * @private
+         */
+        protected static _getParameter(rawData: Array<any>, index: number, defaultValue: any): any;
+        /**
+         * @private
+         */
+        constructor();
+        /**
+         * @private
+         */
+        protected _parseArmature(rawData: any, scale: number): ArmatureData;
+        /**
+         * @private
+         */
+        protected _parseBone(rawData: any): BoneData;
+        /**
+         * @private
+         */
+        protected _parseIK(rawData: any): void;
+        /**
+         * @private
+         */
+        protected _parseSlot(rawData: any, zOrder: number): SlotData;
+        /**
+         * @private
+         */
+        protected _parseSkin(rawData: any): SkinData;
+        /**
+         * @private
+         */
+        protected _parseSlotDisplaySet(rawData: any): SlotDisplayDataSet;
+        /**
+         * @private
+         */
+        protected _parseDisplay(rawData: any): DisplayData;
+        /**
+         * @private
+         */
+        protected _parseMesh(rawData: any): MeshData;
+        /**
+         * @private
+         */
+        protected _parseAnimation(rawData: any): AnimationData;
+        /**
+         * @private
+         */
+        protected _parseBoneTimeline(rawData: any): BoneTimelineData;
+        /**
+         * @private
+         */
+        protected _parseSlotTimeline(rawData: any): SlotTimelineData;
+        /**
+         * @private
+         */
+        protected _parseFFDTimeline(rawData: any): FFDTimelineData;
+        /**
+         * @private
+         */
+        protected _parseAnimationFrame(rawData: any, frameStart: number, frameCount: number): AnimationFrameData;
+        /**
+         * @private
+         */
+        protected _parseZOrderFrame(rawData: any, frameStart: number, frameCount: number): ZOrderFrameData;
+        /**
+         * @private
+         */
+        protected _parseBoneFrame(rawData: Object, frameStart: number, frameCount: number): BoneFrameData;
+        /**
+         * @private
+         */
+        protected _parseSlotFrame(rawData: any, frameStart: number, frameCount: number): SlotFrameData;
+        /**
+         * @private
+         */
+        protected _parseFFDFrame(rawData: any, frameStart: number, frameCount: number): ExtensionFrameData;
+        /**
+         * @private
+         */
+        protected _parseTweenFrame<T extends TweenFrameData<T>>(rawData: any, frame: T, frameStart: number, frameCount: number): void;
+        /**
+         * @private
+         */
+        protected _parseFrame<T extends FrameData<T>>(rawData: any, frame: T, frameStart: number, frameCount: number): void;
+        /**
+         * @private
+         */
+        protected _parseTimeline<T extends FrameData<T>>(rawData: Object, timeline: TimelineData<T>, frameParser: (rawData: any, frameStart: number, frameCount: number) => T): void;
+        /**
+         * @private
+         */
+        protected _parseActionData(rawData: any, actions: Array<ActionData>, bone: BoneData, slot: SlotData): void;
+        /**
+         * @private
+         */
+        protected _parseEventData(rawData: any, events: Array<EventData>, bone: BoneData, slot: SlotData): void;
+        /**
+         * @private
+         */
+        protected _parseTransform(rawData: Object, transform: Transform): void;
+        /**
+         * @private
+         */
+        protected _parseColorTransform(rawData: Object, color: ColorTransform): void;
+        /**
+         * @inheritDoc
+         */
+        parseDragonBonesData(rawData: any, scale?: number): DragonBonesData;
+        /**
+         * @inheritDoc
+         */
+        parseTextureAtlasData(rawData: any, textureAtlasData: TextureAtlasData, scale?: number): void;
+        /**
+         * @private
+         */
+        private static _instance;
+        /**
+         * @deprecated
+         * @see dragonBones.BaseFactory#parseDragonBonesData()
+         */
+        static getInstance(): ObjectDataParser;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @language zh_CN
+     * 贴图集数据。
+     * @version DragonBones 3.0
+     */
+    abstract class TextureAtlasData extends BaseObject {
+        /**
+         * @language zh_CN
+         * 是否开启共享搜索。 [true: 开启, false: 不开启]
+         * @default false
+         * @version DragonBones 4.5
+         */
+        autoSearch: boolean;
+        /**
+         * @language zh_CN
+         * 贴图集缩放系数。
+         * @version DragonBones 3.0
+         */
+        scale: number;
+        /**
+         * @language zh_CN
+         * 贴图集名称。
+         * @version DragonBones 3.0
+         */
+        name: string;
+        /**
+         * @language zh_CN
+         * 贴图集图片路径。
+         * @version DragonBones 3.0
+         */
+        imagePath: string;
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+        /**
+         * @private
+         */
+        getTexture(name: string): TextureData;
+    }
+    /**
+     * @private
+     */
+    abstract class TextureData extends BaseObject {
+        static generateRectangle(): Rectangle;
+        rotated: boolean;
+        name: string;
+        frame: Rectangle;
+        parent: TextureAtlasData;
+        region: Rectangle;
+        constructor();
+        /**
+         * @inheritDoc
+         */
+        protected _onClear(): void;
+    }
+}
+declare namespace dragonBones {
+    /**
+     * @private
+     */
+    type BuildArmaturePackage = {
+        dataName?: string;
+        textureAtlasName?: string;
+        data?: DragonBonesData;
+        armature?: ArmatureData;
+        skin?: SkinData;
+    };
+    /**
+     * @language zh_CN
+     * 创建骨架的基础工厂。 (通常只需要一个全局工厂实例)
+     * @see dragonBones.DragonBonesData
+     * @see dragonBones.TextureAtlasData
+     * @see dragonBones.ArmatureData
+     * @see dragonBones.Armature
+     * @version DragonBones 3.0
+     */
+    abstract class BaseFactory {
+        protected static _defaultParser: ObjectDataParser;
+        /**
+         * @language zh_CN
+         * 是否开启共享搜索。 [true: 开启, false: 不开启]
+         * 如果开启，创建一个骨架时，可以从多个龙骨数据中寻找骨架数据，或贴图集数据中寻找贴图数据。 (通常在有共享导出的数据时开启)
+         * @see dragonBones.DragonBonesData#autoSearch
+         * @see dragonBones.TextureAtlasData#autoSearch
+         * @version DragonBones 4.5
+         */
+        autoSearch: boolean;
+        /**
+         * @private
+         */
+        protected _dataParser: DataParser;
+        /**
+         * @private
+         */
+        protected _dragonBonesDataMap: Map<DragonBonesData>;
+        /**
+         * @private
+         */
+        protected _textureAtlasDataMap: Map<Array<TextureAtlasData>>;
+        /**
+         * @private
+         */
+        constructor(dataParser?: DataParser);
+        /**
+         * @private
+         */
+        protected _getTextureData(textureAtlasName: string, textureName: string): TextureData;
+        /**
+         * @private
+         */
+        protected _fillBuildArmaturePackage(dataPackage: BuildArmaturePackage, dragonBonesName: string, armatureName: string, skinName: string, textureAtlasName: string): boolean;
+        /**
+         * @private
+         */
+        protected _buildBones(dataPackage: BuildArmaturePackage, armature: Armature): void;
+        /**
+         * @private
+         */
+        protected _buildSlots(dataPackage: BuildArmaturePackage, armature: Armature): void;
+        /**
+         * @private
+         */
+        protected _replaceSlotDisplay(dataPackage: BuildArmaturePackage, displayData: DisplayData, slot: Slot, displayIndex: number): void;
+        /**
+         * @private
+         */
+        protected abstract _generateTextureAtlasData(textureAtlasData: TextureAtlasData, textureAtlas: any): TextureAtlasData;
+        /**
+         * @private
+         */
+        protected abstract _generateArmature(dataPackage: BuildArmaturePackage): Armature;
+        /**
+         * @private
+         */
+        protected abstract _generateSlot(dataPackage: BuildArmaturePackage, slotDisplayDataSet: SlotDisplayDataSet, armature: Armature): Slot;
+        /**
+         * @language zh_CN
+         * 解析并添加龙骨数据。
+         * @param rawData 需要解析的原始数据。 (JSON)
+         * @param name 为数据提供一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。
+         * @returns DragonBonesData
+         * @see #getDragonBonesData()
+         * @see #addDragonBonesData()
+         * @see #removeDragonBonesData()
+         * @see dragonBones.DragonBonesData
+         * @version DragonBones 4.5
+         */
+        parseDragonBonesData(rawData: any, name?: string, scale?: number): DragonBonesData;
+        /**
+         * @language zh_CN
+         * 解析并添加贴图集数据。
+         * @param rawData 需要解析的原始数据。 (JSON)
+         * @param textureAtlas 贴图集数据。 (JSON)
+         * @param name 为数据指定一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。
+         * @param scale 为贴图集设置一个缩放值。
+         * @returns 贴图集数据
+         * @see #getTextureAtlasData()
+         * @see #addTextureAtlasData()
+         * @see #removeTextureAtlasData()
+         * @see dragonBones.TextureAtlasData
+         * @version DragonBones 4.5
+         */
+        parseTextureAtlasData(rawData: any, textureAtlas: Object, name?: string, scale?: number): TextureAtlasData;
+        /**
+         * @language zh_CN
+         * 获取指定名称的龙骨数据。
+         * @param name 数据名称。
+         * @returns DragonBonesData
+         * @see #parseDragonBonesData()
+         * @see #addDragonBonesData()
+         * @see #removeDragonBonesData()
+         * @see dragonBones.DragonBonesData
+         * @version DragonBones 3.0
+         */
+        getDragonBonesData(name: string): DragonBonesData;
+        /**
+         * @language zh_CN
+         * 添加龙骨数据。
+         * @param data 龙骨数据。
+         * @param name 为数据指定一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。
+         * @see #parseDragonBonesData()
+         * @see #getDragonBonesData()
+         * @see #removeDragonBonesData()
+         * @see dragonBones.DragonBonesData
+         * @version DragonBones 3.0
+         */
+        addDragonBonesData(data: DragonBonesData, name?: string): void;
+        /**
+         * @language zh_CN
+         * 移除龙骨数据。
+         * @param name 数据名称。
+         * @param disposeData 是否释放数据。 [false: 不释放, true: 释放]
+         * @see #parseDragonBonesData()
+         * @see #getDragonBonesData()
+         * @see #addDragonBonesData()
+         * @see dragonBones.DragonBonesData
+         * @version DragonBones 3.0
+         */
+        removeDragonBonesData(name: string, disposeData?: boolean): void;
+        /**
+         * @language zh_CN
+         * 获取指定名称的贴图集数据列表。
+         * @param name 数据名称。
+         * @returns 贴图集数据列表。
+         * @see #parseTextureAtlasData()
+         * @see #addTextureAtlasData()
+         * @see #removeTextureAtlasData()
+         * @see dragonBones.textures.TextureAtlasData
+         * @version DragonBones 3.0
+         */
+        getTextureAtlasData(name: string): Array<TextureAtlasData>;
+        /**
+         * @language zh_CN
+         * 添加贴图集数据。
+         * @param data 贴图集数据。
+         * @param name 为数据指定一个名称，以便可以通过这个名称获取数据，如果未设置，则使用数据中的名称。
+         * @see #parseTextureAtlasData()
+         * @see #getTextureAtlasData()
+         * @see #removeTextureAtlasData()
+         * @see dragonBones.textures.TextureAtlasData
+         * @version DragonBones 3.0
+         */
+        addTextureAtlasData(data: TextureAtlasData, name?: string): void;
+        /**
+         * @language zh_CN
+         * 移除贴图集数据。
+         * @param name 数据名称。
+         * @param disposeData 是否释放数据。 [false: 不释放, true: 释放]
+         * @see #parseTextureAtlasData()
+         * @see #getTextureAtlasData()
+         * @see #addTextureAtlasData()
+         * @see dragonBones.textures.TextureAtlasData
+         * @version DragonBones 3.0
+         */
+        removeTextureAtlasData(name: string, disposeData?: boolean): void;
+        /**
+         * @language zh_CN
+         * 清除所有的数据。
+         * @param disposeData 是否释放数据。 [false: 不释放, true: 释放]
+         * @version DragonBones 4.5
+         */
+        clear(disposeData?: boolean): void;
+        /**
+         * @language zh_CN
+         * 创建一个指定名称的骨架。
+         * @param armatureName 骨架数据名称。
+         * @param dragonBonesName 龙骨数据名称，如果未设置，将检索所有的龙骨数据，当多个龙骨数据中包含同名的骨架数据时，可能无法创建出准确的骨架。
+         * @param skinName 皮肤名称，如果未设置，则使用默认皮肤。
+         * @param textureAtlasName 贴图集数据名称，如果未设置，则使用龙骨数据。
+         * @returns 骨架
+         * @see dragonBones.Armature
+         * @version DragonBones 3.0
+         */
+        buildArmature(armatureName: string, dragonBonesName?: string, skinName?: string, textureAtlasName?: string): Armature;
+        /**
+         * @language zh_CN
+         * 将指定骨架的动画替换成其他骨架的动画。 (通常这些骨架应该具有相同的骨架结构)
+         * @param toArmature 指定的骨架。
+         * @param fromArmatreName 其他骨架的名称。
+         * @param fromSkinName 其他骨架的皮肤名称，如果未设置，则使用默认皮肤。
+         * @param fromDragonBonesDataName 其他骨架属于的龙骨数据名称，如果未设置，则检索所有的龙骨数据。
+         * @param ifRemoveOriginalAnimationList 是否移除原有的动画。 [true: 移除, false: 不移除]
+         * @returns 是否替换成功。 [true: 成功, false: 不成功]
+         * @see dragonBones.Armature
+         * @version DragonBones 4.5
+         */
+        copyAnimationsToArmature(toArmature: Armature, fromArmatreName: string, fromSkinName?: string, fromDragonBonesDataName?: string, ifRemoveOriginalAnimationList?: boolean): boolean;
+        /**
+         * @language zh_CN
+         * 将指定插槽的显示对象替换为指定资源创造出的显示对象。
+         * @param dragonBonesName 指定的龙骨数据名称。
+         * @param armatureName 指定的骨架名称。
+         * @param slotName 指定的插槽名称。
+         * @param displayName 指定的显示对象名称。
+         * @param slot 指定的插槽实例。
+         * @param displayIndex 要替换的显示对象的索引，如果未设置，则替换当前正在显示的显示对象。
+         * @version DragonBones 4.5
+         */
+        replaceSlotDisplay(dragonBonesName: string, armatureName: string, slotName: string, displayName: string, slot: Slot, displayIndex?: number): void;
+        /**
+         * @language zh_CN
+         * 将指定插槽的显示对象列表替换为指定资源创造出的显示对象列表。
+         * @param dragonBonesName 指定的 DragonBonesData 名称。
+         * @param armatureName 指定的骨架名称。
+         * @param slotName 指定的插槽名称。
+         * @param slot 指定的插槽实例。
+         * @version DragonBones 4.5
+         */
+        replaceSlotDisplayList(dragonBonesName: string, armatureName: string, slotName: string, slot: Slot): void;
+        /**
+         * @private
+         */
+        getAllDragonBonesData(): Map<DragonBonesData>;
+        /**
+         * @private
+         */
+        getAllTextureAtlasData(): Map<Array<TextureAtlasData>>;
+    }
+}
+
 declare let jsb: any;

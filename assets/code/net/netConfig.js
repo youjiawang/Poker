@@ -1,8 +1,7 @@
-window.net = {}
 net.config = {
-    httpURL: "",
+    httpURL: '',
     httpTimeOut: 5000,
-    webSocketURL: "",
+    webSocketURL: '',
     httpCache: [], //http请求缓存
-};
+}
 module.exports = net.config
