@@ -81,8 +81,8 @@ net.on = function(type, cb, target) {
 net.off = function(type, target) {
     if (type == undefined || type == null) return
     if (events[type] == undefined || events[type] == null) return
-    for (let k of events[type]) {
-        if (k.target == target) events[type].splice(k, 1)
+    for (let k in events[type]) {
+        if (events[type][k].target == target) events[type].splice(k, 1)
     }
 
 }
