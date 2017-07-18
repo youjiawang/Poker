@@ -17,9 +17,7 @@ cc.Class({
 
     // use this for initialization
     onLoad() {
-        net.on('User_init', (data) => {
-            cc.log('----')
-            cc.log(data)
+        net.on('User_init', () => {
             cc.director.loadScene('main')
         }, this)
     },
@@ -36,6 +34,5 @@ cc.Class({
         if (this.lbedit.string == '') return
         GameData.uId = this.lbedit.string
         net.send('User_init')
-
     }
 })
