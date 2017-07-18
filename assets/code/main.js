@@ -12,19 +12,28 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
+        joinbox: cc.Prefab
     },
 
     // use this for initialization
     onLoad() {
-        cc.director.setDisplayStats(true)
+        // cc.director.setDisplayStats(true)
+        cc.game.addPersistRootNode(this.node)
 
-        net.on('Room_create', () => {
-            cc.director.loadScene('main')
+        net.on('Room_create', (data) => {
+            GameData.roomData = data
+            this.node.active = false
+            cc.director.loadScene('Cow')
         }, this)
-        net.on('Room_enter', () => {
-            cc.director.loadScene('main')
+        net.on('Room_enter', (data) => {
+            GameData.roomData = data
+            this.node.active = false
+            cc.director.loadScene('Cow')
         }, this)
-
+        this.node.on('join', () => {
+            cc.find('main/win').removeAllChildren()
+            net.send('Room_enter', { 'roomId': 1 })
+        })
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -39,7 +48,10 @@ cc.Class({
         net.send('Room_create', { 'gameId': 1, 'types': { '1': 1, '2': 1, '3': 2 } })
     },
     enterRoom() {
-        net.send('Room_enter', { 'roomId': 1 })
+        let win = cc.instantiate(this.joinbox)
+        win.parent = cc.find('main/win')
+
+
     },
     randomRoom() {
 

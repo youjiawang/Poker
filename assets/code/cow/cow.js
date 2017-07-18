@@ -7,18 +7,21 @@ cc.Class({
 
         btReady: cc.Node,
         spineNode: cc.Node,
-        pokeNode: [cc.Node]
+        pokeNode: [cc.Node],
+        time: cc.Label,
+        roomId: cc.Label
     },
 
     // use this for initialization
     onLoad: function() {
-
+        this.roomId.string = GameData.roomData.roomId
     },
 
     // called every frame, uncomment this function to activate update callback
-    // update: function (dt) {
-
-    // },
+    update: function() {
+        let date = new Date()
+        this.time.string = date.getHours() + ':' + date.getMinutes()
+    },
     showCard(data) {
         for (let k in data) {
             let card = new cc.Node()

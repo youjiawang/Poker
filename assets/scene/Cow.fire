@@ -4302,6 +4302,12 @@
     "spineNode": {
       "__id__": 101
     },
-    "pokeNode": []
+    "pokeNode": [],
+    "time": {
+      "__id__": 9
+    },
+    "roomId": {
+      "__id__": 12
+    }
   }
 ]
