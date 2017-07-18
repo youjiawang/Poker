@@ -18,13 +18,11 @@ cc.Class({
     onLoad() {
         cc.director.setDisplayStats(true)
 
-        net.on('Room_create', (data) => {
-            cc.log('----')
-            cc.log(data)
+        net.on('Room_create', () => {
+            cc.director.loadScene('main')
         }, this)
-        net.on('Room_enter', (data) => {
-            cc.log('----')
-            cc.log(data)
+        net.on('Room_enter', () => {
+            cc.director.loadScene('main')
         }, this)
 
     },
