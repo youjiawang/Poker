@@ -12,12 +12,14 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
+        lbedit: cc.EditBox
     },
 
     // use this for initialization
     onLoad() {
-        GameData.uId = 100
-        net.on('onopen', () => {
+        net.on('User_init', (data) => {
+            cc.log('----')
+            cc.log(data)
             cc.director.loadScene('main')
         }, this)
     },
@@ -27,6 +29,13 @@ cc.Class({
 
     // },
     onDestroy() {
-        net.off('onopen', this)
+        net.off('User_init', this)
+    },
+
+    btlogin() {
+        if (this.lbedit.string == '') return
+        GameData.uId = this.lbedit.string
+        net.send('User_init')
+
     }
 })

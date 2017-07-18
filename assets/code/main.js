@@ -17,10 +17,7 @@ cc.Class({
     // use this for initialization
     onLoad() {
         cc.director.setDisplayStats(true)
-        net.on('User_init', (data) => {
-            cc.log('----')
-            cc.log(data)
-        }, this)
+
         net.on('Room_create', (data) => {
             cc.log('----')
             cc.log(data)
@@ -29,7 +26,7 @@ cc.Class({
             cc.log('----')
             cc.log(data)
         }, this)
-        net.send('User_init')
+
     },
 
     // called every frame, uncomment this function to activate update callback
@@ -37,7 +34,6 @@ cc.Class({
 
     // },
     onDestroy() {
-        net.off('User_init', this)
         net.off('Room_create', this)
         net.off('Room_enter', this)
     },
