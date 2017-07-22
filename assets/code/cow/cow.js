@@ -4,6 +4,8 @@ cc.Class({
     properties: {
         poker: cc.SpriteAtlas,
         pokerSmall: cc.SpriteAtlas,
+        sprQiang: cc.SpriteFrame,
+        sprBuQiang: cc.SpriteFrame,
 
         btReady: cc.Node,
         spineNode: cc.Node,
@@ -22,49 +24,68 @@ cc.Class({
             4: cc.find('Canvas/pos/other4')
         }
         this.roomId.string = GameData.roomData.roomId
-        this.data = R.clone(GameData.roomData)
+        this.data = GameData.roomData
+        this.myChatId = this.data.users[GameData.uId].pos
         if (GameData.roomData) {
-            let myChatId = this.data.users[GameData.uId].pos
             for (let i in this.data.users) {
-                if (i == GameData.uId) continue
-                let cChatId = (this.data.users[i].pos - myChatId + 5) % 5
+                // if (i == GameData.uId) continue
+                let cChatId = (this.data.users[i].pos - this.myChatId + 5) % 5
                 this.chat[cChatId].active = true
+                this.showUserInfo(cChatId, i)
+                this.showPrepare(cChatId, this.data.users[i].status)
             }
         }
 
 
         net.on('room_enterbroadcast', (data) => {
-            let curstate = GameData.roomData.status
-            GameData.roomData = data
-            let myChatId = this.data.users[GameData.uId].pos
+            this.data = data
             for (let i in this.data.users) {
                 if (i == GameData.uId) continue
-                let cChatId = (this.data.users[i].pos - myChatId + 5) % 5
+                let cChatId = (this.data.users[i].pos - this.myChatId + 5) % 5
                 this.chat[cChatId].active = true
+                this.showUserInfo(cChatId, i)
             }
-            if (curstate == 0 && GameData.roomData.status == 1) {
-                this.showStartAnim()
-            }
+
         }, this)
         net.on('room_readybroadcast', (data) => {
-
+            this.data = data
+            let allReady = true
+            for (let i in this.data.users) {
+                let cChatId = (this.data.users[i].pos - this.myChatId + 5) % 5
+                // this.chat[cChatId].status = true
+                if (!this.data.users[i].status) allReady = false
+                this.showPrepare(cChatId, this.data.users[i].status)
+            }
+            if (allReady && this.data.status) this.showStartAnim()
         }, this)
 
         net.on('room_qzbroadcast', (data) => {
-
-        },this)
+            this.data = data
+            let allQiangZhuang = true
+            for (let i in this.data.users) {
+                let cChatId = (this.data.users[i].pos - this.myChatId + 5) % 5
+                // this.chat[cChatId].status = true
+                if (!this.data.users[i].status) allQiangZhuang = false
+                this.showBankerState(cChatId, this.data.users[i].status)
+            }
+        }, this)
 
         net.on('room_fapai_broadcast', (data) => {
-
-        },this)
+        }, this)
     },
 
     // called every frame, uncomment this function to activate update callback
-    update: function () {
+    update() {
         let date = new Date()
         this.time.string = date.getHours() + ':' + date.getMinutes()
 
     },
+
+    showUserInfo(pos, name) {
+        let infoNode = this.chat[pos].getChildByName('info')
+        infoNode.getChildByName('name').getComponent(cc.Label).string = name
+    },
+
     showCard(data) {
         cc.find('Canvas/pos/my/card').removeAllChildren()
         for (let k in data) {
@@ -74,6 +95,7 @@ cc.Class({
             card.parent = cc.find('Canvas/pos/my/card')
         }
     },
+
     showCard2(pos, data) {
         cc.find('Canvas/pos/other' + pos + '/card').removeAllChildren()
         for (let k in data) {
@@ -89,30 +111,26 @@ cc.Class({
         cc.find('Canvas/pos/my/prepare').active = true
     },
     showPrepare(pos, b) {
-        let myChatId = this.data.users[GameData.uId].pos
-        let cChatId = (pos - myChatId + 5) % 5
-        this.chat[cChatId].active = b
+        this.chat[pos].getChildByName('prepare').active = b
     },
     showStartAnim() {
+        for (let k in this.chat) this.showPrepare(k, false)
         let snode = cc.find('start', this.spineNode)
         snode.active = true
         snode.getComponent('sp.Skeleton').setAnimation(0, 'start', false)
         snode.getComponent('sp.Skeleton').setCompleteListener(() => {
             snode.active = false
-            this.showBanker()
+            cc.find('Canvas/banker').active = true
         })
     },
-
-    /**
-     * 显示叫庄
-     */
-    showBanker() {
-        cc.find('Canvas/banker').active = true
+    showBankerState(pos, b) {
+        if (b) {
+            this.chat[pos].getChildByName('prepare').active = true
+            if (b == 1) this.chat[pos].getChildByName('prepare').getComponent(cc.Sprite).spriteFrame = this.sprQiang
+            if (b == 2) this.chat[pos].getChildByName('prepare').getComponent(cc.Sprite).spriteFrame = this.sprBuQiang
+        }
+        else this.chat[pos].getChildByName('prepare').active = false
     },
-
-    /**
-     * 点击叫庄
-     */
     hideBanker(e, s) {
         cc.find('Canvas/banker').active = false
         net.send('Room_qiangzhuang', { qiang: s })

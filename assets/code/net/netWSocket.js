@@ -1,6 +1,6 @@
 var socket = null
 var events = {}
-var onopen = function() {
+var onopen = function () {
     cc.log('WebSocket ::onopen')
     net.emit('onopen')
 }
@@ -8,12 +8,12 @@ var onopen = function() {
 // var getConnected = function () {
 //     return socket && socket.readyState == WebSocket.OPEN;
 // };
-var onmessage = function(evt) {
+var onmessage = function (evt) {
     //解包 string 转json
     var result = JSON.parse(decodeURI(evt.data))
     if (result.hasOwnProperty('method') != -1) {
         //派发事件
-        if (result.result == 0) {
+        if (result.result == 0 || result.result == undefined) {
             cc.log(result.method + ':')
             cc.log(result.info)
             net.emit(result.method, result.info)
@@ -31,19 +31,19 @@ var onmessage = function(evt) {
     }
 }
 
-var onerror = function() {
+var onerror = function () {
     cc.log('WebSocket ::onerror')
     net.emit('onerror')
     setTimeout(wsInit, 1000)
 }
 
-var onclose = function() {
+var onclose = function () {
     cc.log('WebSocket ::onclose')
     net.emit('onclose')
     setTimeout(wsInit, 1000)
 }
 
-var wsInit = function() {
+var wsInit = function () {
     try {
         socket = new WebSocket(net.config.webSocketURL)
     } catch (error) {
@@ -58,7 +58,7 @@ var wsInit = function() {
 }
 
 net.ws = wsInit
-net.emit = function(type, data) {
+net.emit = function (type, data) {
     if (type == undefined || type == null) return
     if (events[type] == undefined || events[type] == null) return
     for (let k = 0; k < events[type].length; k++) {
@@ -71,14 +71,14 @@ net.emit = function(type, data) {
     }
 
 }
-net.on = function(type, cb, target) {
+net.on = function (type, cb, target) {
     if (type == undefined || type == null) return
     if (cb == undefined || cb == null) return
     if (target != undefined) cb = cb.bind(target)
     if (events[type] == undefined || events[type] == null) events[type] = []
     events[type].push({ target: target, cb: cb })
 }
-net.off = function(type, target) {
+net.off = function (type, target) {
     if (type == undefined || type == null) return
     if (events[type] == undefined || events[type] == null) return
     for (let k in events[type]) {
@@ -86,7 +86,7 @@ net.off = function(type, target) {
     }
 
 }
-net.send = function(type, data) {
+net.send = function (type, data) {
     let arr = type.split('_')
     if (data == undefined || data == null) data = {}
     let sdata = { header: type, class: arr[0], method: arr[1], params: data }
@@ -97,7 +97,7 @@ net.send = function(type, data) {
     //     sdata.params.sessionId = GameData.sessionId
     if (GameData.uId != undefined && GameData.uId != null)
         sdata.params.uId = GameData.uId
-        // stackMessages.push(JSON.stringify(sdata));
-        // cc.log(encodeURI(JSON.stringify(sdata)))
+    // stackMessages.push(JSON.stringify(sdata));
+    // cc.log(encodeURI(JSON.stringify(sdata)))
     socket.send((JSON.stringify(sdata)))
 }
