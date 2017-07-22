@@ -30,9 +30,9 @@ cc.Class({
             this.node.active = false
             cc.director.loadScene('Cow')
         }, this)
-        this.node.on('join', () => {
+        this.node.on('join', (e) => {
             cc.find('main/win').removeAllChildren()
-            net.send('Room_enter', { 'roomId': 1 })
+            net.send('Room_enter', { 'roomId': e.detail })
         })
     },
 

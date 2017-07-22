@@ -43,9 +43,11 @@ cc.Class({
         if (s == 'clear') this.strBuf = ''
         else if (s == 'delete') this.strBuf = this.str.substring(0, this.str.length - 1)
         else this.strBuf += s
-        if (this.str.length == 6) {
+        if (this.strBuf.length == 6) {
             setTimeout(() => {
-                this.node.dispatchEvent(new cc.Event.EventCustom('join', true))
+                let cus = new cc.Event.EventCustom('join', true)
+                cus.detail = this.strBuf
+                this.node.dispatchEvent(cus)
             }, 100)
 
         }
