@@ -11,7 +11,7 @@ cc.Class({
         pokeNode: [cc.Node],
         time: cc.Label,
         roomId: cc.Label,
-        roomTime :cc.Label
+        roomTime: cc.Label
     },
 
     onLoad: function () {
@@ -23,7 +23,7 @@ cc.Class({
             4: cc.find('Canvas/pos/other4')
         }
         this.roomId.string = GameData.roomData.roomId
-        this.roomTime = GameData.roomData.time+':'+GameData.roomData.allTime
+        this.roomTime = GameData.roomData.time + ':' + GameData.roomData.allTime
         this.data = GameData.roomData
         this.myChatId = this.data.users[GameData.uId].pos
         if (GameData.roomData) {
@@ -77,21 +77,23 @@ cc.Class({
             }
         }, this)
         net.on('room_result', (data) => {
+            cc.log('-----')
             for (let i in this.data.users) {
                 let cChatId = (this.data.users[i].pos - this.myChatId + 5) % 5
-                this.showCard(cChatId, data[i].poker)
+                this.showCard(cChatId, data.users[i].poker)
                 // this.showNiu(cChatId,data[i])
             }
             //判断是否结束
             GameData.roomData.time++
-            this.roomTime = GameData.roomData.time+':'+GameData.roomData.allTime
-            setTimeout(()=>{
-                if(GameData.roomData.time>=GameData.roomData.allTime){
+            this.roomTime = GameData.roomData.time + ':' + GameData.roomData.allTime
+            setTimeout(() => {
+                if (GameData.roomData.time >= GameData.roomData.allTime) {
                     cc.director.loadScene('main')
-                }else{
+                } else {
+                    this.clearState()
                     net.send('room_ready')
                 }
-            },5000)
+            }, 5000)
         }, this)
         net.on('room_mumultiplebroadcast', (data) => {
             this.data = data
@@ -165,8 +167,16 @@ cc.Class({
         else if (data == 3) this.chat[pos].getChildByName('fen').getComponent(cc.Sprite).spriteFrame = this.gameAtlas.getSpriteFrame('Text_x3')
         else this.chat[pos].getChildByName('fen').active = false
     },
-    showNiu(pos,data) {
-        
+    showNiu(pos, data) {
+
+    },
+    clearState() {
+        for (let i in this.chat) {
+            if (this.chat[i].active == false) continue
+            this.chat[i].getChildByName('zhuang').active = false
+            this.chat[i].getChildByName('fen').active = false
+        }
+        this.chat[0].getChildByName('prepare').active = true
     },
     onDestroy() {
         net.off('room_enterbroadcast', this)
@@ -174,5 +184,7 @@ cc.Class({
         net.off('room_fapai_broadcast', this)
         net.off('room_qzbroadcast', this)
         net.off('Room_multiple', this)
+        net.off('room_result', this)
+        net.off('room_mumultiplebroadcast', this)
     },
 })
