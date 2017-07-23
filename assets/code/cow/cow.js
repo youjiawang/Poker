@@ -175,6 +175,7 @@ cc.Class({
             if (this.chat[i].active == false) continue
             this.chat[i].getChildByName('zhuang').active = false
             this.chat[i].getChildByName('fen').active = false
+            this.chat[i].getChildByName('card').removeAllChildren()
         }
         this.chat[0].getChildByName('prepare').active = true
     },
