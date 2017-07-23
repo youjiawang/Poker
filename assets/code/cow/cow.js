@@ -10,7 +10,8 @@ cc.Class({
         spineNode: cc.Node,
         pokeNode: [cc.Node],
         time: cc.Label,
-        roomId: cc.Label
+        roomId: cc.Label,
+        roomTime :cc.Label
     },
 
     onLoad: function () {
@@ -22,6 +23,7 @@ cc.Class({
             4: cc.find('Canvas/pos/other4')
         }
         this.roomId.string = GameData.roomData.roomId
+        this.roomTime = GameData.roomData.time+':'+GameData.roomData.allTime
         this.data = GameData.roomData
         this.myChatId = this.data.users[GameData.uId].pos
         if (GameData.roomData) {
@@ -53,7 +55,7 @@ cc.Class({
             this.data = data
             for (let i in this.data.users) {
                 let cChatId = (this.data.users[i].pos - this.myChatId + 5) % 5
-                if (this.data.users[i].poker) this.showCard(cChatId, this.data.users[i].poker)
+                if (cChatId == 0) this.showCard(cChatId, this.data.users[i].poker)
                 else this.showCard(cChatId, 4)
                 this.showPrepare(cChatId, false)
                 cc.find('Canvas/banker').active = true
@@ -74,15 +76,25 @@ cc.Class({
                 if (this.data.users[i].multiple && this.data.zhuangid != i) this.showCallState(cChatId, this.data.users[i].multiple)
             }
         }, this)
-        net.on('room_mumultiplebroadcast', (data) => {
-            //发第五张牌
-            this.data = data
+        net.on('room_result', (data) => {
             for (let i in this.data.users) {
                 let cChatId = (this.data.users[i].pos - this.myChatId + 5) % 5
-                if (this.data.users[i].poker) this.showCard(cChatId, this.data.users[i].poker.pokers)
-                else this.showCard(cChatId, 5)
+                this.showCard(cChatId, data[i].poker)
+                // this.showNiu(cChatId,data[i])
             }
-            this.showNiu()
+            //判断是否结束
+            GameData.roomData.time++
+            this.roomTime = GameData.roomData.time+':'+GameData.roomData.allTime
+            setTimeout(()=>{
+                if(GameData.roomData.time>=GameData.roomData.allTime){
+                    cc.director.loadScene('main')
+                }else{
+                    net.send('room_ready')
+                }
+            },5000)
+        }, this)
+        net.on('room_mumultiplebroadcast', (data) => {
+            this.data = data
         }, this)
     },
 
@@ -90,7 +102,6 @@ cc.Class({
     update() {
         let date = new Date()
         this.time.string = date.getHours() + ':' + date.getMinutes()
-
     },
 
     showUserInfo(pos, name) {
@@ -144,6 +155,7 @@ cc.Class({
         net.send('room_qiangzhuang', { qiang: s })
     },
     chickCall(e, s) {
+        cc.find('Canvas/call').active = false
         net.send('room_multiple', { multiple: s })
     },
     showCallState(pos, data) {
@@ -153,10 +165,8 @@ cc.Class({
         else if (data == 3) this.chat[pos].getChildByName('fen').getComponent(cc.Sprite).spriteFrame = this.gameAtlas.getSpriteFrame('Text_x3')
         else this.chat[pos].getChildByName('fen').active = false
     },
-    showNiu() {
-        cc.find('Canvas/call').active = false
-        cc.find('Canvas/niu').active = true
-
+    showNiu(pos,data) {
+        
     },
     onDestroy() {
         net.off('room_enterbroadcast', this)
