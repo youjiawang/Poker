@@ -77,11 +77,10 @@ cc.Class({
             }
         }, this)
         net.on('room_result', (data) => {
-            cc.log('-----')
             for (let i in this.data.users) {
                 let cChatId = (this.data.users[i].pos - this.myChatId + 5) % 5
                 this.showCard(cChatId, data.users[i].poker)
-                // this.showNiu(cChatId,data[i])
+                this.showNiu(cChatId, data.users[i].pokerType)
             }
             //判断是否结束
             GameData.roomData.time++
@@ -168,13 +167,16 @@ cc.Class({
         else this.chat[pos].getChildByName('fen').active = false
     },
     showNiu(pos, data) {
-
+        let niu = [100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 310, 414, 411, 412, 415, 413, 416, 417]
+        this.chat[pos].getChildByName('niu').active = true
+        this.chat[pos].getChildByName('niu').getComponent(cc.Sprite).spriteFrame = this.gameAtlas.getSpriteFrame('V2_Title_DNF_' + niu[data])
     },
     clearState() {
         for (let i in this.chat) {
             if (this.chat[i].active == false) continue
             this.chat[i].getChildByName('zhuang').active = false
             this.chat[i].getChildByName('fen').active = false
+            this.chat[i].getChildByName('niu').active = false
             this.chat[i].getChildByName('card').removeAllChildren()
         }
         this.chat[0].getChildByName('prepare').active = true
