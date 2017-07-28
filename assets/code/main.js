@@ -12,7 +12,8 @@ cc.Class({
         //    readonly: false,    // optional, default is false
         // },
         // ...
-        joinbox: cc.Prefab
+        joinbox: cc.Prefab,
+        createbox: cc.Prefab
     },
 
     // use this for initialization
@@ -21,11 +22,13 @@ cc.Class({
         cc.game.addPersistRootNode(this.node)
 
         net.on('Room_create', (data) => {
+            cc.find('main/win').removeAllChildren()
             GameData.roomData = data
             this.node.active = false
             cc.director.loadScene('Cow')
         }, this)
         net.on('Room_enter', (data) => {
+            cc.find('main/win').removeAllChildren()
             GameData.roomData = data
             this.node.active = false
             cc.director.loadScene('Cow')
@@ -45,13 +48,12 @@ cc.Class({
         net.off('Room_enter', this)
     },
     createRoom() {
-        net.send('Room_create', { 'gameId': 1, 'types': { '1': 1, '2': 1, '3': 2 } })
+        let win = cc.instantiate(this.createbox)
+        win.parent = cc.find('main/win')
     },
     enterRoom() {
         let win = cc.instantiate(this.joinbox)
         win.parent = cc.find('main/win')
-
-
     },
     randomRoom() {
 

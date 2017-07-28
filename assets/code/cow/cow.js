@@ -86,6 +86,18 @@ cc.Class({
             GameData.roomData.time++
             this.roomTime = GameData.roomData.time + ':' + GameData.roomData.allTime
             setTimeout(() => {
+                cc.find('Canvas/win/roundWin').true = true
+                cc.find('Canvas/win/roundWin/Layout').removeAllChildren()
+                for (let k in this.data.users) {
+                    let node = new cc.Node()
+                    let lb = node.addComponent(cc.Label)
+                    lb.string(k+'     '+data.roomInfo.users[k].score)
+                    node.parent = cc.find('Canvas/win/roundWin/Layout')
+                }
+
+            })
+            setTimeout(() => {
+                cc.find('Canvas/win/roundWin').active = false
                 if (GameData.roomData.time >= GameData.roomData.allTime) {
                     cc.director.loadScene('main')
                 } else {

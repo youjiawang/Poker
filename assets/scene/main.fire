@@ -2983,6 +2983,9 @@
     "_enabled": true,
     "joinbox": {
       "__uuid__": "66955f94-f3e5-4a86-b790-5010bbdcaead"
+    },
+    "createbox": {
+      "__uuid__": "8c817c3c-f7d0-4422-93eb-1078b1611e29"
     }
   },
   {
