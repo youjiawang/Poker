@@ -8,7 +8,7 @@ cc.Class({
 
         btReady: cc.Node,
         spineNode: cc.Node,
-        pokeNode: [cc.Node],
+        pokeNode: [cc.Node],  
         time: cc.Label,
         roomId: cc.Label,
         roomTime: cc.Label
