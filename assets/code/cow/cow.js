@@ -91,11 +91,11 @@ cc.Class({
                 for (let k in this.data.users) {
                     let node = new cc.Node()
                     let lb = node.addComponent(cc.Label)
-                    lb.string(k+'     '+data.roomInfo.users[k].score)
+                    lb.string = (k + '     ' + data.roomInfo.users[k].score)
                     node.parent = cc.find('Canvas/win/roundWin/Layout')
                 }
 
-            })
+            },1000)
             setTimeout(() => {
                 cc.find('Canvas/win/roundWin').active = false
                 if (GameData.roomData.time >= GameData.roomData.allTime) {
@@ -172,6 +172,7 @@ cc.Class({
         net.send('room_multiple', { multiple: s })
     },
     showCallState(pos, data) {
+        cc.find('Canvas/call').active = false
         this.chat[pos].getChildByName('fen').active = true
         if (data == 1) this.chat[pos].getChildByName('fen').getComponent(cc.Sprite).spriteFrame = this.gameAtlas.getSpriteFrame('Text_x1')
         else if (data == 2) this.chat[pos].getChildByName('fen').getComponent(cc.Sprite).spriteFrame = this.gameAtlas.getSpriteFrame('Text_x2')
