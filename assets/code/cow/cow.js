@@ -1,4 +1,4 @@
-cc.Class({
+cc.Class({ 
     extends: cc.Component,
 
     properties: {
